@@ -3,22 +3,36 @@ import java.util.ArrayList;
 public class Giocatore {
     private String nome;
     private ArrayList<Chiave> chiavi;
+    private final static int MAX_CHIAVI = 5;
 
     public Giocatore(String nome) {
         this.nome = nome;
         chiavi = new ArrayList<Chiave>();
     }
 
+
+
     public void aggiungiChiave(Chiave c) {
         chiavi.add(c);
-        System.out.println("Chiave raccolta: " + c.getTipoChiave());
     }
 
     public void rimuoviChiave(Chiave c) {
         chiavi.remove(c);
     }
 
+    public boolean checkChiaveRaccoglibile(Chiave c) {
+        if (this.chiavi.size() < MAX_CHIAVI && pesoTotaleChiavi() + c.getPeso() <= 50)
+            return true;
+        return false;
+    }
 
+    public int pesoTotaleChiavi() {
+        int pesoTotale = 0;
+        for (Chiave c : chiavi) {
+            pesoTotale += c.getPeso();
+        }
+        return pesoTotale;
+    }
 
 
     public String getNome() {

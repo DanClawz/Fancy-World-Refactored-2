@@ -21,11 +21,13 @@ public class Gioco {
 
             if (m.getMondo().get(m.getPianoCorrente()-1).isChiavePresente() && !chiavePosCorrente.isDepositata()) {    // controllo: se la chiave e' presente e se e' depositata
                 System.out.println(chiavePosCorrente);
-                if (MyUtil.controlledCharInput("Vuoi raccogliere la chiave? [s-n]", 's', 'n') == 's') {
+                if (MyUtil.controlledCharInput("Vuoi raccogliere la chiave? [s-n]", 's', 'n') == 's' && giocatore.checkChiaveRaccoglibile(chiavePosCorrente)) {
                     Chiave c = m.raccogliChiave();
                     giocatore.aggiungiChiave(c);
-                    System.out.println("Chiave raccolta!");
+                    System.out.println("Chiave raccolta: " + c);
                 }
+
+                else System.out.println("La chiave non può essere raccolta! Numero chiavi in possesso: " + giocatore.getChiavi().size() + ", Peso chiavi corrente: " + giocatore.pesoTotaleChiavi());
                 m.getMondo().get(m.getPianoCorrente()-1).setChiavePresente(false);
             }
 

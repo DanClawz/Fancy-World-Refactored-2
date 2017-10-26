@@ -5,6 +5,8 @@ public class Chiave {
     private String tipoChiave;
     private int passaggioDaAprire;
     private boolean depositata;
+    private int peso;
+
 
     public Chiave(Coordinata posChiave) {
         this.posChiave = posChiave;
@@ -17,16 +19,16 @@ public class Chiave {
 
     public void setPassaggioDaAprire(char tipo) {
         switch(tipo) {
-            case 'l': this.tipoChiave = "legno"; this.passaggioDaAprire = 3; break;
-            case 'f': this.tipoChiave = "ferro"; this.passaggioDaAprire = 4; break;
-            case 'b': this.tipoChiave = "bronzo"; this.passaggioDaAprire = 5; break;
-            case 'a': this.tipoChiave = "argento"; this.passaggioDaAprire = 6; break;
-            case 'o': this.tipoChiave = "oro"; this.passaggioDaAprire = 7; break;
-            case 't': this.tipoChiave = "titanite"; this.passaggioDaAprire = 8; break;
-            case 'c': this.tipoChiave = "cristallo"; this.passaggioDaAprire = 9; break;
-            case 'd': this.tipoChiave = "diamante"; this.passaggioDaAprire = 10; break;
-            case 'v': this.tipoChiave = "vibranio"; this.passaggioDaAprire = 11; break;
-            case 'm': this.tipoChiave = "misteriosa"; this.passaggioDaAprire = 12; break;
+            case 'l': this.tipoChiave = "legno"; this.passaggioDaAprire = 3; this.peso = 2; break;
+            case 'f': this.tipoChiave = "ferro"; this.passaggioDaAprire = 4; this.peso = 4; break;
+            case 'b': this.tipoChiave = "bronzo"; this.passaggioDaAprire = 5; this.peso = 6; break;
+            case 'a': this.tipoChiave = "argento"; this.passaggioDaAprire = 6; this.peso = 8; break;
+            case 'o': this.tipoChiave = "oro"; this.passaggioDaAprire = 7; this.peso = 10; break;
+            case 't': this.tipoChiave = "titanite"; this.passaggioDaAprire = 8; this.peso = 13; break;
+            case 'c': this.tipoChiave = "cristallo"; this.passaggioDaAprire = 9; this.peso = 16; break;
+            case 'd': this.tipoChiave = "diamante"; this.passaggioDaAprire = 10; this.peso = 19; break;
+            case 'v': this.tipoChiave = "vibranio"; this.passaggioDaAprire = 11; this.peso = 22; break;
+            case 'm': this.tipoChiave = "misteriosa"; this.passaggioDaAprire = 12; this.peso = 25; break;
         }
     }
 
@@ -60,9 +62,17 @@ public class Chiave {
 
     @Override
     public String toString() {
-        return "Chiave di " + this.tipoChiave;
+        return "Chiave di " + this.tipoChiave + ", peso: " + this.peso;
     }
 
+
+    public int getPeso() {
+        return peso;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
 
     public boolean isDepositata() {
         return depositata;
