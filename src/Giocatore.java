@@ -1,12 +1,10 @@
 import java.util.ArrayList;
 
 public class Giocatore {
-    private String nome;
     private ArrayList<Chiave> chiavi;
     private final static int MAX_CHIAVI = 5;
 
-    public Giocatore(String nome) {
-        this.nome = nome;
+    public Giocatore() {
         chiavi = new ArrayList<Chiave>();
     }
 
@@ -35,13 +33,7 @@ public class Giocatore {
     }
 
 
-    public String getNome() {
-        return nome;
-    }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
     public ArrayList<Chiave> getChiavi() {
         return chiavi;

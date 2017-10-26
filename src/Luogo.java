@@ -157,7 +157,11 @@ public class Luogo {
     }
 
     public void rimuoviChiave(Chiave c) {
-        chiavi.remove(c);
+
+        for (int i = 0; i < chiavi.size(); i++) {
+            if (chiavi.get(i).equals(c) && chiavi.get(i).getPosChiave().equals(c.getPosChiave()))
+                chiavi.remove(i);
+        }
     }
 
     public Chiave getChiave(Coordinata c) {

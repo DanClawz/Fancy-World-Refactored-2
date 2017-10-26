@@ -1,21 +1,23 @@
 import java.util.ArrayList;
 
-public class Gioco {
+public class Partita {
     private String nomeGiocatore;
     private Giocatore giocatore;
     private Mondo m;
     private char input;
 
-    public Gioco(String nomeGiocatore) {
+    public Partita() {
         this.nomeGiocatore = nomeGiocatore;
         m = new Mondo("mondo1");
-        this.giocatore = new Giocatore(nomeGiocatore);
+        this.giocatore = new Giocatore();
         gioca();
     }
 
     private void gioca() {
         while(true) {
             System.out.println(m.stampaMappa());
+
+            System.out.println("Il giocatore ha le chiavi: " + giocatore.getChiavi());
 
             Chiave chiavePosCorrente = m.getMondo().get(m.getPianoCorrente()-1).getChiave(m.getMondo().get(m.getPianoCorrente()-1).getPosCorrente());
 
