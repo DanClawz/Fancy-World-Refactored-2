@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class Passaggio {
+public class Passaggio implements Serializable {
     private Coordinata coordinata;
     private boolean aperto;
     private int pianoDest;

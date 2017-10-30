@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Luogo {
+public class Luogo implements Serializable {
     private Coordinata start, goal, posCorrente;
     private ArrayList<Coordinata> ostacoli;
     private ArrayList<Passaggio> lista_passaggi;
@@ -175,6 +176,8 @@ public class Luogo {
             c.setDepositata(false);
         }
     }
+
+
 
 
 

@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Chiave {
+public class Chiave implements Serializable {
     private Coordinata posChiave;
     private String tipoChiave;
     private int passaggioDaAprire;

@@ -1,19 +1,27 @@
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 
-public class Partita {
-    private String nomeGiocatore;
+public class Partita implements Serializable{
+    private String nomePartita;
     private Giocatore giocatore;
     private Mondo m;
     private char input;
+    private int id;
+    private Date date;
+    private ListaPartite partite;
 
-    public Partita() {
-        this.nomeGiocatore = nomeGiocatore;
-        m = new Mondo("mondo1");
-        this.giocatore = new Giocatore();
-        gioca();
+    public Partita(int id, String nomePartita, Giocatore giocatore, Mondo m) {
+        this.nomePartita = nomePartita;
+        this.m = m;
+        this.id = id;
+        this.giocatore = giocatore;
+        partite=LetturaScritturaPartita.leggi();
+        date = new Date();
+        System.out.println(date);
     }
 
-    private void gioca() {
+    public void gioca() {
         while(true) {
             System.out.println(m.stampaMappa());
 
@@ -57,7 +65,11 @@ public class Partita {
                 }
                 else System.out.println("Non hai nessuna chiave!");
             }
-            else if (input == 'q') System.exit(1);
+            else if (input == 'q') {
+                isPartitaPresente();
+                LetturaScritturaPartita.scrivi(partite);
+                System.exit(1);
+            }
 
             if (m.getMondo().get(m.getPianoCorrente()-1).isPassaggioRaggiunto())
                 System.out.println("Il passaggio ti porta verso: luogo" + Passaggio.pianoDestPassaggio(m.getMondo().get(m.getPianoCorrente()-1).getLista_passaggi(), m.getMondo().get(m.getPianoCorrente()-1).getPosCorrente()));
@@ -70,6 +82,17 @@ public class Partita {
                 break;
             }
         }
+    }
+
+    public void isPartitaPresente() {   //aggiungo/aggiorno la partita alla lista
+        for(int i=0; i<partite.getPartite().size(); i++) {
+            if (partite.getPartite().get(i).getId() == this.id) {
+                partite.getPartite().set(i, this);
+                return;
+            }
+        }
+        partite.aggiungiPartita(this);
+
     }
 
     private String[] opzioniDeposita(ArrayList<Chiave> chiavi) {
@@ -86,5 +109,40 @@ public class Partita {
             this.input = input.charAt(0);
     }
 
+    public String toString() {
+        return nomePartita + ", " + String.valueOf(date);
+    }
 
+
+    public Giocatore getGiocatore() {
+        return giocatore;
+    }
+
+    public void setGiocatore(Giocatore giocatore) {
+        this.giocatore = giocatore;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Mondo getM() {
+        return m;
+    }
+
+    public void setM(Mondo m) {
+        this.m = m;
+    }
+
+    public String getNomePartita() {
+        return nomePartita;
+    }
+
+    public void setNomePartita(String nomePartita) {
+        this.nomePartita = nomePartita;
+    }
 }

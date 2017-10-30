@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.nio.channels.Pipe;
 import java.util.ArrayList;
 
-public class Mondo {
+public class Mondo implements Serializable {
 
     final static int NLUOGHI = 5;
     private ArrayList<Luogo> mondo;
@@ -77,6 +78,10 @@ public class Mondo {
 
     public ArrayList<Luogo> getMondo() {
         return mondo;
+    }
+
+    public void setMondo(ArrayList<Luogo> mondo) {
+        this.mondo = mondo;
     }
 
     public int getPianoCorrente() {

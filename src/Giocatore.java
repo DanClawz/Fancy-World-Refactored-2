@@ -1,6 +1,8 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Giocatore {
+public class Giocatore implements Serializable {
+    private String nome;
     private ArrayList<Chiave> chiavi;
     private final static int MAX_CHIAVI = 5;
 
@@ -31,6 +33,8 @@ public class Giocatore {
         }
         return pesoTotale;
     }
+
+
 
 
 

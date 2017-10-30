@@ -1,10 +1,10 @@
 import java.io.*;
 import java.util.ArrayList;
 
-public class Mappa {
+public class Mappa implements Serializable {
     static final int NRIGHE = 5;
     static final int NCOLONNE = 10;
-    private BufferedReader b;
+    private transient BufferedReader b;
     private String mappa = "";
     private char[][] map = {};
 
