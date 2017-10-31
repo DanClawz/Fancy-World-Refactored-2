@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b18cba1c-0bc8-48ad-b171-f2b178c4ae10" name="Default" comment="">
+    <list default="true" id="b18cba1c-0bc8-48ad-b171-f2b178c4ae10" name="Default" comment="Versione iniziale Release 3">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Mappe/mondo1_luogo4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Mappe/mondo1_luogo5" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Saves/saves.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CaricaPartita.java" afterPath="$PROJECT_DIR$/src/CaricaPartita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Luogo.java" afterPath="$PROJECT_DIR$/src/Luogo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyUtil.java" afterPath="$PROJECT_DIR$/src/MyUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Partita.java" afterPath="$PROJECT_DIR$/src/Partita.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +27,7 @@
       <file leaf-file-name="Partita.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Partita.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="360">
               <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -40,7 +39,7 @@
       <file leaf-file-name="Chiave.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Chiave.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="30">
               <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -49,16 +48,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mappa.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Mappa.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Mappa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            <state relative-caret-position="330">
+              <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#grid#0;class#Mappa#0" expanded="false" />
                 <element signature="method#posizioneOstacoli#0;class#Mappa#0" expanded="false" />
+                <element signature="e#1819#1831#0" expanded="true" />
+                <element signature="e#2238#2249#0" expanded="true" />
+                <element signature="e#2764#2772#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saves.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Saves/saves.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,18 +135,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Giocatore.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Giocatore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -240,9 +240,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,7 +260,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -396,7 +396,8 @@
       <workItem from="1509093516794" duration="5175000" />
       <workItem from="1509355433494" duration="13554000" />
       <workItem from="1509444838362" duration="5155000" />
-      <workItem from="1509456578508" duration="1549000" />
+      <workItem from="1509456578508" duration="1719000" />
+      <workItem from="1509460276486" duration="92000" />
     </task>
     <task id="LOCAL-00001" summary="Da fare:&#10;- classe Coordinata&#10;- iniziare classe Luogo&#10;- sistemare classe Mappa">
       <created>1506604619447</created>
@@ -573,11 +574,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509376393522</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Da fare:&#10;- progettare Release 4">
+      <created>1509460098397</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1509460098398</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180696000" />
+    <option name="totallyTimeSpent" value="180958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="135" y="186" width="1920" height="1050" extended-state="6" />
@@ -585,6 +593,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32665965" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -607,7 +616,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32665965" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -651,7 +659,9 @@
     <MESSAGE value="Da fare:&#10;- Progettare Release 3" />
     <MESSAGE value="Da fare:&#10;- Sessioni" />
     <MESSAGE value="Da fare:&#10;- ricontrollo generale Release 3&#10;- progettare Release 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Da fare:&#10;- ricontrollo generale Release 3&#10;- progettare Release 4" />
+    <MESSAGE value="Da fare:&#10;- progettare Release 4" />
+    <MESSAGE value="Versione iniziale Release 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Versione iniziale Release 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -660,13 +670,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Coordinata.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="33" column="30" lean-forward="false" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Luogo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1005">
@@ -707,6 +710,9 @@
             <element signature="imports" expanded="true" />
             <element signature="method#grid#0;class#Mappa#0" expanded="false" />
             <element signature="method#posizioneOstacoli#0;class#Mappa#0" expanded="false" />
+            <element signature="e#1819#1831#0" expanded="true" />
+            <element signature="e#2238#2249#0" expanded="true" />
+            <element signature="e#2764#2772#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -737,6 +743,9 @@
             <element signature="imports" expanded="true" />
             <element signature="method#grid#0;class#Mappa#0" expanded="false" />
             <element signature="method#posizioneOstacoli#0;class#Mappa#0" expanded="false" />
+            <element signature="e#1819#1831#0" expanded="true" />
+            <element signature="e#2238#2249#0" expanded="true" />
+            <element signature="e#2764#2772#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -792,6 +801,9 @@
             <element signature="imports" expanded="true" />
             <element signature="method#grid#0;class#Mappa#0" expanded="false" />
             <element signature="method#posizioneOstacoli#0;class#Mappa#0" expanded="false" />
+            <element signature="e#1819#1831#0" expanded="true" />
+            <element signature="e#2238#2249#0" expanded="true" />
+            <element signature="e#2764#2772#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -840,6 +852,9 @@
             <element signature="imports" expanded="true" />
             <element signature="method#grid#0;class#Mappa#0" expanded="false" />
             <element signature="method#posizioneOstacoli#0;class#Mappa#0" expanded="false" />
+            <element signature="e#1819#1831#0" expanded="true" />
+            <element signature="e#2238#2249#0" expanded="true" />
+            <element signature="e#2764#2772#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -896,6 +911,9 @@
             <element signature="imports" expanded="true" />
             <element signature="method#grid#0;class#Mappa#0" expanded="false" />
             <element signature="method#posizioneOstacoli#0;class#Mappa#0" expanded="false" />
+            <element signature="e#1819#1831#0" expanded="true" />
+            <element signature="e#2238#2249#0" expanded="true" />
+            <element signature="e#2764#2772#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -960,6 +978,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -979,9 +998,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="4" column="49" lean-forward="false" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1057,17 +1073,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CLS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CLS.java" />
     <entry file="file://$PROJECT_DIR$/src/Partita.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="360">
           <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1077,7 +1086,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Chiave.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="30">
           <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1087,13 +1096,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Mappa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        <state relative-caret-position="330">
+          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#grid#0;class#Mappa#0" expanded="false" />
             <element signature="method#posizioneOstacoli#0;class#Mappa#0" expanded="false" />
+            <element signature="e#1819#1831#0" expanded="true" />
+            <element signature="e#2238#2249#0" expanded="true" />
+            <element signature="e#2764#2772#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Saves/saves.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
