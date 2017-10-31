@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b18cba1c-0bc8-48ad-b171-f2b178c4ae10" name="Default" comment="Versione iniziale Release 3">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Mappe/mondo1_luogo4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Mappe/mondo1_luogo5" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Saves/saves.txt" />
+    <list default="true" id="b18cba1c-0bc8-48ad-b171-f2b178c4ae10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -397,7 +394,7 @@
       <workItem from="1509355433494" duration="13554000" />
       <workItem from="1509444838362" duration="5155000" />
       <workItem from="1509456578508" duration="1719000" />
-      <workItem from="1509460276486" duration="92000" />
+      <workItem from="1509460276486" duration="163000" />
     </task>
     <task id="LOCAL-00001" summary="Da fare:&#10;- classe Coordinata&#10;- iniziare classe Luogo&#10;- sistemare classe Mappa">
       <created>1506604619447</created>
@@ -581,11 +578,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509460098398</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Versione iniziale Release 4">
+      <created>1509460386105</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1509460386105</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180958000" />
+    <option name="totallyTimeSpent" value="181029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="135" y="186" width="1920" height="1050" extended-state="6" />
@@ -661,7 +665,8 @@
     <MESSAGE value="Da fare:&#10;- ricontrollo generale Release 3&#10;- progettare Release 4" />
     <MESSAGE value="Da fare:&#10;- progettare Release 4" />
     <MESSAGE value="Versione iniziale Release 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Versione iniziale Release 3" />
+    <MESSAGE value="Versione iniziale Release 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Versione iniziale Release 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
