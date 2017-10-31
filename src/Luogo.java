@@ -35,6 +35,7 @@ public class Luogo implements Serializable {
 
 
     public String stampaMappa() {
+
         String mappaContorno = "";
 
         mappaContorno += "╔";

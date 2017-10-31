@@ -41,7 +41,8 @@ public class MyUtil {
     public static char charInput(String MESSAGGIO) {
         System.out.print(MESSAGGIO + " (se una stringa, viene letto solo il 1^ carattere): ");
         String s = input.next();
-        return s.charAt(0);
+        if (!s.equals("")) return s.charAt(0);
+        else return charInput("Devi inserire un carattere!");
     }
 
     public static char controlledCharInput(String MESSAGGIO, char... caratteri) {

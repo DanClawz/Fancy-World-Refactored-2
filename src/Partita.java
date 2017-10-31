@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,22 +11,32 @@ public class Partita implements Serializable{
     private int id;
     private Date date;
     private ListaPartite partite;
+    private boolean autoSave;
 
     public Partita(int id, String nomePartita, Giocatore giocatore, Mondo m) {
         this.nomePartita = nomePartita;
         this.m = m;
         this.id = id;
         this.giocatore = giocatore;
-        partite=LetturaScritturaPartita.leggi();
+        partite = LetturaScritturaPartita.leggi();
         date = new Date();
         System.out.println(date);
     }
 
-    public void gioca() {
-        while(true) {
-            System.out.println(m.stampaMappa());
 
-            System.out.println("Il giocatore ha le chiavi: " + giocatore.getChiavi());
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+
+    public void gioca() {
+        int nMosse = 0;
+
+        while(true) {
+            clearScreen();
+            System.out.println("\n\n\n\n");
+            System.out.println(m.stampaMappa());
+            System.out.println(giocatore.getChiavi().isEmpty() ? ("Nessuna chiave raccolta") : ("Chiavi in possesso: " + giocatore.getChiavi()));
 
             Chiave chiavePosCorrente = m.getMondo().get(m.getPianoCorrente()-1).getChiave(m.getMondo().get(m.getPianoCorrente()-1).getPosCorrente());
 
@@ -66,23 +77,40 @@ public class Partita implements Serializable{
                 else System.out.println("Non hai nessuna chiave!");
             }
             else if (input == 'q') {
-                isPartitaPresente();
-                LetturaScritturaPartita.scrivi(partite);
+                salvaPartita();
                 System.exit(1);
             }
 
             if (m.getMondo().get(m.getPianoCorrente()-1).isPassaggioRaggiunto())
                 System.out.println("Il passaggio ti porta verso: luogo" + Passaggio.pianoDestPassaggio(m.getMondo().get(m.getPianoCorrente()-1).getLista_passaggi(), m.getMondo().get(m.getPianoCorrente()-1).getPosCorrente()));
 
-            System.out.print("\n\n\n\n\n\n");
 
             if (m.obbiettivoRaggiunto()) {
                 System.out.println(m.stampaMappa());
                 System.out.println("Hai vinto!");
                 break;
             }
+
+            nMosse++;
+
+            if (autoSave && nMosse == 5) {
+                salvaPartita();
+                nMosse = 0;
+            }
         }
+
     }
+
+    public void autoSalvataggio(boolean autoSave) {
+        this.autoSave = autoSave;
+    }
+
+    public void salvaPartita() {
+        isPartitaPresente();
+        LetturaScritturaPartita.scrivi(partite);
+        System.out.println("Partita salvata");
+    }
+
 
     public void isPartitaPresente() {   //aggiungo/aggiorno la partita alla lista
         for(int i=0; i<partite.getPartite().size(); i++) {

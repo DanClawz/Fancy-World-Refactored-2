@@ -15,6 +15,7 @@ public class CaricaPartita {
         Giocatore g = null;
         int id = -1;
         String nome = "";
+        boolean autoSave = true;
 
         while(true) {
             if (isNuovaPartita) {
@@ -22,6 +23,7 @@ public class CaricaPartita {
                 m = new Mondo("mondo1");
                 g = new Giocatore();
                 nome = MyUtil.stringInput("Inserisci nome salvataggio");
+                autoSave = MyUtil.controlledCharInput("Abilitare autosalvataggio? [s-n]", 's', 'n') == 's' ? true : false;
                 break;
 
             }
@@ -41,8 +43,9 @@ public class CaricaPartita {
                 menu();
             }
         }
-        
+
         p = new Partita(id, nome, g, m);
+        p.autoSalvataggio(autoSave);
         p.gioca();
     }
 
