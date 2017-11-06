@@ -6,7 +6,6 @@ public class Quesito {
     public Quesito(String domanda, String[] opzioni, String risposta) {
         this.domanda = domanda;
         this.opzioni = opzioni;
-        System.out.println(this.opzioni[1]);
         this.risposta = risposta;
     }
 
@@ -26,6 +25,7 @@ public class Quesito {
     public String toStringProva2() {
         return risposta + "\n";
     }
+
     public String toStringProva3() {
         return domanda + "\n" + risposta + "\n";
     }

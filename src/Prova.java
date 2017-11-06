@@ -15,22 +15,25 @@ public class Prova {
 
         int tentativi = 2;
         LeggiProva leggi = new LeggiProva();
-        leggi.leggiProva1();
-        //System.out.println(leggi.getProva1().get(0).toStringProva1());
-        //leggi.aCaso();
+        leggi.leggiProva2();
 
-        int r = MyUtil.randomInt(0, leggi.getProva1().size()-1);
-        //System.out.println(leggi.getProva1().get(1).getOpzioni()[0]);
+        int r = MyUtil.randomInt(0, leggi.getProva2().size()-1);
 
-        //System.out.println(leggi.getProva1().get(r).toStringProva1());
+        String risposta = leggi.nascondiCaratteri(r);
+        System.out.println("Inserisci risposta: ");
 
-        //MyUtil.controlledStringInput(leggi.getProva3().get(r).getDomanda(), leggi.getProva1().get(r).getOpzioni());
+        while(true) {
+            String inputUtente = MyUtil.stringInput(leggi.stringaNascostaConSpazi(risposta));
+            String t;
+            if (leggi.checkRispostaProva2(r, inputUtente))
+                break;
+            else
+                risposta = leggi.match(r, inputUtente, risposta);
 
-        int scelta = MyUtil.myMenu(leggi.getProva1().get(r).getDomanda(), leggi.getProva1().get(r).getOpzioni());
-        if (leggi.checkRispostaProva1(r, leggi.getProva1().get(r).getOpzioni()[scelta-1])) {
-            System.out.println("Risposta esatta!");
         }
-        else System.out.println("Risposta non esatta!");
+        System.out.println("Risposta corretta");
+
+
 
 
     }

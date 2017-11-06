@@ -36,12 +36,6 @@ public class LeggiProva {
         }
     }
 
-    public void aCaso() {
-        for (Quesito q : prova1) {
-            System.out.println(q.toStringProva1());
-        }
-    }
-
     public void leggiProva2() {
         String parola;
         try {
@@ -80,6 +74,51 @@ public class LeggiProva {
     public boolean checkRispostaProva1(int index, String risposta) {
         if (prova1.get(index).getRisposta().equalsIgnoreCase(risposta)) return true;
         return false;
+    }
+
+    public boolean checkRispostaProva2(int index, String risposta) {
+        if (prova2.get(index).getRisposta().equalsIgnoreCase(risposta)) return true;
+        return false;
+    }
+
+    public String nascondiCaratteri(int index) {
+        String risposta = prova2.get(index).getRisposta();
+        String t = "";
+        for (int i = 0; i < risposta.length(); i++) {
+            t += '_';
+        }
+        return t;
+    }
+
+    public String match(int index, String rispostaUtente, String caratteriNascosti) {
+        char[] risposta = prova2.get(index).getRisposta().toCharArray();
+        char[] rUtente = rispostaUtente.toCharArray();
+        char[] cNascosti = caratteriNascosti.toCharArray();
+        for (int i = 0; i < Math.min(risposta.length, rispostaUtente.length()); i++) {
+            if (rUtente[i] == risposta[i] && nUnderscore(String.valueOf(cNascosti)) > 2) cNascosti[i] = rUtente[i];
+        }
+        return String.valueOf(cNascosti);
+    }
+
+    public String match2(int index, String rispostaUtente, String ) {
+        String caratteriNascosti = nascondiCaratteri(index);
+        match(index, rispostaUtente, caratteriNascosti);
+    }
+
+    private int nUnderscore(String stringa) {
+        int k = 0;
+        for (int i = 0; i < stringa.length(); i++) {
+            if (stringa.charAt(i) == '_') k++;
+        }
+        return k;
+    }
+
+    public String stringaNascostaConSpazi(String nascosta) {
+        String t = "";
+        for (int i = 0; i < nascosta.length(); i++) {
+            t += nascosta.charAt(i) + " ";
+        }
+        return t;
     }
 
     public boolean checkRispostaProva3(int index, String risposta) {

@@ -24,16 +24,10 @@ public class Partita implements Serializable{
     }
 
 
-    public static void clearScreen() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
-
     public void gioca() {
         int nMosse = 0;
 
         while(true) {
-            clearScreen();
             System.out.println("\n\n\n\n");
             System.out.println(m.stampaMappa());
             System.out.println(giocatore.getChiavi().isEmpty() ? ("Nessuna chiave raccolta") : ("Chiavi in possesso: " + giocatore.getChiavi()));
