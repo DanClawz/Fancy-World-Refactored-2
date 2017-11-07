@@ -71,6 +71,7 @@ public class MyUtil {
     public static int randomInt(int min, int max) {
         Random r = new Random();
         int n= r.nextInt(max) + min;
+        System.out.println("massimo: " + max);
         return n ;
     }
 

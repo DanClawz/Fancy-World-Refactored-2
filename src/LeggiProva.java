@@ -100,11 +100,6 @@ public class LeggiProva {
         return String.valueOf(cNascosti);
     }
 
-    public String match2(int index, String rispostaUtente, String ) {
-        String caratteriNascosti = nascondiCaratteri(index);
-        match(index, rispostaUtente, caratteriNascosti);
-    }
-
     private int nUnderscore(String stringa) {
         int k = 0;
         for (int i = 0; i < stringa.length(); i++) {

@@ -5,9 +5,11 @@ public class Giocatore implements Serializable {
     private String nome;
     private ArrayList<Chiave> chiavi;
     private final static int MAX_CHIAVI = 5;
+    private int punteggio;
 
     public Giocatore() {
         chiavi = new ArrayList<Chiave>();
+        this.punteggio = 10;
     }
 
 
@@ -36,8 +38,13 @@ public class Giocatore implements Serializable {
 
 
 
+    public int getPunteggio() {
+        return punteggio;
+    }
 
-
+    public void setPunteggio(int punteggio) {
+        this.punteggio = punteggio;
+    }
 
     public ArrayList<Chiave> getChiavi() {
         return chiavi;
