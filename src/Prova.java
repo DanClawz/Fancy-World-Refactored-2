@@ -1,19 +1,22 @@
-public class Prova {
+import java.io.Serializable;
+
+public class Prova implements Serializable{
     private Coordinata c;
     private int tipo;
     private LeggiProva leggi;
     private int punteggio;
-    // costruttore
+
+
     public Prova(Coordinata c) {
         this.c = c;
         leggi = new LeggiProva();
-        //this.tipo = MyUtil.randomInt(1, 3);
-        this.tipo = 3;
+        this.tipo = MyUtil.randomInt(1, 3);
         this.punteggio = this.tipo*10;
         leggiProva();
+
     }
 
-    public void leggiProva() {
+    private void leggiProva() {
         switch(this.tipo) {
             case 1: leggi.leggiProva1(); break;
             case 2: leggi.leggiProva2(); break;
@@ -21,7 +24,7 @@ public class Prova {
         }
     }
 
-    public int prova1() {
+    private int prova1() {
         int tentativi = 2;
         int indiceDomanda = MyUtil.randomInt(0, leggi.getProva1().size()-1);
 
@@ -40,7 +43,7 @@ public class Prova {
         return -punteggio;
     }
 
-    public int prova2() {
+    private int prova2() {
         int tentativi = 15;
         int indiceParola = MyUtil.randomInt(0, leggi.getProva2().size()-1);
 
@@ -66,7 +69,7 @@ public class Prova {
         }
     }
 
-    public int prova3() {
+    private int prova3() {
         int tentativi = 3;
         int indiceRisposta = MyUtil.randomInt(0, leggi.getProva3().size()-1);
 
@@ -83,6 +86,18 @@ public class Prova {
         }
 
     }
+
+    public int prova() {
+        switch(this.tipo) {
+            case 1: return prova1();
+            case 2: return prova2();
+            case 3: return prova3();
+        }
+        return 0;
+    }
+
+
+
 
     public int getPunteggio() {
         return punteggio;
@@ -116,19 +131,24 @@ public class Prova {
         this.leggi = leggi;
     }
 
-    public static void main (String args[]) {
-        Prova p = new Prova(new Coordinata(0, 0));
-        /*int tentativi = 3;
-        LeggiProva leggi = new LeggiProva();
-        leggi.leggiProva3();
-        int r = MyUtil.randomInt(0, leggi.getProva3().size()-1);
-
-        while(!leggi.checkRispostaProva3(r, MyUtil.stringInput(leggi.getProva3().get(r).getDomanda())) && tentativi-- > 0) {
-            System.out.println("Risposta non corretta! Hai ancora " + tentativi + " tentativi a disposizione.");
-        }
-        System.out.println("Risposta corretta!");*/
-
-        System.out.println("Hai vinto " + p.prova3() + " punti");
+    @Override
+    public String toString() {
+        return "Tipo prova: " + this.tipo + " " + this.c;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Coordinata) {
+            Coordinata c = (Coordinata)o;
+            if (this.c.equals(c)) return true;
+        }
+        return false;
+    }
+
+    public static void main (String args[]) {
+        Prova p = new Prova(new Coordinata(0, 0));
+        Giocatore g = new Giocatore();
+        g.modificaPunteggio(p.prova());
+        System.out.println("Hai " + g.getPunteggio() + " punti");
+    }
 }

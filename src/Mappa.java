@@ -108,6 +108,20 @@ public class Mappa implements Serializable {
 
     }
 
+    public ArrayList<Prova> posizioniProve() {
+        ArrayList<Prova> prove = new ArrayList<Prova>();
+        for (int i = 0; i < NRIGHE; i++) {
+            for (int j = 0; j < NCOLONNE; j++) {
+                if (map[i][j] == '$') {
+                    Prova p = new Prova(new Coordinata(i, j));
+                    prove.add(p);
+                    map[i][j] = '.';
+                }
+            }
+        }
+        return prove;
+    }
+
     public Coordinata posizioneGoal() {
         for (int i = 0; i < NRIGHE; i++) {
             for (int j = 0; j < NCOLONNE; j++) {

@@ -29,6 +29,7 @@ public class Partita implements Serializable{
 
         while(true) {
             System.out.println("\n\n\n\n");
+            System.out.println("Punteggio: " + giocatore.getPunteggio());
             System.out.println(m.stampaMappa());
             System.out.println(giocatore.getChiavi().isEmpty() ? ("Nessuna chiave raccolta") : ("Chiavi in possesso: " + giocatore.getChiavi()));
 
@@ -85,8 +86,18 @@ public class Partita implements Serializable{
                 break;
             }
 
-            nMosse++;
+            if (m.getMondo().get(m.getPianoCorrente()-1).isProvaRaggiunta() && !m.getMondo().get(m.getPianoCorrente()-1).isProvaSostenuta()) {
+                if (MyUtil.controlledCharInput("Vuoi sostenere la prova?", 's', 'n') == 's') {
+                    int punti = m.getMondo().get(m.getPianoCorrente()-1).getProva().prova();
+                    if (punti > 0) m.getMondo().get(m.getPianoCorrente()-1).setProvaSostenuta(true);
+                    giocatore.modificaPunteggio(punti);
+                }
+            }
 
+
+
+
+            nMosse++;
             if (autoSave && nMosse == 5) {
                 salvaPartita();
                 nMosse = 0;

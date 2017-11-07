@@ -36,8 +36,7 @@ public class Mondo implements Serializable {
             mondo.get(pianoCorrente-1).setPassaggioRaggiunto(true);
             mondo.get(pianoCorrente-1).resetPassaggi();
             mondo.get(pianoCorrente-1).setChiaviDepositate();
-
-
+            mondo.get(pianoCorrente-1).setProvaSostenuta(false);
         }
 
         else if ((Passaggio.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio) && (input == 'u' && nuovoPiano <= pianoCorrente) || (input == 'd' && nuovoPiano >= pianoCorrente))) {
@@ -55,6 +54,7 @@ public class Mondo implements Serializable {
             pianoPartenza = Passaggio.pianoDestPassaggio(mondo.get(pianoCorrente-1).getLista_passaggi(), mondo.get(pianoCorrente-1).getPosCorrente());
             mondo.get(pianoCorrente-1).apriPassaggio(mondo.get(pianoPartenza-1).getPosCorrente(), true);        // apre il passaggio da b (destinazione) verso a (partenza)
         }
+
 
     }
 

@@ -36,6 +36,10 @@ public class Giocatore implements Serializable {
         return pesoTotale;
     }
 
+    public void modificaPunteggio(int punteggio) {
+        if (punteggio <= 0 || this.punteggio + punteggio < 0) this.punteggio = 0;
+        else this.punteggio += punteggio;
+    }
 
 
     public int getPunteggio() {

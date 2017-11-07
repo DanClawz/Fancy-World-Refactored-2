@@ -7,16 +7,18 @@ public class Luogo implements Serializable {
     private ArrayList<Passaggio> lista_passaggi;
     private char[][] mappa;
     private Mappa mappaIniziale;
-    private boolean passaggioRaggiunto, goalRaggiunto, chiavePresente;
+    private boolean passaggioRaggiunto, goalRaggiunto, chiavePresente, provaRaggiunta, provaSostenuta;
     private int piano;
     private String nomeLuogo;
     private boolean chiaveDepositata;
+    private ArrayList<Prova> prove;
 
     private ArrayList<Chiave> chiavi;
 
     public Luogo(String nomeFile, int piano) {
         this.piano = piano;
         this.nomeLuogo = nomeFile.split("_")[1];
+
         mappaIniziale = new Mappa(nomeFile);
         mappa = mappaIniziale.getMap();
         lista_passaggi = mappaIniziale.passaggi();
@@ -24,6 +26,7 @@ public class Luogo implements Serializable {
         start = mappaIniziale.posizioneIniziale();
         goal = mappaIniziale.posizioneGoal();
         chiavi = mappaIniziale.posizioniChiavi();
+        prove = mappaIniziale.posizioniProve();
 
 
         posCorrente = start;
@@ -31,6 +34,8 @@ public class Luogo implements Serializable {
         goalRaggiunto = false;
         chiavePresente = false;
         chiaveDepositata = false;
+        provaRaggiunta = false;
+        provaSostenuta = false;
     }
 
 
@@ -108,6 +113,10 @@ public class Luogo implements Serializable {
                 if (goal.equals(posNuova))
                     goalRaggiunto = true;
                 else goalRaggiunto = false;
+
+                if (isProvaPresente())
+                    provaRaggiunta = true;
+                else provaRaggiunta = false;
             }
         }
 
@@ -178,9 +187,44 @@ public class Luogo implements Serializable {
         }
     }
 
+    public Prova getProva() {
+        for (Prova p : prove) {
+            if (p.equals(posCorrente)) return p;
+        }
+        return null;
+    }
+
+    public boolean isProvaPresente() {
+        for (Prova p : prove) {
+            if (p.getC().equals(posCorrente)) return true;
+        }
+        return false;
+    }
 
 
+    public boolean isProvaSostenuta() {
+        return provaSostenuta;
+    }
 
+    public void setProvaSostenuta(boolean provaSostenuta) {
+        this.provaSostenuta = provaSostenuta;
+    }
+
+    public ArrayList<Prova> getProve() {
+        return prove;
+    }
+
+    public void setProve(ArrayList<Prova> prove) {
+        this.prove = prove;
+    }
+
+    public boolean isProvaRaggiunta() {
+        return provaRaggiunta;
+    }
+
+    public void setProvaRaggiunta(boolean provaRaggiunta) {
+        this.provaRaggiunta = provaRaggiunta;
+    }
 
     public boolean isChiaveDepositata() {
         return chiaveDepositata;

@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 
-public class LeggiProva {
+public class LeggiProva implements Serializable{
 
     private ArrayList<Quesito> prova1, prova2, prova3;
     private transient BufferedReader b;
