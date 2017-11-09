@@ -8,13 +8,15 @@ public class Mondo implements Serializable {
     private ArrayList<Luogo> mondo;
     private int pianoCorrente;
     private String nomeMondo;
+    private int id;
 
-    public Mondo(String nome) {
+    public Mondo(String nome, int id) {
         this.nomeMondo = nome;
+        this.id = id;
         mondo = new ArrayList<Luogo>();
         for (int i = 1; i <= NLUOGHI; i++) {
             String nomeFile = "";
-            nomeFile += "./src/Mappe/" + nome + "_luogo" + i;
+            nomeFile += "./src/Mappe/" + nome + "/" + nome + "_luogo" + i;
             mondo.add(new Luogo(nomeFile, i));
         }
         pianoCorrente = 1;  // ATTENZIONE AGLI INDICI!!!!!
@@ -91,7 +93,6 @@ public class Mondo implements Serializable {
     public void depositaChiave(Chiave chiave) {
         chiave.setPosChiave(mondo.get(pianoCorrente-1).getPosCorrente());
         mondo.get(pianoCorrente-1).aggiungiChiave(chiave);
-        //mondo.get(pianoCorrente-1).setChiavePresente(true);
         chiave.setDepositata(true);
     }
 
@@ -101,6 +102,14 @@ public class Mondo implements Serializable {
         return c;
     }
 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public static void main (String args[]) {
         /*int nuovoPiano = Passaggio.pianoDestPassaggio(mondo.get(pianoCorrente-1).getLista_passaggi(), mondo.get(pianoCorrente-1).getPosCorrente());

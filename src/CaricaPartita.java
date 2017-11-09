@@ -1,10 +1,15 @@
+import java.util.ArrayList;
+
 public class CaricaPartita {
 
     private ListaPartite partite;
-    private boolean isNuovaPartita;
+    private boolean isNuovaPartita, abilitaCambiaMondo;
+    private ArrayList<Mondo> mondi;
+    public static final int N_MONDI = 2;
 
     public CaricaPartita() {
         partite = LetturaScritturaPartita.leggi();
+        mondi = new ArrayList<Mondo>();
         menu();
         scegliPartita();
     }
@@ -20,9 +25,12 @@ public class CaricaPartita {
         while(true) {
             if (isNuovaPartita) {
                 id = generaId();
-                m = new Mondo("mondo1");
+                for (int i = 1; i <= N_MONDI; i++) {
+                    m = new Mondo("mondo" + i, i);
+                    mondi.add(m);
+                }
                 g = new Giocatore();
-                nome = MyUtil.stringInput("Inserisci nome salvataggio");
+                nome = MyUtil.stringInput("\nInserisci nome salvataggio");
                 autoSave = MyUtil.controlledCharInput("Abilitare autosalvataggio? [s-n]", 's', 'n') == 's' ? true : false;
                 break;
 
@@ -30,7 +38,7 @@ public class CaricaPartita {
             else if (!partite.getPartite().isEmpty()) {
                 id = sceltaUtente() - 1;
                 if(id < partite.getPartite().size()) {
-                    m = partite.getPartite().get(id).getM();
+                    mondi = partite.getPartite().get(id).getMondi();
                     g = partite.getPartite().get(id).getGiocatore();
                     nome = partite.getPartite().get(id).getNomePartita();
                     break;
@@ -44,8 +52,10 @@ public class CaricaPartita {
             }
         }
 
-        p = new Partita(id, nome, g, m);
+        p = new Partita(id, nome, g, mondi, menuSceltaMondo(), this.abilitaCambiaMondo);
         p.autoSalvataggio(autoSave);
+        p.salvaPartita();
+
         p.gioca();
     }
 
@@ -57,7 +67,7 @@ public class CaricaPartita {
         }
         opzioni[opzioni.length-1] = "Annulla";
 
-        return MyUtil.myMenu("Carica partita", opzioni);
+        return MyUtil.myMenu("\nCarica partita", opzioni);
 
     }
 
@@ -67,9 +77,17 @@ public class CaricaPartita {
     }
 
     public void menu() {
-        switch(MyUtil.myMenu("Gioca", "Nuova partita", "Carica partita")) {
+        switch(MyUtil.myMenu("\nGioca", "Nuova partita", "Carica partita")) {
             case 1: isNuovaPartita = true; break;
             case 2: isNuovaPartita = false; break;
+        }
+    }
+
+    public int menuSceltaMondo() {
+        switch(MyUtil.myMenu("\nScegli il mondo da giocare", "mondo1", "mondo2", "tutti")) {
+            case 1: abilitaCambiaMondo = false; return 1;
+            case 2: abilitaCambiaMondo = false; return 2;
+            default: abilitaCambiaMondo = true; return 0;
         }
     }
 

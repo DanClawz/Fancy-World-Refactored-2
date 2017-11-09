@@ -12,17 +12,27 @@ public class Partita implements Serializable{
     private Date date;
     private ListaPartite partite;
     private boolean autoSave;
+    private ArrayList<Mondo> mondi;
+    private boolean abilitaCambiaMondo;
 
-    public Partita(int id, String nomePartita, Giocatore giocatore, Mondo m) {
+    public Partita(int id, String nomePartita, Giocatore giocatore, ArrayList<Mondo> mondi, int scelta, boolean abilitaCambiaMondo) {
+        this.abilitaCambiaMondo = abilitaCambiaMondo;
         this.nomePartita = nomePartita;
-        this.m = m;
+        this.mondi = mondi;
+        this.m = mondi.get(scegliMondo(scelta));
         this.id = id;
         this.giocatore = giocatore;
         partite = LetturaScritturaPartita.leggi();
         date = new Date();
-        System.out.println(date);
     }
 
+
+    private int scegliMondo(int scelta) {
+        switch (scelta) {
+            case 0: return 0;
+            default: return scelta-1;
+        }
+    }
 
     public void gioca() {
         int nMosse = 0;
@@ -31,6 +41,16 @@ public class Partita implements Serializable{
             System.out.println("\n\n\n\n");
             System.out.println("Punteggio: " + giocatore.getPunteggio());
             System.out.println(m.stampaMappa());
+
+
+            if (m.getMondo().get(m.getPianoCorrente()-1).isProvaRaggiunta() && !m.getMondo().get(m.getPianoCorrente()-1).isProvaSostenuta()) {
+                if (MyUtil.controlledCharInput("Vuoi sostenere la prova?", 's', 'n') == 's') {
+                    int punti = m.getMondo().get(m.getPianoCorrente()-1).getProva().prova();
+                    if (punti > 0) m.getMondo().get(m.getPianoCorrente()-1).setProvaSostenuta(true);
+                    giocatore.modificaPunteggio(punti);
+                }
+            }
+
             System.out.println(giocatore.getChiavi().isEmpty() ? ("Nessuna chiave raccolta") : ("Chiavi in possesso: " + giocatore.getChiavi()));
 
             Chiave chiavePosCorrente = m.getMondo().get(m.getPianoCorrente()-1).getChiave(m.getMondo().get(m.getPianoCorrente()-1).getPosCorrente());
@@ -82,19 +102,12 @@ public class Partita implements Serializable{
 
             if (m.obbiettivoRaggiunto()) {
                 System.out.println(m.stampaMappa());
-                System.out.println("Hai vinto!");
-                break;
-            }
-
-            if (m.getMondo().get(m.getPianoCorrente()-1).isProvaRaggiunta() && !m.getMondo().get(m.getPianoCorrente()-1).isProvaSostenuta()) {
-                if (MyUtil.controlledCharInput("Vuoi sostenere la prova?", 's', 'n') == 's') {
-                    int punti = m.getMondo().get(m.getPianoCorrente()-1).getProva().prova();
-                    if (punti > 0) m.getMondo().get(m.getPianoCorrente()-1).setProvaSostenuta(true);
-                    giocatore.modificaPunteggio(punti);
+                if (abilitaCambiaMondo) cambiaMondo();
+                else {
+                    System.out.println("Obiettivo raggiunto!");
+                    break;
                 }
             }
-
-
 
 
             nMosse++;
@@ -104,6 +117,17 @@ public class Partita implements Serializable{
             }
         }
 
+    }
+
+    public void cambiaMondo() {
+        if (m.getId() < mondi.size()) {
+            if (MyUtil.controlledCharInput("\nHai completato questo mondo! Vuoi continuare con il mondo successivo? ", 's', 'n') == 's')
+                this.m = mondi.get(m.getId());
+        }
+        else {
+            System.out.println("Obiettivo raggiunto!");
+            System.exit(1);
+        }
     }
 
     public void autoSalvataggio(boolean autoSave) {
@@ -146,6 +170,21 @@ public class Partita implements Serializable{
         return nomePartita + ", " + String.valueOf(date);
     }
 
+    public boolean isAbilitaCambiaMondo() {
+        return abilitaCambiaMondo;
+    }
+
+    public void setAbilitaCambiaMondo(boolean abilitaCambiaMondo) {
+        this.abilitaCambiaMondo = abilitaCambiaMondo;
+    }
+
+    public ArrayList<Mondo> getMondi() {
+        return mondi;
+    }
+
+    public void setMondi(ArrayList<Mondo> mondi) {
+        this.mondi = mondi;
+    }
 
     public Giocatore getGiocatore() {
         return giocatore;
