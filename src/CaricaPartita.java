@@ -32,6 +32,7 @@ public class CaricaPartita {
                 g = new Giocatore();
                 nome = MyUtil.stringInput("\nInserisci nome salvataggio");
                 autoSave = MyUtil.controlledCharInput("Abilitare autosalvataggio? [s-n]", 's', 'n') == 's' ? true : false;
+                p = new Partita(id, nome, g, mondi, menuSceltaMondo(), this.abilitaCambiaMondo);
                 break;
 
             }
@@ -41,6 +42,7 @@ public class CaricaPartita {
                     mondi = partite.getPartite().get(id).getMondi();
                     g = partite.getPartite().get(id).getGiocatore();
                     nome = partite.getPartite().get(id).getNomePartita();
+                    p = new Partita(id, nome, g, mondi, partite.getPartite().get(id).getScelta(), this.abilitaCambiaMondo);
                     break;
                 }
                 else
@@ -52,7 +54,7 @@ public class CaricaPartita {
             }
         }
 
-        p = new Partita(id, nome, g, mondi, menuSceltaMondo(), this.abilitaCambiaMondo);
+
         p.autoSalvataggio(autoSave);
         p.salvaPartita();
 
@@ -83,12 +85,25 @@ public class CaricaPartita {
         }
     }
 
+
     public int menuSceltaMondo() {
-        switch(MyUtil.myMenu("\nScegli il mondo da giocare", "mondo1", "mondo2", "tutti")) {
-            case 1: abilitaCambiaMondo = false; return 1;
-            case 2: abilitaCambiaMondo = false; return 2;
-            default: abilitaCambiaMondo = true; return 0;
+        String[] opzioni = new String[mondi.size()+1];
+        for (int i = 0; i < mondi.size(); i++) {
+            opzioni[i] = mondi.get(i).getNomeMondo();
         }
+        opzioni[mondi.size()] = "tutti";
+
+        int input = MyUtil.myMenu("\nScegli il mondo da giocare", opzioni);
+
+        if (input < opzioni.length) {
+            abilitaCambiaMondo = false;
+            return input;
+        }
+        else {
+            abilitaCambiaMondo = true;
+            return 0;
+        }
+
     }
 
 

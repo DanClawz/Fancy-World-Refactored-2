@@ -1,4 +1,4 @@
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;
@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class MyUtil {
 
     private static Scanner input = new Scanner(System.in);
+    private static BufferedReader reader;
 
     static {
         input.useDelimiter(System.getProperty("line.separator"));
@@ -101,6 +102,22 @@ public class MyUtil {
         }
         System.out.println("-- Devi inserire una delle seguenti stringhe: " + Arrays.toString(opzioniArray) + " --");
         return controlledStringInput(MESSAGGIO, opzioni);
+    }
+
+    public static ArrayList<String> leggiFile(String nomeFile) {
+        ArrayList<String> stringhe = new ArrayList<String>();
+        try {
+            reader = new BufferedReader(new FileReader(new File(nomeFile)));
+            String stringa;
+            while((stringa = reader.readLine()) != null) {
+                stringhe.add(stringa);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return stringhe;
     }
 
 }

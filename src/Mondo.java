@@ -11,14 +11,16 @@ public class Mondo implements Serializable {
     private int id;
 
     public Mondo(String nome, int id) {
-        this.nomeMondo = nome;
+        ArrayList<String> parametri = MyUtil.leggiFile("./src/Mappe/" + nome + "/" + "nomi_luoghi");
+        this.nomeMondo = parametri.get(0);
         this.id = id;
         mondo = new ArrayList<Luogo>();
         for (int i = 1; i <= NLUOGHI; i++) {
             String nomeFile = "";
             nomeFile += "./src/Mappe/" + nome + "/" + nome + "_luogo" + i;
-            mondo.add(new Luogo(nomeFile, i));
+            mondo.add(new Luogo(nomeFile, i, parametri.get(i)));
         }
+
         pianoCorrente = 1;  // ATTENZIONE AGLI INDICI!!!!!
     }
 
@@ -102,6 +104,13 @@ public class Mondo implements Serializable {
         return c;
     }
 
+    public String getNomeMondo() {
+        return nomeMondo;
+    }
+
+    public void setNomeMondo(String nomeMondo) {
+        this.nomeMondo = nomeMondo;
+    }
 
     public int getId() {
         return id;

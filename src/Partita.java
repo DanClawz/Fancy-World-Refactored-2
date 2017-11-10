@@ -14,11 +14,13 @@ public class Partita implements Serializable{
     private boolean autoSave;
     private ArrayList<Mondo> mondi;
     private boolean abilitaCambiaMondo;
+    private int scelta;
 
     public Partita(int id, String nomePartita, Giocatore giocatore, ArrayList<Mondo> mondi, int scelta, boolean abilitaCambiaMondo) {
         this.abilitaCambiaMondo = abilitaCambiaMondo;
         this.nomePartita = nomePartita;
         this.mondi = mondi;
+        this.scelta = scelta;
         this.m = mondi.get(scegliMondo(scelta));
         this.id = id;
         this.giocatore = giocatore;
@@ -166,8 +168,16 @@ public class Partita implements Serializable{
             this.input = input.charAt(0);
     }
 
+    public int getScelta() {
+        return scelta;
+    }
+
+    public void setScelta(int scelta) {
+        this.scelta = scelta;
+    }
+
     public String toString() {
-        return nomePartita + ", " + String.valueOf(date);
+        return nomePartita + ", " + m.getNomeMondo() + ", " + String.valueOf(date);
     }
 
     public boolean isAbilitaCambiaMondo() {

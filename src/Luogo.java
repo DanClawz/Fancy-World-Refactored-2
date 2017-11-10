@@ -15,11 +15,14 @@ public class Luogo implements Serializable {
 
     private ArrayList<Chiave> chiavi;
 
-    public Luogo(String nomeFile, int piano) {
+    public Luogo(String nomeFile, int piano, String nomeLuogo) {
         this.piano = piano;
-        this.nomeLuogo = nomeFile.split("_")[1];
+        //this.nomeLuogo = nomeFile.split("_")[1];
+        this.nomeLuogo = nomeLuogo;
+
 
         mappaIniziale = new Mappa(nomeFile);
+
         mappa = mappaIniziale.getMap();
         lista_passaggi = mappaIniziale.passaggi();
         ostacoli = mappaIniziale.posizioneOstacoli();
