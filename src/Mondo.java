@@ -62,6 +62,15 @@ public class Mondo implements Serializable {
 
     }
 
+
+    public boolean isProvaPresente() {
+        for (Luogo l : mondo) {
+            if (!l.getProve().isEmpty()) return true;
+        }
+        return false;
+    }
+
+
     public boolean obbiettivoRaggiunto() {
         return mondo.get(pianoCorrente-1).isGoalRaggiunto();
     }

@@ -29,6 +29,9 @@ public class CaricaPartita {
                     m = new Mondo("mondo" + i, i);
                     mondi.add(m);
                 }
+
+
+
                 g = new Giocatore();
                 nome = MyUtil.stringInput("\nInserisci nome salvataggio");
                 autoSave = MyUtil.controlledCharInput("Abilitare autosalvataggio? [s-n]", 's', 'n') == 's' ? true : false;

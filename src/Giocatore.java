@@ -6,10 +6,18 @@ public class Giocatore implements Serializable {
     private ArrayList<Chiave> chiavi;
     private final static int MAX_CHIAVI = 5;
     private int punteggio;
+    private int punteggioVittoria;
 
     public Giocatore() {
         chiavi = new ArrayList<Chiave>();
         this.punteggio = 10;
+        this.punteggioVittoria = 100;
+    }
+
+    public Giocatore(int punteggioIniziale, int punteggioVittoria) {
+        chiavi = new ArrayList<Chiave>();
+        this.punteggio = punteggioIniziale;
+        this.punteggioVittoria = punteggioVittoria;
     }
 
 
@@ -41,6 +49,13 @@ public class Giocatore implements Serializable {
         else this.punteggio += punteggio;
     }
 
+    public int getPunteggioVittoria() {
+        return punteggioVittoria;
+    }
+
+    public void setPunteggioVittoria(int punteggioVittoria) {
+        this.punteggioVittoria = punteggioVittoria;
+    }
 
     public int getPunteggio() {
         return punteggio;

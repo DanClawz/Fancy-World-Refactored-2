@@ -6,6 +6,9 @@ public class Prova implements Serializable{
     private LeggiProva leggi;
     private int punteggio;
 
+    private int nProve;
+    private int punteggioMax;
+
 
     public Prova(Coordinata c) {
         this.c = c;
@@ -14,6 +17,21 @@ public class Prova implements Serializable{
         this.punteggio = this.tipo*10;
         leggiProva();
 
+    }
+
+    public Prova(Coordinata c, int nProve, int valoreProva) {
+        this.c = c;
+        leggi = new LeggiProva();
+        this.tipo = MyUtil.randomInt(1, nProve);
+        this.punteggio = valoreProva;
+        leggiProva();
+
+    }
+
+    private void inizializzaProva(int nProve) {
+        this.nProve = nProve;
+        this.tipo = MyUtil.randomInt(1, nProve);
+        leggiProva();
     }
 
     private void leggiProva() {
@@ -97,7 +115,22 @@ public class Prova implements Serializable{
     }
 
 
+    public int getPunteggioMax() {
+        return punteggioMax;
+    }
 
+    public void setPunteggioMax(int punteggioMax) {
+        this.punteggioMax = punteggioMax;
+    }
+
+    public int getnProve() {
+        return nProve;
+    }
+
+    public void setnProve(int nProve) {
+        inizializzaProva(nProve);
+
+    }
 
     public int getPunteggio() {
         return punteggio;

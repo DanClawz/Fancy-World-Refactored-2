@@ -104,12 +104,25 @@ public class Partita implements Serializable{
 
             if (m.obbiettivoRaggiunto()) {
                 System.out.println(m.stampaMappa());
-                if (abilitaCambiaMondo) cambiaMondo();
+
+                if (m.isProvaPresente()) {
+                    if (giocatore.getPunteggio() >= giocatore.getPunteggioVittoria()) {
+                        System.out.println("Obiettivo raggiunto!");
+
+                        if (abilitaCambiaMondo) cambiaMondo();
+                        else break;
+                    }
+                    else System.out.println("Devi raggiungere " + giocatore.getPunteggioVittoria() + " punti per vincere! Hai attualmente " + giocatore.getPunteggio() + " punti");
+                }
+
                 else {
                     System.out.println("Obiettivo raggiunto!");
-                    break;
+
+                    if (abilitaCambiaMondo) cambiaMondo();
+                    else break;
                 }
             }
+
 
 
             nMosse++;
@@ -127,7 +140,6 @@ public class Partita implements Serializable{
                 this.m = mondi.get(m.getId());
         }
         else {
-            System.out.println("Obiettivo raggiunto!");
             System.exit(1);
         }
     }

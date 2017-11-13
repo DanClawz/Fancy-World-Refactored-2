@@ -12,7 +12,6 @@ public class Luogo implements Serializable {
     private String nomeLuogo;
     private boolean chiaveDepositata;
     private ArrayList<Prova> prove;
-
     private ArrayList<Chiave> chiavi;
 
     public Luogo(String nomeFile, int piano, String nomeLuogo) {
