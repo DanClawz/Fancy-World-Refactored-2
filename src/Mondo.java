@@ -129,8 +129,9 @@ public class Mondo implements Serializable {
         this.id = id;
     }
 
-    public static void main (String args[]) {
-        /*int nuovoPiano = Passaggio.pianoDestPassaggio(mondo.get(pianoCorrente-1).getLista_passaggi(), mondo.get(pianoCorrente-1).getPosCorrente());
-        System.out.println(nuovoPiano);*/
+    @Override
+    public String toString() {
+        return "nome mondo:" + this.nomeMondo + "\n" +
+                "luoghi:" + mondo;
     }
 }

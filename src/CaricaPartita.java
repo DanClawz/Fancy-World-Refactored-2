@@ -30,11 +30,15 @@ public class CaricaPartita {
                     mondi.add(m);
                 }
 
-
-
                 g = new Giocatore();
                 nome = MyUtil.stringInput("\nInserisci nome salvataggio");
                 autoSave = MyUtil.controlledCharInput("Abilitare autosalvataggio? [s-n]", 's', 'n') == 's' ? true : false;
+
+                // configurazione mondi
+                for (int i = 0; i < mondi.size(); i++)
+                    if (MyUtil.controlledCharInput("Vuoi configurare " + mondi.get(i).getNomeMondo(), 's', 'n') == 's')
+                        new MondoConfig(mondi.get(i), g).menuConfigMondo();
+
                 p = new Partita(id, nome, g, mondi, menuSceltaMondo(), this.abilitaCambiaMondo);
                 break;
 

@@ -203,6 +203,12 @@ public class Luogo implements Serializable {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "nomeLuogo:" + this.nomeLuogo + "\n" +
+                "prove:" + this.prove + "\n" +
+                "chiavi:" + this.chiavi;
+    }
 
     public boolean isProvaSostenuta() {
         return provaSostenuta;

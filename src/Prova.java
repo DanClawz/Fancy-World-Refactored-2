@@ -12,9 +12,11 @@ public class Prova implements Serializable{
 
     public Prova(Coordinata c) {
         this.c = c;
+        this.nProve = 3;
         leggi = new LeggiProva();
         this.tipo = MyUtil.randomInt(1, 3);
         this.punteggio = this.tipo*10;
+        this.punteggioMax = 50;
         leggiProva();
 
     }
@@ -28,8 +30,7 @@ public class Prova implements Serializable{
 
     }
 
-    private void inizializzaProva(int nProve) {
-        this.nProve = nProve;
+    public void inizializzaProva() {
         this.tipo = MyUtil.randomInt(1, nProve);
         leggiProva();
     }
@@ -128,8 +129,8 @@ public class Prova implements Serializable{
     }
 
     public void setnProve(int nProve) {
-        inizializzaProva(nProve);
-
+        this.nProve = nProve;
+        inizializzaProva();
     }
 
     public int getPunteggio() {
@@ -166,7 +167,7 @@ public class Prova implements Serializable{
 
     @Override
     public String toString() {
-        return "Tipo prova: " + this.tipo + " " + this.c;
+        return "Tipo prova: " + this.tipo + ", punteggio:" + this.punteggio + ", pMax:" + this.punteggioMax + ", nProve: " + this.nProve;
     }
 
     @Override

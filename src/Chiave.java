@@ -7,11 +7,20 @@ public class Chiave implements Serializable {
     private int passaggioDaAprire;
     private boolean depositata;
     private int peso;
+    private int pesoMax;
+    private int nTipiChiave;
+
+    private String[] tipiChiave;
+    private int[] pesiChiave;
 
 
     public Chiave(Coordinata posChiave) {
         this.posChiave = posChiave;
         this.depositata = false;
+        this.pesoMax = 25;
+        this.nTipiChiave = 10;
+        this.tipiChiave = new String[]{"legno", "ferro", "bronzo", "argento", "oro", "titanite", "cristallo", "diamante", "vibranio", "misteriosa"};
+        this.pesiChiave = new int[]{2, 4, 6, 8, 10, 13, 16, 19, 22, 25};
     }
 
     public int getPassaggioDaAprire() {
@@ -19,18 +28,22 @@ public class Chiave implements Serializable {
     }
 
     public void setPassaggioDaAprire(char tipo) {
-        switch(tipo) {
-            case 'l': this.tipoChiave = "legno"; this.passaggioDaAprire = 3; this.peso = 2; break;
-            case 'f': this.tipoChiave = "ferro"; this.passaggioDaAprire = 4; this.peso = 4; break;
-            case 'b': this.tipoChiave = "bronzo"; this.passaggioDaAprire = 5; this.peso = 6; break;
-            case 'a': this.tipoChiave = "argento"; this.passaggioDaAprire = 6; this.peso = 8; break;
-            case 'o': this.tipoChiave = "oro"; this.passaggioDaAprire = 7; this.peso = 10; break;
-            case 't': this.tipoChiave = "titanite"; this.passaggioDaAprire = 8; this.peso = 13; break;
-            case 'c': this.tipoChiave = "cristallo"; this.passaggioDaAprire = 9; this.peso = 16; break;
-            case 'd': this.tipoChiave = "diamante"; this.passaggioDaAprire = 10; this.peso = 19; break;
-            case 'v': this.tipoChiave = "vibranio"; this.passaggioDaAprire = 11; this.peso = 22; break;
-            case 'm': this.tipoChiave = "misteriosa"; this.passaggioDaAprire = 12; this.peso = 25; break;
+        Character[] tipoInput = new Character[]{'l', 'f', 'b', 'a', 'o', 't', 'c', 'd', 'v', 'm'};
+
+        for (int i = 0; i < tipoInput.length; i++) {
+            if (tipo == tipoInput[i]) {
+                this.tipoChiave = tipiChiave[i];
+                this.passaggioDaAprire = i+3;
+                this.peso = pesiChiave[i];
+                break;
+            }
         }
+    }
+
+    public void setPesi(int index, int peso) {
+        this.pesiChiave[index] = peso;
+        this.peso = peso;
+
     }
 
     public static boolean isChiavePresente(ArrayList<Chiave> chiavi, Coordinata coordinata) {
@@ -66,6 +79,38 @@ public class Chiave implements Serializable {
         return "Chiave di " + this.tipoChiave + ", peso: " + this.peso;
     }
 
+
+    public String[] getTipiChiave() {
+        return tipiChiave;
+    }
+
+    public void setTipiChiave(String[] tipiChiave) {
+        this.tipiChiave = tipiChiave;
+    }
+
+    public int[] getPesiChiave() {
+        return pesiChiave;
+    }
+
+    public void setPesiChiave(int[] pesiChiave) {
+        this.pesiChiave = pesiChiave;
+    }
+
+    public int getnTipiChiave() {
+        return nTipiChiave;
+    }
+
+    public void setnTipiChiave(int nTipiChiave) {
+        this.nTipiChiave = nTipiChiave;
+    }
+
+    public int getPesoMax() {
+        return pesoMax;
+    }
+
+    public void setPesoMax(int pesoMax) {
+        this.pesoMax = pesoMax;
+    }
 
     public int getPeso() {
         return peso;

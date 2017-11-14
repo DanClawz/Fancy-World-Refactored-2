@@ -4,18 +4,21 @@ import java.util.ArrayList;
 public class Giocatore implements Serializable {
     private String nome;
     private ArrayList<Chiave> chiavi;
-    private final static int MAX_CHIAVI = 5;
+    private int maxNumChiavi;
     private int punteggio;
     private int punteggioVittoria;
+    private int capacitaInventario;
 
     public Giocatore() {
         chiavi = new ArrayList<Chiave>();
         this.punteggio = 10;
         this.punteggioVittoria = 100;
+        this.capacitaInventario = 50;
+        this.maxNumChiavi = 5;
     }
 
     public Giocatore(int punteggioIniziale, int punteggioVittoria) {
-        chiavi = new ArrayList<Chiave>();
+        this.chiavi = new ArrayList<Chiave>();
         this.punteggio = punteggioIniziale;
         this.punteggioVittoria = punteggioVittoria;
     }
@@ -31,7 +34,7 @@ public class Giocatore implements Serializable {
     }
 
     public boolean checkChiaveRaccoglibile(Chiave c) {
-        if (this.chiavi.size() < MAX_CHIAVI && pesoTotaleChiavi() + c.getPeso() <= 50)
+        if (this.chiavi.size() < maxNumChiavi && pesoTotaleChiavi() + c.getPeso() <= this.capacitaInventario)
             return true;
         return false;
     }
@@ -47,6 +50,27 @@ public class Giocatore implements Serializable {
     public void modificaPunteggio(int punteggio) {
         if (punteggio <= 0 || this.punteggio + punteggio < 0) this.punteggio = 0;
         else this.punteggio += punteggio;
+    }
+
+    @Override
+    public String toString() {
+        return "punteggio:" + this.punteggio + ", pVittoria: " + this.punteggioVittoria;
+    }
+
+    public int getMaxNumChiavi() {
+        return maxNumChiavi;
+    }
+
+    public void setMaxNumChiavi(int maxNumChiavi) {
+        this.maxNumChiavi = maxNumChiavi;
+    }
+
+    public int getCapacitaInventario() {
+        return capacitaInventario;
+    }
+
+    public void setCapacitaInventario(int capacitaInventario) {
+        this.capacitaInventario = capacitaInventario;
     }
 
     public int getPunteggioVittoria() {
