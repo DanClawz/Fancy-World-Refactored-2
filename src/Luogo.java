@@ -68,7 +68,7 @@ public class Luogo implements Serializable {
     public void muovi(Coordinata posNew) {
         if (Passaggio.compareListaPassaggi(lista_passaggi, posCorrente)) mappa[posCorrente.getX()][posCorrente.getY()] = '○';
         else if (!chiavi.isEmpty() && Chiave.isChiavePresente(chiavi, posCorrente)) mappa[posCorrente.getX()][posCorrente.getY()] = '¶';
-        else if (goal.equals(posCorrente)) mappa[posCorrente.getX()][posCorrente.getY()] = 'X';
+        else if (goal.equals(posCorrente)) mappa[posCorrente.getX()][posCorrente.getY()] = '⌂';
         else mappa[posCorrente.getX()][posCorrente.getY()] = '.';
         mappa[posNew.getX()][posNew.getY()] = '●';
         this.posCorrente = posNew;
@@ -208,6 +208,12 @@ public class Luogo implements Serializable {
         return "nomeLuogo:" + this.nomeLuogo + "\n" +
                 "prove:" + this.prove + "\n" +
                 "chiavi:" + this.chiavi;
+    }
+
+
+    public void setGoal(Coordinata goal) {
+        this.goal = goal;
+        this.mappa[goal.getX()][goal.getY()] = '⌂';
     }
 
     public boolean isProvaSostenuta() {

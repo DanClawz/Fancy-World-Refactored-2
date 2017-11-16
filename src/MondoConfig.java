@@ -29,7 +29,7 @@ public class MondoConfig {
                     "Procedi"
             )) {
 
-                case 1: break;
+                case 1: nTipiChiavi(); break;
                 case 2: pesoMaxChiavi(); break;
                 case 3: pesoChiave(); break;
                 case 4: numMaxChiavi(); break;
@@ -55,7 +55,6 @@ public class MondoConfig {
         giocatore.setPunteggioVittoria(MyUtil.controlledIntInput("Inserisci il punteggio vittoria", giocatore.getPunteggio(), Integer.MAX_VALUE));
         System.out.println(giocatore);
     }
-
 
     public void nTipologieProve() {
         if (!mondo.isProvaPresente()) {
@@ -162,6 +161,27 @@ public class MondoConfig {
         giocatore.setCapacitaInventario(MyUtil.controlledIntInput("Inserisci il max peso delle chiavi possedute contemporaneamente", 2, Integer.MAX_VALUE));
     }
 
+    public void nTipiChiavi() {
+        int input = MyUtil.controlledIntInput("Inserisci quanti tipi di chiavi possono essere presenti nel mondo (questo influenzera' il numero di luoghi giocabili)", 0, 10);
+        int pianoMax = input+2;
+        Coordinata g = mondo.getMondo().get(mondo.getMondo().size()-1).getGoal();
+        mondo.getMondo().get(input+1).setGoal(g);
+        for (int j = 0; j < mondo.getMondo().size(); j++) {
+            for (int i = 0; i < mondo.getMondo().get(j).getLista_passaggi().size(); i++) {
+                /*if (mondo.getMondo().get(input+1).getLista_passaggi().get(i).getDest() > pianoMax) {
+                    mondo.getMondo().get(input+1).getLista_passaggi().get(i).setDest(input+1);
+                }*/
+
+                if (mondo.getMondo().get(j).getLista_passaggi().get(i).getDest() > pianoMax) {
+                    mondo.getMondo().get(j).getLista_passaggi().get(i).setDest(j+1);
+                    mondo.getMondo().get(j).getLista_passaggi().get(i).setAperto(true);
+                }
+
+            }
+        }
+
+    }
+
 
 
 
@@ -180,10 +200,7 @@ public class MondoConfig {
     public void setGiocatore(Giocatore giocatore) {
         this.giocatore = giocatore;
     }
-
-    public void returnMondo() {
-
-    }
+    
 
     public static void main(String args[]) {
 
