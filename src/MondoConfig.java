@@ -200,7 +200,7 @@ public class MondoConfig {
     public void setGiocatore(Giocatore giocatore) {
         this.giocatore = giocatore;
     }
-    
+
 
     public static void main(String args[]) {
 

@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b18cba1c-0bc8-48ad-b171-f2b178c4ae10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chiave.java" afterPath="$PROJECT_DIR$/src/Chiave.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Luogo.java" afterPath="$PROJECT_DIR$/src/Luogo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MondoConfig.java" afterPath="$PROJECT_DIR$/src/MondoConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Saves/saves.txt" afterPath="$PROJECT_DIR$/src/Saves/saves.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/src/MondoConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1326">
-              <caret line="202" column="4" lean-forward="false" selection-start-line="202" selection-start-column="4" selection-end-line="202" selection-end-column="4" />
+              <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
               <folding>
                 <element signature="method#punteggioIniziale#0;class#MondoConfig#0" expanded="false" />
                 <element signature="method#punteggioVittoria#0;class#MondoConfig#0" expanded="false" />
@@ -461,7 +458,7 @@
       <workItem from="1510575875424" duration="791000" />
       <workItem from="1510576996264" duration="6492000" />
       <workItem from="1510653811619" duration="13650000" />
-      <workItem from="1510827105583" duration="3802000" />
+      <workItem from="1510827105583" duration="4146000" />
     </task>
     <task id="LOCAL-00001" summary="Da fare:&#10;- classe Coordinata&#10;- iniziare classe Luogo&#10;- sistemare classe Mappa">
       <created>1506604619447</created>
@@ -715,11 +712,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510672838244</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Da fare:&#10;- mettere a posto output&#10;- fare le mappe&#10;- dare nomi sensati ai luoghi e mappe&#10;- controllo generale programma">
+      <created>1510831185881</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1510831185881</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249822000" />
+    <option name="totallyTimeSpent" value="250166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="135" y="186" width="1922" height="1053" extended-state="6" />
@@ -773,7 +777,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Da fare:&#10;- preparare ancora Release 1 per Release 2&#10;- I DANNATI PASSAGGI!!!" />
     <MESSAGE value="Da fare:&#10;- preparare ancora Release 1 per Release 2" />
     <MESSAGE value="Da fare:&#10;- commit stupido" />
     <MESSAGE value="Da fare:&#10;- cose" />
@@ -798,7 +801,8 @@
     <MESSAGE value="Da fare:&#10;- progettare release 5" />
     <MESSAGE value="Da fare:&#10;- fare opzioni MenuConfigMondo&#10;- finire Release 5&#10;- ricontrollare parametrizzazione Prova" />
     <MESSAGE value="Da fare:&#10;- finire MondoConfig&#10;- ricontrollare release 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Da fare:&#10;- finire MondoConfig&#10;- ricontrollare release 5" />
+    <MESSAGE value="Da fare:&#10;- mettere a posto output&#10;- fare le mappe&#10;- dare nomi sensati ai luoghi e mappe&#10;- controllo generale programma" />
+    <option name="LAST_COMMIT_MESSAGE" value="Da fare:&#10;- mettere a posto output&#10;- fare le mappe&#10;- dare nomi sensati ai luoghi e mappe&#10;- controllo generale programma" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1131,7 +1135,7 @@
     <entry file="file://$PROJECT_DIR$/src/MondoConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
-          <caret line="202" column="4" lean-forward="false" selection-start-line="202" selection-start-column="4" selection-end-line="202" selection-end-column="4" />
+          <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
           <folding>
             <element signature="method#punteggioIniziale#0;class#MondoConfig#0" expanded="false" />
             <element signature="method#punteggioVittoria#0;class#MondoConfig#0" expanded="false" />
