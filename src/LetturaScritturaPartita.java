@@ -33,7 +33,7 @@ public class LetturaScritturaPartita implements Serializable {
         }catch(ClassNotFoundException e) {
             //...
         }catch(IOException e) {
-            System.out.println("\nNon legge !!!\n");
+            System.out.println("\nNessun salvataggio presente!\n");
         }
         return partite;
     }

@@ -79,6 +79,10 @@ public class Chiave implements Serializable {
         return "Chiave di " + this.tipoChiave + ", peso: " + this.peso;
     }
 
+    public void setPesoIndice(int indice) {
+
+    }
+
 
     public String[] getTipiChiave() {
         return tipiChiave;
@@ -118,6 +122,11 @@ public class Chiave implements Serializable {
 
     public void setPeso(int peso) {
         this.peso = peso;
+        System.out.println(this.peso);
+    }
+
+    public void setPesoIndice(int peso, int indice) {
+        pesiChiave[indice] = peso;
     }
 
     public boolean isDepositata() {
