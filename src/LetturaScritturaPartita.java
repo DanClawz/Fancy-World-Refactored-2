@@ -5,7 +5,7 @@ public class LetturaScritturaPartita implements Serializable {
 
     public static void scrivi(ListaPartite p) {
         try {
-            FileOutputStream file=new FileOutputStream("./src/Saves/saves.txt");
+            FileOutputStream file=new FileOutputStream("./src/saves.txt");
             ObjectOutputStream fOut= new ObjectOutputStream(file);
             fOut.writeObject(p);
             fOut.close();
@@ -18,7 +18,7 @@ public class LetturaScritturaPartita implements Serializable {
     public static ListaPartite leggi() {
         ListaPartite partite = new ListaPartite();
         try {
-            FileInputStream file=new FileInputStream("./src/Saves/saves.txt");
+            FileInputStream file=new FileInputStream("./src/saves.txt");
             ObjectInputStream fIn= new ObjectInputStream(file);
             boolean endFile=false;
             while(!endFile) {
