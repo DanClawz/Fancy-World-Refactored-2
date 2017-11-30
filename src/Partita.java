@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -41,7 +42,7 @@ public class Partita implements Serializable{
 
         while(true) {
             System.out.println("\n\n\n\n");
-            System.out.println("Punteggio: " + giocatore.getPunteggio());
+
             System.out.println(m.stampaMappa());
 
 
@@ -53,6 +54,7 @@ public class Partita implements Serializable{
                 }
             }
 
+            System.out.println("Punteggio: " + giocatore.getPunteggio());
             System.out.println(giocatore.getChiavi().isEmpty() ? ("Nessuna chiave raccolta") : ("Chiavi in possesso: " + giocatore.getChiavi()));
 
             Chiave chiavePosCorrente = m.getMondo().get(m.getPianoCorrente()-1).getChiave(m.getMondo().get(m.getPianoCorrente()-1).getPosCorrente());
@@ -189,7 +191,8 @@ public class Partita implements Serializable{
     }
 
     public String toString() {
-        return nomePartita + ", " + m.getNomeMondo() + ", " + String.valueOf(date);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy, HH:mm");
+        return nomePartita + ", " + m.getNomeMondo() + ", " + String.valueOf(sdf.format(date));
     }
 
     public boolean isAbilitaCambiaMondo() {

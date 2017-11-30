@@ -14,6 +14,14 @@ public class CaricaPartita {
         scegliPartita();
     }
 
+    public CaricaPartita(boolean isNuovaPartita) {
+        this.isNuovaPartita = isNuovaPartita;
+        partite = LetturaScritturaPartita.leggi();
+        mondi = new ArrayList<Mondo>();
+
+        scegliPartita();
+    }
+
     public void scegliPartita() {
         Partita p = null;
         Mondo m = null;
@@ -23,7 +31,7 @@ public class CaricaPartita {
         boolean autoSave = true;
 
         while(true) {
-            if (isNuovaPartita) {
+            if (isNuovaPartita || (!isNuovaPartita && partite.getPartite().isEmpty()) ) {
                 id = generaId();
                 for (int i = 1; i <= N_MONDI; i++) {
                     m = new Mondo("mondo" + i, i);
@@ -53,17 +61,14 @@ public class CaricaPartita {
                     break;
                 }
                 else
-                    menu();
-            }
-            else {
-                System.out.println("Non ci sono salvataggi!");
-                menu();
+                    break;
             }
         }
 
 
         p.autoSalvataggio(autoSave);
         p.salvaPartita();
+
 
         p.gioca();
     }
@@ -86,10 +91,14 @@ public class CaricaPartita {
     }
 
     public void menu() {
-        switch(MyUtil.myMenu("\nGioca", "Nuova partita", "Carica partita")) {
-            case 1: isNuovaPartita = true; break;
-            case 2: isNuovaPartita = false; break;
+        boolean menu = true;
+        while(menu) {
+            switch(MyUtil.myMenu("\nGioca", "Nuova partita", "Carica partita")) {
+                case 1: isNuovaPartita = true; break;
+                case 2: isNuovaPartita = false; break;
+            }
         }
+
     }
 
 
@@ -113,5 +122,7 @@ public class CaricaPartita {
 
     }
 
-
+    public void setNuovaPartita(boolean nuovaPartita) {
+        isNuovaPartita = nuovaPartita;
+    }
 }

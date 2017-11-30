@@ -122,7 +122,6 @@ public class Chiave implements Serializable {
 
     public void setPeso(int peso) {
         this.peso = peso;
-        System.out.println(this.peso);
     }
 
     public void setPesoIndice(int peso, int indice) {
