@@ -2,8 +2,8 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Mappa implements Serializable {
-    static final int NRIGHE = 5;
-    static final int NCOLONNE = 10;
+    static final int NRIGHE = 15;
+    static final int NCOLONNE = 50;
     private transient BufferedReader b;
     private String mappa = "";
     private char[][] map = {};
