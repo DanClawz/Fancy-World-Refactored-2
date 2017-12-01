@@ -19,7 +19,7 @@ public class Chiave implements Serializable {
         this.depositata = false;
         this.pesoMax = 25;
         this.nTipiChiave = 10;
-        this.tipiChiave = new String[]{"legno", "ferro", "bronzo", "argento", "oro", "titanite", "cristallo", "diamante", "vibranio", "merda"};
+        this.tipiChiave = new String[]{"legno", "ferro", "bronzo", "argento", "oro", "titanite", "cristallo", "diamante", "vibranio", "misteriosa"};
         this.pesiChiave = new int[]{2, 4, 6, 8, 10, 13, 16, 19, 22, 25};
     }
 
@@ -76,7 +76,7 @@ public class Chiave implements Serializable {
 
     @Override
     public String toString() {
-        return "Chiave di " + this.tipoChiave + ", peso: " + this.peso;
+        return "Chiave " + (!this.tipoChiave.equals("misteriosa") ? "di " : "") + this.tipoChiave + ", peso: " + this.peso;
     }
 
     public void setPesoIndice(int indice) {
