@@ -46,10 +46,10 @@ public class Partita implements Serializable{
             System.out.println(m.stampaMappa());
 
 
-            if (m.getMondo().get(m.getPianoCorrente()-1).isProvaRaggiunta() && !m.getMondo().get(m.getPianoCorrente()-1).isProvaSostenuta()) {
+            if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isProvaRaggiunta() && !m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isProvaSostenuta()) {
                 if (MyUtil.controlledCharInput("Vuoi sostenere la prova?", 's', 'n') == 's') {
-                    int punti = m.getMondo().get(m.getPianoCorrente()-1).getProva().prova();
-                    if (punti > 0) m.getMondo().get(m.getPianoCorrente()-1).setProvaSostenuta(true);
+                    int punti = m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getProva().prova();
+                    if (punti > 0) m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).setProvaSostenuta(true);
                     giocatore.modificaPunteggio(punti);
                 }
             }
@@ -57,9 +57,9 @@ public class Partita implements Serializable{
             System.out.println("Punteggio: " + giocatore.getPunteggio());
             System.out.println(giocatore.getChiavi().isEmpty() ? ("Nessuna chiave raccolta") : ("Chiavi in possesso: " + giocatore.getChiavi()));
 
-            Chiave chiavePosCorrente = m.getMondo().get(m.getPianoCorrente()-1).getChiave(m.getMondo().get(m.getPianoCorrente()-1).getPosCorrente());
+            Chiave chiavePosCorrente = m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getChiave(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getPosCorrente());
 
-            if (m.getMondo().get(m.getPianoCorrente()-1).isChiavePresente() && !chiavePosCorrente.isDepositata()) {    // controllo: se la chiave e' presente e se e' depositata
+            if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isChiavePresente() && !chiavePosCorrente.isDepositata()) {    // controllo: se la chiave e' presente e se e' depositata
                 System.out.println(chiavePosCorrente);
                 if (MyUtil.controlledCharInput("Vuoi raccogliere la chiave? [s-n]", 's', 'n') == 's' && giocatore.checkChiaveRaccoglibile(chiavePosCorrente)) {
                     Chiave c = m.raccogliChiave();
@@ -68,14 +68,14 @@ public class Partita implements Serializable{
                 }
 
                 else System.out.println("La chiave non può essere raccolta! Numero chiavi in possesso: " + giocatore.getChiavi().size() + ", Peso chiavi corrente: " + giocatore.pesoTotaleChiavi());
-                m.getMondo().get(m.getPianoCorrente()-1).setChiavePresente(false);
+                m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).setChiavePresente(false);
             }
 
             String in = MyUtil.stringInput("Dove vuoi muoverti? [n-s-e-w-u-d][x per depositare una chiave][q per uscire]: ");
             checkInput(in);
 
             if(input == 'n' || input == 's' || input == 'e' || input == 'w')
-                m.getMondo().get(m.getPianoCorrente()-1).aggiornaMappa(input);
+                m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).aggiornaMappa(input);
             else if (input == 'u' || input == 'd')
                 m.cambioLuogo(input, giocatore.getChiavi());
             else if (input == 'x') {
@@ -84,7 +84,7 @@ public class Partita implements Serializable{
                     int i = MyUtil.myMenu("Scegli la chiave da depositare: ", opzioniDeposita(giocatore.getChiavi()));
                     if (i != opzioniDeposita(giocatore.getChiavi()).length) {
                         Chiave chiaveNuova = giocatore.getChiavi().get(i-1);
-                        if(m.getMondo().get(m.getPianoCorrente()-1).posLibera(chiaveNuova)) {
+                        if(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).posLibera(chiaveNuova)) {
                             m.depositaChiave(chiaveNuova); // aggiunge la chiave dalla mappa
                             giocatore.rimuoviChiave(chiaveNuova);    // rimuove la chiave dalla lista chiavi del giocatore
                             System.out.println("Chiave depositata!");
@@ -100,8 +100,8 @@ public class Partita implements Serializable{
                 System.exit(1);
             }
 
-            if (m.getMondo().get(m.getPianoCorrente()-1).isPassaggioRaggiunto())
-                System.out.println("Il passaggio ti porta verso: luogo" + Passaggio.pianoDestPassaggio(m.getMondo().get(m.getPianoCorrente()-1).getLista_passaggi(), m.getMondo().get(m.getPianoCorrente()-1).getPosCorrente()));
+            if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isPassaggioRaggiunto())
+                System.out.println("Il passaggio ti porta verso: luogo" + Passaggio.pianoDestPassaggio(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getLista_passaggi(), m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getPosCorrente()));
 
 
             if (m.obbiettivoRaggiunto()) {

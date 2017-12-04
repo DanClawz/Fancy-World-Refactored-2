@@ -44,6 +44,7 @@ public class Prova implements Serializable{
     }
 
     private int prova1() {
+        System.out.println("\nDomanda a risposta chiusa");
         int tentativi = 2;
         int indiceDomanda = MyUtil.randomInt(0, leggi.getProva1().size()-1);
 
@@ -63,6 +64,7 @@ public class Prova implements Serializable{
     }
 
     private int prova2() {
+        System.out.println("\nIndovina la parola");
         int tentativi = 15;
         int indiceParola = MyUtil.randomInt(0, leggi.getProva2().size()-1);
 
@@ -89,6 +91,7 @@ public class Prova implements Serializable{
     }
 
     private int prova3() {
+        System.out.println("\nIndovinello");
         int tentativi = 3;
         int indiceRisposta = MyUtil.randomInt(0, leggi.getProva3().size()-1);
 

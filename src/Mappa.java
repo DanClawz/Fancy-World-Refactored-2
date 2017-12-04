@@ -86,6 +86,20 @@ public class Mappa implements Serializable {
                     p.get(p.size()-1).assegnaTipoPassaggio();
                     map[i][j] = '○';
                 }
+                else if (Character.isLetter(map[i][j])) {
+                    switch(map[i][j]) {
+                        case 'Q': p.add(new Passaggio(new Coordinata(i, j), 10, true));
+                                p.get(p.size()-1).assegnaTipoPassaggio();
+                                map[i][j] = '○';break;
+                        case 'W': p.add(new Passaggio(new Coordinata(i, j), 11, true));
+                                p.get(p.size()-1).assegnaTipoPassaggio();
+                                map[i][j] = '○';break;
+                        case 'E': p.add(new Passaggio(new Coordinata(i, j), 12, true));
+                                p.get(p.size()-1).assegnaTipoPassaggio();
+                                map[i][j] = '○';break;
+                    }
+
+                }
             }
         }
 
@@ -96,7 +110,7 @@ public class Mappa implements Serializable {
         ArrayList<Chiave> c = new ArrayList<Chiave>();
         for (int i = 0; i < NRIGHE; i++) {
             for (int j = 0; j < NCOLONNE; j++) {
-                if (Character.isLetter(map[i][j])) {
+                if (Character.isLetter(map[i][j]) && (map[i][j]!='Q' && map[i][j]!='W' && map[i][j]!='E')) {
                     Chiave t = new Chiave(new Coordinata(i, j));
                     t.setPassaggioDaAprire(Character.toLowerCase(map[i][j]));
                     c.add(t);

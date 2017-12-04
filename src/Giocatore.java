@@ -48,7 +48,7 @@ public class Giocatore implements Serializable {
     }
 
     public void modificaPunteggio(int punteggio) {
-        if (punteggio <= 0 || this.punteggio + punteggio < 0) this.punteggio = 0;
+        if (this.punteggio + punteggio < 0) this.punteggio = 0;
         else this.punteggio += punteggio;
     }
 
