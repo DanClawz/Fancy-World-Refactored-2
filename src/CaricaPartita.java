@@ -39,7 +39,8 @@ public class CaricaPartita {
                 }
 
                 g = new Giocatore();
-                nome = MyUtil.stringInput("\nInserisci nome salvataggio");
+                if (MyUtil.controlledCharInput("\nVuoi fare il tutorial? [s-n]", 's', 'n') == 's') new Partita(new Giocatore(0, 10), new Mondo("tutorial", 99));
+                nome = MyUtil.stringInputNonVuoto("\nInserisci nome salvataggio");
                 autoSave = MyUtil.controlledCharInput("Abilitare autosalvataggio? [s-n]", 's', 'n') == 's' ? true : false;
 
                 // configurazione mondi
@@ -57,6 +58,7 @@ public class CaricaPartita {
                     mondi = partite.getPartite().get(id).getMondi();
                     g = partite.getPartite().get(id).getGiocatore();
                     nome = partite.getPartite().get(id).getNomePartita();
+                    this.abilitaCambiaMondo = partite.getPartite().get(id).isAbilitaCambiaMondo();
                     p = new Partita(id, nome, g, mondi, partite.getPartite().get(id).getScelta(), this.abilitaCambiaMondo);
                     break;
                 }
@@ -75,11 +77,9 @@ public class CaricaPartita {
 
     public int sceltaUtente() {
 
-        String[] opzioni = new String[partite.getPartite().size()+1];
-        for (int i = 0; i < partite.getPartite().size(); i++) {
+        String[] opzioni = new String[partite.getPartite().size()];
+        for (int i = 0; i < partite.getPartite().size(); i++)
             opzioni[i] = partite.getPartite().get(i).toString();
-        }
-        opzioni[opzioni.length-1] = "Annulla";
 
         return MyUtil.myMenu("\nCarica partita", opzioni);
 
@@ -112,11 +112,11 @@ public class CaricaPartita {
         int input = MyUtil.myMenu("\nScegli il mondo da giocare", opzioni);
 
         if (input < opzioni.length) {
-            abilitaCambiaMondo = false;
+            this.abilitaCambiaMondo = false;
             return input;
         }
         else {
-            abilitaCambiaMondo = true;
+            this.abilitaCambiaMondo = true;
             return 0;
         }
 

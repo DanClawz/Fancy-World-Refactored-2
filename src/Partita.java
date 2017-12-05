@@ -27,6 +27,15 @@ public class Partita implements Serializable{
         this.giocatore = giocatore;
         partite = LetturaScritturaPartita.leggi();
         date = new Date();
+        stampaMessaggio(this.m.getPathMondo());
+    }
+
+    public Partita(Giocatore giocatore, Mondo tutorial) {
+        this.giocatore = giocatore;
+        this.m = tutorial;
+        this.autoSave = false;
+        this.abilitaCambiaMondo = false;
+        gioca();
     }
 
 
@@ -39,6 +48,7 @@ public class Partita implements Serializable{
 
     public void gioca() {
         int nMosse = 0;
+
 
         while(true) {
             System.out.println("\n\n\n\n");
@@ -140,6 +150,7 @@ public class Partita implements Serializable{
         if (m.getId() < mondi.size()) {
             if (MyUtil.controlledCharInput("\nHai completato questo mondo! Vuoi continuare con il mondo successivo? ", 's', 'n') == 's')
                 this.m = mondi.get(m.getId());
+            stampaMessaggio(this.m.getPathMondo());
         }
         else {
             System.exit(1);
@@ -166,6 +177,13 @@ public class Partita implements Serializable{
         }
         partite.aggiungiPartita(this);
 
+    }
+
+    private void stampaMessaggio(String nome) {
+        String s = MyUtil.leggiFileStringa(nome + "messaggio");
+        System.out.println("\n\n\n" + s);
+        MyUtil.stringInputVuoto("");
+        MyUtil.stringInputVuoto("Premi Invio per continuare...");
     }
 
     private String[] opzioniDeposita(ArrayList<Chiave> chiavi) {

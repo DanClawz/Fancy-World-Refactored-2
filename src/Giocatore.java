@@ -21,6 +21,8 @@ public class Giocatore implements Serializable {
         this.chiavi = new ArrayList<Chiave>();
         this.punteggio = punteggioIniziale;
         this.punteggioVittoria = punteggioVittoria;
+        this.capacitaInventario = 50;
+        this.maxNumChiavi = 5;
     }
 
 

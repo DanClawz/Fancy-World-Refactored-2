@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         boolean menu = true;
         splashScreen();
+        MyUtil.stringInputVuoto("Premi un tasto per continuare");
 
         /*while(menu) {
             switch(MyUtil.myMenu("Benvenuto!", "Gioca", "Istruzioni", "Esci")) {
@@ -16,10 +17,10 @@ public class Main {
         }*/
 
         while(menu) {
-            switch(MyUtil.myMenu("Benvenuto!", "Nuova partita", "Carica partita", "Istruzioni", "Esci")) {
+            switch(MyUtil.myMenu("\n\n\nBenvenuto!", "Nuova partita", "Carica partita", "Tutorial", "Esci")) {
                 case 1: new CaricaPartita(true); break;
                 case 2: new CaricaPartita(false); break;
-                case 3: System.out.println("Come si gioca???"); break;
+                case 3: new Partita(new Giocatore(0, 10), new Mondo("tutorial", 99)); break;
                 case 4: System.out.println("Esci!"); System.out.println("Un'occasione del genere non ti si ripresenterà più."); menu = false; break;
             }
         }

@@ -58,8 +58,23 @@ public class MyUtil {
     public static String stringInput(String MESSAGGIO) {
         System.out.print(MESSAGGIO + ": ");
         String s = input.next();
+        //if (s.equals("")) return stringInput("Stringa vuota! Inserisci una stringa valida");
         return s;
     }
+
+    public static String stringInputNonVuoto(String MESSAGGIO) {
+        System.out.print(MESSAGGIO + ": ");
+        String s = input.next();
+        if (s.equals("")) return stringInput("Stringa vuota! Inserisci una stringa valida");
+        return s;
+    }
+
+    public static String stringInputVuoto(String MESSAGGIO) {
+        System.out.print(MESSAGGIO + "\n");
+        String s = input.nextLine();
+        return s;
+    }
+
 
     public static int myMenu (String MESSAGGIO, String... opzioni) {
         System.out.println(MESSAGGIO);
@@ -118,6 +133,22 @@ public class MyUtil {
             e.printStackTrace();
         }
         return stringhe;
+    }
+
+    public static String leggiFileStringa(String nomeFile) {
+        String s = "";
+        try {
+            reader = new BufferedReader(new FileReader(new File(nomeFile)));
+            String stringa;
+            while((stringa = reader.readLine()) != null) {
+                s += (stringa) + "\n";
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return s;
     }
 
 }

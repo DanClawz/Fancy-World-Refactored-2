@@ -2,14 +2,16 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Mappa implements Serializable {
-    static final int NRIGHE = 15;
-    static final int NCOLONNE = 50;
+    public int NRIGHE;
+    public int NCOLONNE;
     private transient BufferedReader b;
     private String mappa = "";
     private char[][] map = {};
 
 
     public Mappa(String nomeFile) {
+        NRIGHE = 15;
+        NCOLONNE = 50;
         try {
             String t;
             b = new BufferedReader(new FileReader(new File(nomeFile)));
@@ -28,6 +30,36 @@ public class Mappa implements Serializable {
         }
     }
 
+    public Mappa(String nomeFile, boolean tutorial) {
+        if (tutorial) {
+            NRIGHE = 5;
+            NCOLONNE = 10;
+        }
+        else {
+            NRIGHE = 15;
+            NCOLONNE = 50;
+        }
+        try {
+            String t;
+            b = new BufferedReader(new FileReader(new File(nomeFile)));
+            while(true) {
+                t = b.readLine();
+                if (t==null) break;
+                mappa += t + "\n";
+
+            }
+            map = grid();
+
+        } catch (FileNotFoundException e) {
+            System.err.println("File non trovato!");
+        } catch (IOException e) {
+            System.err.println("Errore lettura file!");
+        }
+    }
+
+    private void dimensioniMappa() {
+
+    }
 
     public String getMappa() {
         return mappa;
@@ -147,6 +179,22 @@ public class Mappa implements Serializable {
         return new Coordinata(-1, -1);
     }
 
+
+    public int getNRIGHE() {
+        return NRIGHE;
+    }
+
+    public void setNRIGHE(int NRIGHE) {
+        this.NRIGHE = NRIGHE;
+    }
+
+    public int getNCOLONNE() {
+        return NCOLONNE;
+    }
+
+    public void setNCOLONNE(int NCOLONNE) {
+        this.NCOLONNE = NCOLONNE;
+    }
 
     public char[][] getMap() {
         return map;

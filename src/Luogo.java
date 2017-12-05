@@ -14,13 +14,15 @@ public class Luogo implements Serializable {
     private ArrayList<Prova> prove;
     private ArrayList<Chiave> chiavi;
 
-    public Luogo(String nomeFile, int piano, String nomeLuogo) {
+    public Luogo(String nomeFile, int piano, String nomeLuogo, boolean tutorial) {
         this.piano = piano;
         //this.nomeLuogo = nomeFile.split("_")[1];
         this.nomeLuogo = nomeLuogo;
 
+        if (tutorial)
+            mappaIniziale = new Mappa(nomeFile, true);
+        else mappaIniziale = new Mappa(nomeFile);
 
-        mappaIniziale = new Mappa(nomeFile);
 
         mappa = mappaIniziale.getMap();
         lista_passaggi = mappaIniziale.passaggi();
@@ -46,19 +48,19 @@ public class Luogo implements Serializable {
         String mappaContorno = "";
 
         mappaContorno += "╔";
-        for (int i = 0; i < Mappa.NCOLONNE; i++)
+        for (int i = 0; i < mappaIniziale.getNCOLONNE(); i++)
             mappaContorno += "═";
         mappaContorno += "╗" + "\n";
 
-        for (int i = 0; i < Mappa.NRIGHE; i++) {
+        for (int i = 0; i < mappaIniziale.getNRIGHE(); i++) {
             mappaContorno += "║";
-            for (int j = 0; j < Mappa.NCOLONNE; j++)
+            for (int j = 0; j < mappaIniziale.getNCOLONNE(); j++)
                 mappaContorno += mappa[i][j];
             mappaContorno += "║" + "\n";
         }
 
         mappaContorno += "╚";
-        for (int i = 0; i < Mappa.NCOLONNE; i++)
+        for (int i = 0; i < mappaIniziale.getNCOLONNE(); i++)
             mappaContorno += "═";
         mappaContorno += "╝" + "\n";
 
@@ -86,8 +88,8 @@ public class Luogo implements Serializable {
 
         if (posNuova.getX() < 0) posNuova.setX(0);
         if (posNuova.getY() < 0) posNuova.setY(0);
-        if (posNuova.getX() >= Mappa.NRIGHE) posNuova.setX(Mappa.NRIGHE-1);
-        if (posNuova.getY() >= Mappa.NCOLONNE) posNuova.setY(Mappa.NCOLONNE-1);
+        if (posNuova.getX() >= mappaIniziale.getNRIGHE()) posNuova.setX(mappaIniziale.getNRIGHE()-1);
+        if (posNuova.getY() >= mappaIniziale.getNCOLONNE()) posNuova.setY(mappaIniziale.getNCOLONNE()-1);
 
         if (posNuova.equals(posCorrente)) bordoToccato = true;
 
@@ -96,8 +98,8 @@ public class Luogo implements Serializable {
         ...
          */
 
-        for (int i = (posCorrente.getX()-1 < 0 ? 0 : posCorrente.getX()-1); i <= (posCorrente.getX()+1 > Mappa.NRIGHE ? posCorrente.getX() : posCorrente.getX()+1); i++) {          //riscrivere eventualmente
-            for (int j = (posCorrente.getY()-1 < 0 ? 0 : posCorrente.getY()-1); j <= (posCorrente.getY()+1 > Mappa.NCOLONNE ? posCorrente.getY() : posCorrente.getY()+1); j++) {    //riscrivere eventualmente
+        for (int i = (posCorrente.getX()-1 < 0 ? 0 : posCorrente.getX()-1); i <= (posCorrente.getX()+1 > mappaIniziale.getNRIGHE() ? posCorrente.getX() : posCorrente.getX()+1); i++) {          //riscrivere eventualmente
+            for (int j = (posCorrente.getY()-1 < 0 ? 0 : posCorrente.getY()-1); j <= (posCorrente.getY()+1 > mappaIniziale.getNCOLONNE() ? posCorrente.getY() : posCorrente.getY()+1); j++) {    //riscrivere eventualmente
 
                 if (!ostacoli.contains(posNuova)) {
                     muovi(posNuova);

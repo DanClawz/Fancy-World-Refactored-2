@@ -7,11 +7,14 @@ public class Mondo implements Serializable {
     private int NLUOGHI;
     private ArrayList<Luogo> mondo;
     private int pianoCorrente, pianoPartenza;
+    private boolean tutorial;
     private int pianoArrayList;
     private String nomeMondo;
     private int id;
+    private String pathMondo;
 
     public Mondo(String nome, int id) {
+        this.pathMondo = "./src/Mappe/" + nome + "/";
         NLUOGHI = Integer.parseInt(MyUtil.leggiFile("./src/Mappe/" + nome + "/" + "num_luoghi").get(0));
         ArrayList<String> parametri = MyUtil.leggiFile("./src/Mappe/" + nome + "/" + "nomi_luoghi");
         this.nomeMondo = parametri.get(0);
@@ -23,7 +26,9 @@ public class Mondo implements Serializable {
         for (int i = 1; i <= NLUOGHI; i++) {
             String nomeFile = "";
             nomeFile += "./src/Mappe/" + nome + "/" + nome + "_luogo" + i;
-            mondo.add(new Luogo(nomeFile, i, parametri.get(i)));
+            if (nome.equals("tutorial")) this.tutorial = true;
+            else this.tutorial = false;
+            mondo.add(new Luogo(nomeFile, i, parametri.get(i), this.tutorial));
         }
         pianoCorrente = pianoPartenza;
     }
@@ -94,7 +99,7 @@ public class Mondo implements Serializable {
     public String stampaMappa() {
         return nomeMondo.toUpperCase() + "\n" +
                 mondo.get(pianoCorrente-pianoPartenza).getNomeLuogo() + "\n" +
-                "Il goal si trova in: " + luogoGoal() + "\n" +
+                (this.tutorial ? "" : "Il goal si trova in: " + luogoGoal() + "\n") +
                 mondo.get(pianoCorrente-pianoPartenza).stampaMappa();
     }
 
@@ -120,6 +125,14 @@ public class Mondo implements Serializable {
         Chiave c = mondo.get(pianoCorrente-pianoPartenza).getChiave(mondo.get(pianoCorrente-pianoPartenza).getPosCorrente());
         mondo.get(pianoCorrente-pianoPartenza).rimuoviChiave(c);
         return c;
+    }
+
+    public String getPathMondo() {
+        return pathMondo;
+    }
+
+    public void setPathMondo(String pathMondo) {
+        this.pathMondo = pathMondo;
     }
 
     public int getPianoPartenza() {

@@ -73,7 +73,7 @@ public class Prova implements Serializable{
         System.out.println("Inserisci risposta: ");
 
         while(tentativi > 0) {
-            String inputUtente = MyUtil.stringInput(leggi.stringaNascostaConSpazi(risposta));
+            String inputUtente = MyUtil.stringInputNonVuoto(leggi.stringaNascostaConSpazi(risposta));
             if (leggi.checkRispostaProva2(indiceParola, inputUtente))
                 break;
             else
@@ -95,7 +95,7 @@ public class Prova implements Serializable{
         int tentativi = 3;
         int indiceRisposta = MyUtil.randomInt(0, leggi.getProva3().size()-1);
 
-        while(!leggi.checkRispostaProva3(indiceRisposta, MyUtil.stringInput(leggi.getProva3().get(indiceRisposta).getDomanda())) && --tentativi > 0) {
+        while(!leggi.checkRispostaProva3(indiceRisposta, MyUtil.stringInputNonVuoto(leggi.getProva3().get(indiceRisposta).getDomanda())) && --tentativi > 0) {
             System.out.println("Risposta non corretta! Hai ancora " + tentativi + " tentativi a disposizione.");
         }
         if (tentativi == 0) {
