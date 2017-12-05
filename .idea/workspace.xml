@@ -3,18 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b18cba1c-0bc8-48ad-b171-f2b178c4ae10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CaricaPartita.java" afterPath="$PROJECT_DIR$/src/CaricaPartita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Giocatore.java" afterPath="$PROJECT_DIR$/src/Giocatore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Luogo.java" afterPath="$PROJECT_DIR$/src/Luogo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mappa.java" afterPath="$PROJECT_DIR$/src/Mappa.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mappe/mondo1/nomi_luoghi" afterPath="$PROJECT_DIR$/src/Mappe/mondo1/nomi_luoghi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mappe/mondo2/nomi_luoghi" afterPath="$PROJECT_DIR$/src/Mappe/mondo2/nomi_luoghi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mondo.java" afterPath="$PROJECT_DIR$/src/Mondo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyUtil.java" afterPath="$PROJECT_DIR$/src/MyUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Partita.java" afterPath="$PROJECT_DIR$/src/Partita.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Prova.java" afterPath="$PROJECT_DIR$/src/Prova.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saves.txt" afterPath="$PROJECT_DIR$/src/saves.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -472,7 +460,7 @@
       <workItem from="1512036288003" duration="7346000" />
       <workItem from="1512121391167" duration="2739000" />
       <workItem from="1512380411965" duration="13666000" />
-      <workItem from="1512469205882" duration="14370000" />
+      <workItem from="1512469205882" duration="14407000" />
     </task>
     <task id="LOCAL-00001" summary="Da fare:&#10;- classe Coordinata&#10;- iniziare classe Luogo&#10;- sistemare classe Mappa">
       <created>1506604619447</created>
@@ -782,11 +770,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512398641801</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Da fare 3:&#10;&#10;- controllo generale programma">
+      <created>1512489090131</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1512489090131</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="298231000" />
+    <option name="totallyTimeSpent" value="298268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="135" y="186" width="1920" height="1053" extended-state="6" />
@@ -839,7 +834,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Da fare:&#10;- implementare chiavi e tipi di passaggi" />
     <MESSAGE value="Da fare:&#10;- controllo sui passaggi" />
     <MESSAGE value="Da fare:&#10;- sistemare i controlli dei passaggi e chiavi dei passaggi" />
     <MESSAGE value="Da fare:&#10;- deposito di chiavi con controlli" />
@@ -864,7 +858,8 @@
     <MESSAGE value="Da fare 2:&#10;&#10;- fare le mappe&#10;- dare nomi sensati ai luoghi e mappe&#10;- controllo generale programma" />
     <MESSAGE value="Da fare 2:&#10;&#10;- dare nomi sensati ai luoghi e mappe&#10;- controllo generale programma" />
     <MESSAGE value="Da fare 3:&#10;&#10;- dare nomi sensati ai luoghi e mappe&#10;- controllo generale programma" />
-    <option name="LAST_COMMIT_MESSAGE" value="Da fare 3:&#10;&#10;- dare nomi sensati ai luoghi e mappe&#10;- controllo generale programma" />
+    <MESSAGE value="Da fare 3:&#10;&#10;- controllo generale programma" />
+    <option name="LAST_COMMIT_MESSAGE" value="Da fare 3:&#10;&#10;- controllo generale programma" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
