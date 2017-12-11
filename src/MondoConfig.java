@@ -158,8 +158,8 @@ public class MondoConfig {
         System.out.println("Capacita' inventario modificato in " + giocatore.getCapacitaInventario());
     }
 
-    public void nTipiChiavi() {
-        int input = MyUtil.controlledIntInput("\nInserisci quanti tipi di chiavi possono essere presenti nel mondo (questo influenzera' il numero di luoghi giocabili) (valore corrente: " + mondo.getMondo().get(1).getChiavi().get(0).getnTipiChiave() + ")", 0, 10);
+    public void nTipiChiavi() { // da rivedere
+        int input = MyUtil.controlledIntInput("\nInserisci quanti tipi di chiavi possono essere presenti nel mondo (questo influenzera' il numero di luoghi giocabili) (valore corrente: " + mondo.getMondo().get(1).getChiavi().get(0).getnTipiChiave() + ")", 0, Integer.parseInt(MyUtil.leggiFileStringa(mondo.getPathMondo() + "num_luoghi")));  // da correggere
         int pianoMax = input+2;
         Coordinata g = mondo.getMondo().get(mondo.getMondo().size()-1).getGoal();
         mondo.getMondo().get(input+1).setGoal(g);

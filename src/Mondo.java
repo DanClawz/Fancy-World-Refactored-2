@@ -14,18 +14,18 @@ public class Mondo implements Serializable {
     private String pathMondo;
 
     public Mondo(String nome, int id) {
-        this.pathMondo = "./src/Mappe/" + nome + "/";
-        NLUOGHI = Integer.parseInt(MyUtil.leggiFile("./src/Mappe/" + nome + "/" + "num_luoghi").get(0));
-        ArrayList<String> parametri = MyUtil.leggiFile("./src/Mappe/" + nome + "/" + "nomi_luoghi");
+        this.pathMondo = "./Mappe/" + nome + "/";
+        NLUOGHI = Integer.parseInt(MyUtil.leggiFile("./Mappe/" + nome + "/" + "num_luoghi").get(0));
+        ArrayList<String> parametri = MyUtil.leggiFile("./Mappe/" + nome + "/" + "nomi_luoghi");
         this.nomeMondo = parametri.get(0);
         this.id = id;
         mondo = new ArrayList<Luogo>();
-        pianoPartenza = Integer.parseInt(MyUtil.leggiFile("./src/Mappe/" + nome + "/" + "piano_partenza").get(0));  // ATTENZIONE AGLI INDICI!!!!!
+        pianoPartenza = Integer.parseInt(MyUtil.leggiFile("./Mappe/" + nome + "/" + "piano_partenza").get(0));  // ATTENZIONE AGLI INDICI!!!!!
 
         int j = pianoPartenza;
         for (int i = 1; i <= NLUOGHI; i++) {
             String nomeFile = "";
-            nomeFile += "./src/Mappe/" + nome + "/" + nome + "_luogo" + i;
+            nomeFile += "./Mappe/" + nome + "/" + nome + "_luogo" + i;
             if (nome.equals("tutorial")) this.tutorial = true;
             else this.tutorial = false;
             mondo.add(new Luogo(nomeFile, i, parametri.get(i), this.tutorial));
@@ -125,6 +125,14 @@ public class Mondo implements Serializable {
         Chiave c = mondo.get(pianoCorrente-pianoPartenza).getChiave(mondo.get(pianoCorrente-pianoPartenza).getPosCorrente());
         mondo.get(pianoCorrente-pianoPartenza).rimuoviChiave(c);
         return c;
+    }
+
+    public boolean isTutorial() {
+        return tutorial;
+    }
+
+    public void setTutorial(boolean tutorial) {
+        this.tutorial = tutorial;
     }
 
     public String getPathMondo() {

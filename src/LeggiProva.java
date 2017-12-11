@@ -17,7 +17,7 @@ public class LeggiProva implements Serializable{
         String domanda;
         String risposta;
         try {
-            b = new BufferedReader(new FileReader(new File("./src/Prove/prova1")));
+            b = new BufferedReader(new FileReader(new File("./Prove/prova1")));
             while ((domanda = b.readLine())!=null && domanda.length()!=0) {
                 String[] opzioni = new String[3];   //???????????????
                 opzioni[0] = b.readLine();
@@ -39,7 +39,7 @@ public class LeggiProva implements Serializable{
     public void leggiProva2() {
         String parola;
         try {
-            b = new BufferedReader(new FileReader(new File("./src/Prove/prova2")));
+            b = new BufferedReader(new FileReader(new File("./Prove/prova2")));
             while ((parola = b.readLine())!=null && parola.length()!=0) {
                 Quesito q = new Quesito(parola);
                 prova2.add(q);
@@ -56,7 +56,7 @@ public class LeggiProva implements Serializable{
         String domanda;
         String risposta;
         try {
-            b = new BufferedReader(new FileReader(new File("./src/Prove/prova3")));
+            b = new BufferedReader(new FileReader(new File("./Prove/prova3")));
             while ((domanda = b.readLine())!=null && domanda.length()!=0) {
                 risposta = b.readLine();
                 Quesito q = new Quesito(domanda, risposta);
