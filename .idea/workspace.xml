@@ -378,7 +378,7 @@
       <workItem from="1512655191648" duration="4290000" />
       <workItem from="1512992385291" duration="174000" />
       <workItem from="1513603501313" duration="6321000" />
-      <workItem from="1513673410315" duration="6459000" />
+      <workItem from="1513673410315" duration="6469000" />
     </task>
     <task id="LOCAL-00001" summary="Da fare:&#10;- classe Coordinata&#10;- iniziare classe Luogo&#10;- sistemare classe Mappa">
       <created>1506604619447</created>
@@ -716,11 +716,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513680508433</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Aggiunta javadoc">
+      <created>1513680885201</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1513680885201</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="322841000" />
+    <option name="totallyTimeSpent" value="322851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="135" y="186" width="1317" height="742" extended-state="6" />
