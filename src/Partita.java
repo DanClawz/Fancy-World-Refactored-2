@@ -4,19 +4,55 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+// TODO: Auto-generated Javadoc
+/**
+ * La Classe Partita.
+ */
 public class Partita implements Serializable{
+    
+    /** Il nome partita. */
     private String nomePartita;
+    
+    /** Il giocatore. */
     private Giocatore giocatore;
+    
+    /** Il mondo. */
     private Mondo m;
+    
+    /** L' input. */
     private char input;
+    
+    /** L' id. */
     private int id;
+    
+    /** Le date. */
     private Date date;
+    
+    /** Le partite. */
     private ListaPartite partite;
+    
+    /**  auto save. */
     private boolean autoSave;
+    
+    /** I mondi. */
     private ArrayList<Mondo> mondi;
+    
+    /** L' abilita cambia mondo. */
     private boolean abilitaCambiaMondo;
+    
+    /** La scelta. */
     private int scelta;
 
+    /**
+     * Costuttore della classe
+     *
+     * @param id L' id
+     * @param nomePartita Il  nome partita
+     * @param giocatore Il giocatore
+     * @param mondi I mondi
+     * @param scelta La scelta
+     * @param abilitaCambiaMondo L' abilita cambia mondo
+     */
     public Partita(int id, String nomePartita, Giocatore giocatore, ArrayList<Mondo> mondi, int scelta, boolean abilitaCambiaMondo) {
         this.abilitaCambiaMondo = abilitaCambiaMondo;
         this.nomePartita = nomePartita;
@@ -30,6 +66,12 @@ public class Partita implements Serializable{
         stampaMessaggio(this.m.getPathMondo());
     }
 
+    /**
+     * Costuttore della classe.
+     *
+     * @param giocatore Il giocatore
+     * @param tutorial Il tutorial
+     */
     public Partita(Giocatore giocatore, Mondo tutorial) {
         this.giocatore = giocatore;
         this.m = tutorial;
@@ -39,6 +81,12 @@ public class Partita implements Serializable{
     }
 
 
+    /**
+     * Scegli mondo.
+     *
+     * @param scelta  scelta
+     * @return  int
+     */
     private int scegliMondo(int scelta) {
         switch (scelta) {
             case 0: return 0;
@@ -46,6 +94,9 @@ public class Partita implements Serializable{
         }
     }
 
+    /**
+     * Gioca.
+     */
     public void gioca() {
         String passaggioVerso = "";
         int nMosse = 0;
@@ -156,6 +207,9 @@ public class Partita implements Serializable{
 
     }
 
+    /**
+     * Cambia mondo.
+     */
     public void cambiaMondo() {
         if (m.getId() < mondi.size()) {
             if (MyUtil.controlledCharInput("\nHai completato questo mondo! Vuoi continuare con il mondo successivo? ", 's', 'n') == 's')
@@ -167,10 +221,18 @@ public class Partita implements Serializable{
         }
     }
 
+    /**
+     * Auto salvataggio.
+     *
+     * @param autoSave  auto save
+     */
     public void autoSalvataggio(boolean autoSave) {
         this.autoSave = autoSave;
     }
 
+    /**
+     * Salva partita.
+     */
     public void salvaPartita() {
         if (!this.m.isTutorial()) {
             isPartitaPresente();
@@ -181,6 +243,9 @@ public class Partita implements Serializable{
     }
 
 
+    /**
+     * Controlla se la partita è presente.
+     */
     public void isPartitaPresente() {   //aggiungo/aggiorno la partita alla lista
 
         for(int i=0; i<partite.getPartite().size(); i++) {
@@ -193,6 +258,11 @@ public class Partita implements Serializable{
 
     }
 
+    /**
+     * Stampa messaggio.
+     *
+     * @param nome  nome
+     */
     private void stampaMessaggio(String nome) {
         String s = MyUtil.leggiFileStringa(nome + "messaggio");
         System.out.println("\n\n\n" + s);
@@ -200,6 +270,12 @@ public class Partita implements Serializable{
         MyUtil.stringInputVuoto("Premi Invio per continuare...");
     }
 
+    /**
+     * Opzioni deposita.
+     *
+     * @param chiavi  chiavi
+     * @return  string
+     */
     private String[] opzioniDeposita(ArrayList<Chiave> chiavi) {
         String[] opzioni = new String[chiavi.size()+1];
         for (int i = 0; i < chiavi.size(); i++) {
@@ -209,68 +285,152 @@ public class Partita implements Serializable{
         return opzioni;
     }
 
+    /**
+     * Controlla input.
+     *
+     * @param input  input
+     */
     private void checkInput(String input) {
         if (input.length() != 0)
             this.input = input.charAt(0);
     }
 
+    /**
+     * Restituisce la scelta.
+     *
+     * @return la scelta
+     */
     public int getScelta() {
         return scelta;
     }
 
+    /**
+     * Assegna la scelta.
+     *
+     * @param scelta la nuova scelta
+     */
     public void setScelta(int scelta) {
         this.scelta = scelta;
     }
 
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy, HH:mm");
         return nomePartita + ", " + m.getNomeMondo() + ", " + String.valueOf(sdf.format(date));
     }
 
+    /**
+     * Controlla se l'abilita è cambia mondo.
+     *
+     * @return true, se l'abilita è cambia mondo
+     */
     public boolean isAbilitaCambiaMondo() {
         return abilitaCambiaMondo;
     }
 
+    /**
+     * Assegna l' abilita cambia mondo.
+     *
+     * @param abilitaCambiaMondo la nuova abilita cambia mondo
+     */
     public void setAbilitaCambiaMondo(boolean abilitaCambiaMondo) {
         this.abilitaCambiaMondo = abilitaCambiaMondo;
     }
 
+    /**
+     * Restituisce i mondi.
+     *
+     * @return i mondi
+     */
     public ArrayList<Mondo> getMondi() {
         return mondi;
     }
 
+    /**
+     * Assegna i mondi.
+     *
+     * @param mondi i nuovi mondi
+     */
     public void setMondi(ArrayList<Mondo> mondi) {
         this.mondi = mondi;
     }
 
+    /**
+     * Restituisce il giocatore.
+     *
+     * @return il giocatore
+     */
     public Giocatore getGiocatore() {
         return giocatore;
     }
 
+    /**
+     * Assegna il giocatore.
+     *
+     * @param giocatore il nuovo giocatore
+     */
     public void setGiocatore(Giocatore giocatore) {
         this.giocatore = giocatore;
     }
 
+    /**
+     * Restituisce l'id.
+     *
+     * @return l'id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Assegna l'id.
+     *
+     * @param id il nuovo id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * Restituisce il mondo.
+     *
+     * @return il mondo
+     */
     public Mondo getM() {
         return m;
     }
 
+    /**
+     * Assegna il mondo.
+     *
+     * @param m il nuovo mondo
+     */
     public void setM(Mondo m) {
         this.m = m;
     }
+
+    /**
+     * Restituisce il nome partita.
+     *
+     * @return il nome partita
+     */
+
+
+
+
+
 
     public String getNomePartita() {
         return nomePartita;
     }
 
+    /**
+     * Assegna il nome partita.
+     *
+     * @param nomePartita il nuovo nome partita
+     */
     public void setNomePartita(String nomePartita) {
         this.nomePartita = nomePartita;
     }

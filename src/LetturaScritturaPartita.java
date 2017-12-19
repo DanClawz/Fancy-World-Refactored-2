@@ -1,8 +1,17 @@
 import java.io.*;
 import java.util.ArrayList;
 
+// TODO: Auto-generated Javadoc
+/**
+ * La classe LetturaScritturaPartita.
+ */
 public class LetturaScritturaPartita implements Serializable {
 
+    /**
+     * Scrivi partite.
+     *
+     * @param p la lista delle partite
+     */
     public static void scrivi(ListaPartite p) {
         try {
             FileOutputStream file=new FileOutputStream("./saves.txt");
@@ -15,6 +24,11 @@ public class LetturaScritturaPartita implements Serializable {
         }
     }
 
+    /**
+     * Leggi partite.
+     *
+     * @return la lista delle partite
+     */
     public static ListaPartite leggi() {
         ListaPartite partite = new ListaPartite();
         try {

@@ -1,8 +1,17 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Main.
+ */
 public class Main {
 
+    /**
+     *  main .
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
         boolean menu = true;
         splashScreen();
@@ -28,6 +37,9 @@ public class Main {
     }
 
 
+    /**
+     * Splash screen.
+     */
     public static void splashScreen() {
         System.out.println("\n\n ,gggggggggggggg                                            ,ggg,      gg      ,gg                                      \n" +
                 "dP\"\"\"\"\"\"88\"\"\"\"\"\"                                           dP\"\"Y8a     88     ,8P                     ,dPYb,         8I \n" +

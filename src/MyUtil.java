@@ -5,15 +5,28 @@ import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
+// TODO: Auto-generated Javadoc
+/**
+ * La classe MyUtil.
+ */
 public class MyUtil {
 
+    /** L' input. */
     private static Scanner input = new Scanner(System.in);
+    
+    /** Il reader. */
     private static BufferedReader reader;
 
     static {
         input.useDelimiter(System.getProperty("line.separator"));
     }
 
+    /**
+     *  input.
+     *
+     * @param MESSAGGIO il messaggio
+     * @return  int
+     */
     public static int intInput(String MESSAGGIO) {
         String s = stringInput(MESSAGGIO);
         int n;
@@ -27,6 +40,12 @@ public class MyUtil {
         return n;
     }
 
+    /**
+     * Long input.
+     *
+     * @param MESSAGGIO il messaggio
+     * @return  long
+     */
     public static long longInput(String MESSAGGIO) {
         String n = stringInput(MESSAGGIO + ":");
         long l;
@@ -39,6 +58,12 @@ public class MyUtil {
         return l;
     }
 
+    /**
+     * Char input.
+     *
+     * @param MESSAGGIO il messaggio
+     * @return il char
+     */
     public static char charInput(String MESSAGGIO) {
         System.out.print(MESSAGGIO + " (se una stringa, viene letto solo il 1^ carattere): ");
         String s = input.next();
@@ -46,6 +71,13 @@ public class MyUtil {
         else return charInput("Devi inserire un carattere!");
     }
 
+    /**
+     * Controlla char input.
+     *
+     * @param MESSAGGIO il messaggio
+     * @param caratteri i caratteri
+     * @return i char
+     */
     public static char controlledCharInput(String MESSAGGIO, char... caratteri) {
         char c = charInput(MESSAGGIO + ": ");
         for (int i = 0; i < caratteri.length; i++) {
@@ -55,6 +87,12 @@ public class MyUtil {
         return controlledCharInput(MESSAGGIO, caratteri);
     }
 
+    /**
+     * String input.
+     *
+     * @param MESSAGGIO il messaggio
+     * @return la string
+     */
     public static String stringInput(String MESSAGGIO) {
         System.out.print(MESSAGGIO + ": ");
         String s = input.next();
@@ -62,6 +100,12 @@ public class MyUtil {
         return s;
     }
 
+    /**
+     * String input non vuoto.
+     *
+     * @param MESSAGGIO il messaggio
+     * @return la string
+     */
     public static String stringInputNonVuoto(String MESSAGGIO) {
         System.out.print(MESSAGGIO + ": ");
         String s = input.next();
@@ -69,6 +113,12 @@ public class MyUtil {
         return s;
     }
 
+    /**
+     * String input vuoto.
+     *
+     * @param MESSAGGIO il messaggio
+     * @return il string
+     */
     public static String stringInputVuoto(String MESSAGGIO) {
         System.out.print(MESSAGGIO + "\n");
         String s = input.nextLine();
@@ -76,6 +126,13 @@ public class MyUtil {
     }
 
 
+    /**
+     * menu.
+     *
+     * @param MESSAGGIO il messaggio
+     * @param opzioni le opzioni
+     * @return l'int
+     */
     public static int myMenu (String MESSAGGIO, String... opzioni) {
         System.out.println(MESSAGGIO);
         for (int i=0;i<opzioni.length;i++) {
@@ -84,12 +141,27 @@ public class MyUtil {
         return MyUtil.controlledIntInput("Scelta ", 1, opzioni.length);
     }
 
+    /**
+     * Random int.
+     *
+     * @param min  min
+     * @param max  max
+     * @return  int
+     */
     public static int randomInt(int min, int max) {
         Random r = new Random();
         int n= r.nextInt(max) + min;
         return n ;
     }
 
+    /**
+     * Controllo int input.
+     *
+     * @param MESSAGGIO il messaggio
+     * @param min il min
+     * @param max il max
+     * @return l'int
+     */
     public static int controlledIntInput(String MESSAGGIO,int min, int max) {
         int n = intInput(MESSAGGIO + "[" + min + "-" + max + "]");
         if (n < min || n > max) {
@@ -100,6 +172,13 @@ public class MyUtil {
         return n;
     }
 
+    /**
+     * Controlla la  stringa input.
+     *
+     * @param MESSAGGIO il messaggio
+     * @param opzioni le opzioni
+     * @return la stringa
+     */
     public static String controlledStringInput(String MESSAGGIO, String... opzioni) {
         String s = stringInput(MESSAGGIO + Arrays.toString(opzioni) + ": ");
         for (int i = 0; i < opzioni.length; i++) {
@@ -109,6 +188,13 @@ public class MyUtil {
         return controlledStringInput(MESSAGGIO, opzioni);
     }
 
+    /**
+     * Controlla la  stringa input.
+     *
+     * @param MESSAGGIO il messaggio
+     * @param opzioni le opzioni
+     * @return la stringa
+     */
     public static String controlledStringInput(String MESSAGGIO, ArrayList<String> opzioni) {
         String s = stringInput(MESSAGGIO);
         String[] opzioniArray = (String[]) opzioni.toArray();
@@ -119,6 +205,12 @@ public class MyUtil {
         return controlledStringInput(MESSAGGIO, opzioni);
     }
 
+    /**
+     * Leggi file.
+     *
+     * @param nomeFile il nome file
+     * @return  array list
+     */
     public static ArrayList<String> leggiFile(String nomeFile) {
         ArrayList<String> stringhe = new ArrayList<String>();
         try {
@@ -135,6 +227,12 @@ public class MyUtil {
         return stringhe;
     }
 
+    /**
+     * Leggi file stringa.
+     *
+     * @param nomeFile il nome file
+     * @return la stringa
+     */
     public static String leggiFileStringa(String nomeFile) {
         String s = "";
         try {

@@ -1,14 +1,30 @@
+// TODO: Auto-generated Javadoc
+/**
+ * La Classe MondoConfig.
+ */
 public class MondoConfig {
 
+    /** Il mondo. */
     private Mondo mondo;
+    
+    /** Il giocatore. */
     private Giocatore giocatore;
 
+    /**
+     * Il costruttore della classe.
+     *
+     * @param mondo the mondo
+     * @param giocatore the giocatore
+     */
     public MondoConfig(Mondo mondo, Giocatore giocatore) {
         this.mondo = mondo;
         this.giocatore = giocatore;
     }
 
 
+    /**
+     * Menu config.
+     */
     public void menuConfigMondo() {
         boolean ciclo = true;
         while(ciclo) {
@@ -45,16 +61,25 @@ public class MondoConfig {
     }
 
 
+    /**
+     * Punteggio iniziale.
+     */
     public void punteggioIniziale() {
         giocatore.setPunteggio(MyUtil.intInput("\nInserisci il punteggio iniziale del giocatore (valore corrente: " + giocatore.getPunteggio() + ")"));
         System.out.println("Punteggio iniziale modificato in " + giocatore.getPunteggio());
     }
 
+    /**
+     * Punteggio vittoria.
+     */
     public void punteggioVittoria() {
         giocatore.setPunteggioVittoria(MyUtil.controlledIntInput("\nInserisci il punteggio vittoria (valore corrente: " + giocatore.getPunteggioVittoria() + ")", giocatore.getPunteggio(), Integer.MAX_VALUE));
         System.out.println("Punteggio vittoria modificato in " + giocatore.getPunteggioVittoria());
     }
 
+    /**
+     * Numero tipologie prove.
+     */
     public void nTipologieProve() {
         if (!mondo.isProvaPresente()) {
             System.out.println("\nIn questo mondo non sono presenti le prove!");
@@ -72,6 +97,9 @@ public class MondoConfig {
         valoreProva();
     }
 
+    /**
+     * Valore massimo prova.
+     */
     public void valoreMaxProva() {
         if (!mondo.isProvaPresente()) {
             System.out.println("\nIn questo mondo non sono presenti le prove!");
@@ -91,6 +119,9 @@ public class MondoConfig {
         }
     }
 
+    /**
+     * Valore prova.
+     */
     public void valoreProva() {
 
         if (!mondo.isProvaPresente()) {
@@ -113,6 +144,9 @@ public class MondoConfig {
         }
     }
 
+    /**
+     * Peso massimo chiavi.
+     */
     public void pesoMaxChiavi() {
         int pesoMax = MyUtil.intInput("\nInserisci peso max di una chiave (valore corrente: " + mondo.getMondo().get(1).getChiavi().get(0).getPesoMax() + ")");
         for (int i = 0; i < mondo.getMondo().size(); i++) {
@@ -126,6 +160,9 @@ public class MondoConfig {
         }
     }
 
+    /**
+     * Peso chiave.
+     */
     public void pesoChiave() {
 
         String opzioni[] = new String[mondo.getMondo().get(1).getChiavi().get(0).getTipiChiave().length];
@@ -148,16 +185,25 @@ public class MondoConfig {
         }
     }
 
+    /**
+     * Numumero massimo chiavi.
+     */
     public void numMaxChiavi() {
         giocatore.setMaxNumChiavi(MyUtil.intInput("\nInserisci il numero massimo di chiavi che il giocatore puo' possedere (valore corrente: " + giocatore.getMaxNumChiavi() + ")"));
         System.out.println("Numero massimo di chiavi in possesso modificato in " + giocatore.getMaxNumChiavi());
     }
 
+    /**
+     * Capacita inventario chiavi.
+     */
     public void capacitaInventarioChiavi() {
         giocatore.setCapacitaInventario(MyUtil.controlledIntInput("\nInserisci il max peso delle chiavi possedute contemporaneamente (valore corrente: " + giocatore.getCapacitaInventario() + ")", mondo.getMondo().get(1).getChiavi().get(0).getPesoMax(), Integer.MAX_VALUE));
         System.out.println("Capacita' inventario modificato in " + giocatore.getCapacitaInventario());
     }
 
+    /**
+     * Numero tipi chiavi.
+     */
     public void nTipiChiavi() { // da rivedere
         int input = MyUtil.controlledIntInput("\nInserisci quanti tipi di chiavi possono essere presenti nel mondo (questo influenzera' il numero di luoghi giocabili) (valore corrente: " + mondo.getMondo().get(1).getChiavi().get(0).getnTipiChiave() + ")", 0, Integer.parseInt(MyUtil.leggiFileStringa(mondo.getPathMondo() + "num_luoghi")));  // da correggere
         int pianoMax = input+2;
@@ -176,18 +222,38 @@ public class MondoConfig {
 
 
 
+    /**
+     * Restituisce il mondo.
+     *
+     * @return il mondo
+     */
     public Mondo getMondo() {
         return mondo;
     }
 
+    /**
+     * Assegna il mondo.
+     *
+     * @param mondo il nuovo mondo
+     */
     public void setMondo(Mondo mondo) {
         this.mondo = mondo;
     }
 
+    /**
+     * Restituisce il giocatore.
+     *
+     * @return il giocatore
+     */
     public Giocatore getGiocatore() {
         return giocatore;
     }
 
+    /**
+     * Assegna il giocatore.
+     *
+     * @param giocatore il nuovo giocatore
+     */
     public void setGiocatore(Giocatore giocatore) {
         this.giocatore = giocatore;
     }

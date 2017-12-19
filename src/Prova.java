@@ -1,15 +1,35 @@
 import java.io.Serializable;
 
+// TODO: Auto-generated Javadoc
+/**
+ * La classe Prova.
+ */
 public class Prova implements Serializable{
+    
+    /** La coordinata. */
     private Coordinata c;
+    
+    /** Il tipo. */
     private int tipo;
+    
+    /**  leggi. */
     private LeggiProva leggi;
+    
+    /** Il punteggio. */
     private int punteggio;
 
+    /** TIl numero di  prove. */
     private int nProve;
+    
+    /** il punteggio max. */
     private int punteggioMax;
 
 
+    /**
+     * Costuttore della classe.
+     *
+     * @param c la coordinata
+     */
     public Prova(Coordinata c) {
         this.c = c;
         this.nProve = 3;
@@ -21,6 +41,13 @@ public class Prova implements Serializable{
 
     }
 
+    /**
+     * Costuttore della classe.
+     *
+     * @param c la coordinata
+     * @param nProve il numero di  prove
+     * @param valoreProva il valore prova
+     */
     public Prova(Coordinata c, int nProve, int valoreProva) {
         this.c = c;
         leggi = new LeggiProva();
@@ -30,11 +57,17 @@ public class Prova implements Serializable{
 
     }
 
+    /**
+     * Inizializza prova.
+     */
     public void inizializzaProva() {
         this.tipo = MyUtil.randomInt(1, nProve);
         leggiProva();
     }
 
+    /**
+     * Leggi prova.
+     */
     private void leggiProva() {
         switch(this.tipo) {
             case 1: leggi.leggiProva1(); break;
@@ -43,6 +76,11 @@ public class Prova implements Serializable{
         }
     }
 
+    /**
+     * Prova 1.
+     *
+     * @return  int
+     */
     private int prova1() {
         System.out.println("\nDomanda a risposta chiusa");
         int tentativi = 2;
@@ -63,6 +101,11 @@ public class Prova implements Serializable{
         return -punteggio;
     }
 
+    /**
+     * Prova 2.
+     *
+     * @return  int
+     */
     private int prova2() {
         System.out.println("\nIndovina la parola");
         int tentativi = 15;
@@ -90,6 +133,11 @@ public class Prova implements Serializable{
         }
     }
 
+    /**
+     * Prova 3.
+     *
+     * @return  int
+     */
     private int prova3() {
         System.out.println("\nIndovinello");
         int tentativi = 3;
@@ -109,6 +157,11 @@ public class Prova implements Serializable{
 
     }
 
+    /**
+     * Prova.
+     *
+     * @return  int
+     */
     public int prova() {
         switch(this.tipo) {
             case 1: return prova1();
@@ -119,60 +172,126 @@ public class Prova implements Serializable{
     }
 
 
+    /**
+     * Restituisce il punteggio max.
+     *
+     * @return il punteggio max
+     */
     public int getPunteggioMax() {
         return punteggioMax;
     }
 
+    /**
+     * Assegna il punteggio max.
+     *
+     * @param punteggioMax il nuovo punteggio max
+     */
     public void setPunteggioMax(int punteggioMax) {
         this.punteggioMax = punteggioMax;
     }
 
+    /**
+     * Restituisce il numero di prove.
+     *
+     * @return il numero di prove
+     */
     public int getnProve() {
         return nProve;
     }
 
+    /**
+     * Assegna  il numero di prove.
+     *
+     * @param nProve il numero di prove
+     */
     public void setnProve(int nProve) {
         this.nProve = nProve;
         inizializzaProva();
     }
 
+    /**
+     * Restituisce il punteggio.
+     *
+     * @return il punteggio
+     */
     public int getPunteggio() {
         return punteggio;
     }
 
+    /**
+     * Assegna il punteggio.
+     *
+     * @param punteggio  il punteggio
+     */
     public void setPunteggio(int punteggio) {
         this.punteggio = punteggio;
     }
 
+    /**
+     * Restituisce la coordinata.
+     *
+     * @return la coordinata
+     */
     public Coordinata getC() {
         return c;
     }
 
+    /**
+     * Assegna la coordinata.
+     *
+     * @param c la nuova coordinata
+     */
     public void setC(Coordinata c) {
         this.c = c;
     }
 
+    /**
+     * Restituisce the tipo.
+     *
+     * @return the tipo
+     */
     public int getTipo() {
         return tipo;
     }
 
+    /**
+     * Assegna il tipo.
+     *
+     * @param tipo il nuovo tipo
+     */
     public void setTipo(int tipo) {
         this.tipo = tipo;
     }
 
+    /**
+     * Restituisce  leggi.
+     *
+     * @return  leggi
+     */
     public LeggiProva getLeggi() {
         return leggi;
     }
 
+    /**
+     * Assegna  leggi.
+     *
+     * @param leggi  leggi
+     */
     public void setLeggi(LeggiProva leggi) {
         this.leggi = leggi;
     }
 
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
     @Override
     public String toString() {
         return "Tipo prova: " + this.tipo + ", punteggio:" + this.punteggio + ", pMax:" + this.punteggioMax + ", nProve: " + this.nProve;
     }
 
+    /* (non-Javadoc)
+     * @see java.lang.Object#equals(java.lang.Object)
+     */
     @Override
     public boolean equals(Object o) {
         if (o instanceof Coordinata) {
@@ -182,6 +301,11 @@ public class Prova implements Serializable{
         return false;
     }
 
+    /**
+     * The main method.
+     *
+     * @param args  arguments
+     */
     public static void main (String args[]) {
         Prova p = new Prova(new Coordinata(0, 0));
         Giocatore g = new Giocatore();

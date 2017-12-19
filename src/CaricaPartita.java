@@ -1,12 +1,26 @@
 import java.util.ArrayList;
 
+// TODO: Auto-generated Javadoc
+/**
+ * La Classe CaricaPartita.
+ */
 public class CaricaPartita {
 
+    /** Lista delle partite. */
     private ListaPartite partite;
+    
+    /** Attributi booleane è una nuova partita e ablitia cambia mondo */
     private boolean isNuovaPartita, abilitaCambiaMondo;
+    
+    /** Lista mondi. */
     private ArrayList<Mondo> mondi;
+    
+    /** La costante mondi. */
     public static final int N_MONDI = 2;
 
+    /**
+     * Costruttore della classe.
+     */
     public CaricaPartita() {
         partite = LetturaScritturaPartita.leggi();
         mondi = new ArrayList<Mondo>();
@@ -14,6 +28,11 @@ public class CaricaPartita {
         scegliPartita();
     }
 
+    /**
+     * Costruttore della classe.
+     *
+     * @param isNuovaPartita è nuova partita
+     */
     public CaricaPartita(boolean isNuovaPartita) {
         this.isNuovaPartita = isNuovaPartita;
         partite = LetturaScritturaPartita.leggi();
@@ -22,6 +41,9 @@ public class CaricaPartita {
         scegliPartita();
     }
 
+    /**
+     * Scegli partita.
+     */
     public void scegliPartita() {
         Partita p = null;
         Mondo m = null;
@@ -75,6 +97,8 @@ public class CaricaPartita {
         p.gioca();
     }
 
+
+     
     public int sceltaUtente() {
 
         String[] opzioni = new String[partite.getPartite().size()];
@@ -85,11 +109,20 @@ public class CaricaPartita {
 
     }
 
+    /**
+     * Genera id.
+     *
+     * @return l'id della partita
+     *
+     */
     public int generaId() {
         if (!partite.getPartite().isEmpty()) return partite.getPartite().get(partite.getPartite().size()-1).getId()+1;
         return 0;
     }
 
+    /**
+     * Metodo che crea il Menu.
+     */
     public void menu() {
         boolean menu = true;
         while(menu) {
@@ -102,6 +135,11 @@ public class CaricaPartita {
     }
 
 
+    /**
+     * Metodo fa scegliere la scelta mondo.
+     *
+     * @return la scelta del mondo
+     */
     public int menuSceltaMondo() {
         String[] opzioni = new String[mondi.size()+1];
         for (int i = 0; i < mondi.size(); i++) {
@@ -122,6 +160,11 @@ public class CaricaPartita {
 
     }
 
+    /**
+     * Metodo che pone a isNuovaPartita la stringa nuovaPartita
+     *
+     * @param nuovaPartita la nuova nuova partita
+     */
     public void setNuovaPartita(boolean nuovaPartita) {
         isNuovaPartita = nuovaPartita;
     }

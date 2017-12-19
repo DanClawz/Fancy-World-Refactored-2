@@ -1,14 +1,33 @@
 import java.io.*;
 import java.util.ArrayList;
 
+// TODO: Auto-generated Javadoc
+/**
+ * La classe Mappa.
+ */
 public class Mappa implements Serializable {
+    
+    /** il  numero di righe. */
     public int NRIGHE;
+    
+    /** il numeri di colonne. */
     public int NCOLONNE;
+    
+    /** il buffer reader. */
     private transient BufferedReader b;
+    
+    /** la mappa. */
     private String mappa = "";
+    
+    /** la mappa. */
     private char[][] map = {};
 
 
+    /**
+     * Il costruttore della classe.
+     *
+     * @param nomeFile il nome del file
+     */
     public Mappa(String nomeFile) {
         NRIGHE = 15;
         NCOLONNE = 50;
@@ -30,6 +49,12 @@ public class Mappa implements Serializable {
         }
     }
 
+    /**
+     * Il costruttore della classe.
+     *
+     * @param nomeFile il nome del file
+     * @param tutorial il tutorial
+     */
     public Mappa(String nomeFile, boolean tutorial) {
         if (tutorial) {
             NRIGHE = 5;
@@ -57,18 +82,36 @@ public class Mappa implements Serializable {
         }
     }
 
+    /**
+     * Dimensioni mappa.
+     */
     private void dimensioniMappa() {
 
     }
 
+    /**
+     * Restituisce la mappa.
+     *
+     * @return la mappa
+     */
     public String getMappa() {
         return mappa;
     }
 
+    /**
+     * Assegna la mappa.
+     *
+     * @param mappa the new mappa
+     */
     public void setMappa(String mappa) {
         this.mappa = mappa;
     }
 
+    /**
+     * Grid.
+     *
+     * @return il carattere
+     */
     private char[][] grid() {
         char[][] griglia = new char[NRIGHE][NCOLONNE];
         int j = 0;
@@ -85,6 +128,11 @@ public class Mappa implements Serializable {
         return griglia;
     }       // traspone la stringa mappa in una matrice delle stesse dimensioni della mappa su file
 
+    /**
+     * Posizione iniziale.
+     *
+     * @return la coordinata
+     */
     public Coordinata posizioneIniziale() {
         for (int i = 0; i < NRIGHE; i++) {
             for (int j = 0; j < NCOLONNE; j++) {
@@ -96,6 +144,11 @@ public class Mappa implements Serializable {
         return new Coordinata(-1, -1);
     }
 
+    /**
+     * Posizione ostacoli.
+     *
+     * @return la lista
+     */
     public ArrayList<Coordinata> posizioneOstacoli() {
         ArrayList<Coordinata> c = new ArrayList<Coordinata>();
         for (int i = 0; i < NRIGHE; i++) {
@@ -109,6 +162,11 @@ public class Mappa implements Serializable {
         return c;
     }
 
+    /**
+     * Passaggi.
+     *
+     * @return la lista
+     */
     public ArrayList<Passaggio> passaggi() {
         ArrayList<Passaggio> p = new ArrayList<Passaggio>();
         for (int i = 0; i < NRIGHE; i++) {
@@ -138,6 +196,11 @@ public class Mappa implements Serializable {
         return p;
     }
 
+    /**
+     * La posizioni chiavi.
+     *
+     * @return la lista con la posizione delle chiavi
+     */
     public ArrayList<Chiave> posizioniChiavi() {
         ArrayList<Chiave> c = new ArrayList<Chiave>();
         for (int i = 0; i < NRIGHE; i++) {
@@ -154,6 +217,11 @@ public class Mappa implements Serializable {
 
     }
 
+    /**
+     * La posizioni prove.
+     *
+     * @return La lista con la posizione delle prove.
+     */
     public ArrayList<Prova> posizioniProve() {
         ArrayList<Prova> prove = new ArrayList<Prova>();
         for (int i = 0; i < NRIGHE; i++) {
@@ -168,6 +236,11 @@ public class Mappa implements Serializable {
         return prove;
     }
 
+    /**
+     * Posizione del goal.
+     *
+     * @return la coordinata
+     */
     public Coordinata posizioneGoal() {
         for (int i = 0; i < NRIGHE; i++) {
             for (int j = 0; j < NCOLONNE; j++) {
@@ -180,26 +253,56 @@ public class Mappa implements Serializable {
     }
 
 
+    /**
+     * Restituisce il numero di righe.
+     *
+     * @return il numero di righe
+     */
     public int getNRIGHE() {
         return NRIGHE;
     }
 
+    /**
+     * Assegna il numero di righe.
+     *
+     * @param NRIGHE il numero di righe
+     */
     public void setNRIGHE(int NRIGHE) {
         this.NRIGHE = NRIGHE;
     }
 
+    /**
+     * Restituisce il numero di colonne.
+     *
+     * @return il numero di colonne
+     */
     public int getNCOLONNE() {
         return NCOLONNE;
     }
 
+    /**
+     * Assegna il numero di colonne.
+     *
+     * @param NCOLONNE il numero di colonne
+     */
     public void setNCOLONNE(int NCOLONNE) {
         this.NCOLONNE = NCOLONNE;
     }
 
+    /**
+     * Restituisce la mappa the map.
+     *
+     * @return la mappa
+     */
     public char[][] getMap() {
         return map;
     }
 
+    /**
+     * Assegna la mappa.
+     *
+     * @param map la nuova mappa
+     */
     public void setMap(char[][] map) {
         this.map = map;
     }
