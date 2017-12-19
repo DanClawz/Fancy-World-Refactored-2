@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="." destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" source="1.8" sourcefiles="src/LetturaScritturaPartita.java,src/Prova.java,src/MondoConfig.java,src/Luogo.java,src/Partita.java,src/MyUtil.java,src/LeggiProva.java,src/Quesito.java,src/CaricaPartita.java,src/Giocatore.java,src/Coordinata.java,src/Mondo.java,src/Main.java,src/Mappa.java,src/ListaPartite.java,src/Chiave.java,src/Passaggio.java" sourcepath="src" splitindex="true" use="true" version="true">
+            <link href="https://docs.oracle.com/javase/8/docs/api/"/>
+            <link href="file:/home/marco/IdeaProjects/Fancy-World-Release-5/doc/"/>
+            <link href="http://docs.oracle.com/javase/8/javafx/api/"/>
+        </javadoc>
+    </target>
+</project>

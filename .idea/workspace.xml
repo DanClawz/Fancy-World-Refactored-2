@@ -1,27 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b18cba1c-0bc8-48ad-b171-f2b178c4ae10" name="Default" comment="Aggiunta javadoc">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="b18cba1c-0bc8-48ad-b171-f2b178c4ae10" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/saves.txt" afterPath="$PROJECT_DIR$/saves.txt" />
-      <change beforePath="$PROJECT_DIR$/src/CaricaPartita.java" afterPath="$PROJECT_DIR$/src/CaricaPartita.java" />
-      <change beforePath="$PROJECT_DIR$/src/Chiave.java" afterPath="$PROJECT_DIR$/src/Chiave.java" />
-      <change beforePath="$PROJECT_DIR$/src/Coordinata.java" afterPath="$PROJECT_DIR$/src/Coordinata.java" />
-      <change beforePath="$PROJECT_DIR$/src/Giocatore.java" afterPath="$PROJECT_DIR$/src/Giocatore.java" />
-      <change beforePath="$PROJECT_DIR$/src/LeggiProva.java" afterPath="$PROJECT_DIR$/src/LeggiProva.java" />
-      <change beforePath="$PROJECT_DIR$/src/LetturaScritturaPartita.java" afterPath="$PROJECT_DIR$/src/LetturaScritturaPartita.java" />
-      <change beforePath="$PROJECT_DIR$/src/ListaPartite.java" afterPath="$PROJECT_DIR$/src/ListaPartite.java" />
-      <change beforePath="$PROJECT_DIR$/src/Luogo.java" afterPath="$PROJECT_DIR$/src/Luogo.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/Mappa.java" afterPath="$PROJECT_DIR$/src/Mappa.java" />
-      <change beforePath="$PROJECT_DIR$/src/Mondo.java" afterPath="$PROJECT_DIR$/src/Mondo.java" />
-      <change beforePath="$PROJECT_DIR$/src/MondoConfig.java" afterPath="$PROJECT_DIR$/src/MondoConfig.java" />
-      <change beforePath="$PROJECT_DIR$/src/MyUtil.java" afterPath="$PROJECT_DIR$/src/MyUtil.java" />
-      <change beforePath="$PROJECT_DIR$/src/Partita.java" afterPath="$PROJECT_DIR$/src/Partita.java" />
-      <change beforePath="$PROJECT_DIR$/src/Passaggio.java" afterPath="$PROJECT_DIR$/src/Passaggio.java" />
-      <change beforePath="$PROJECT_DIR$/src/Prova.java" afterPath="$PROJECT_DIR$/src/Prova.java" />
-      <change beforePath="$PROJECT_DIR$/src/Quesito.java" afterPath="$PROJECT_DIR$/src/Quesito.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,7 +36,7 @@
       <file leaf-file-name="Quesito.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Quesito.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
+            <state relative-caret-position="1853">
               <caret line="125" column="30" lean-forward="false" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
               <folding />
             </state>
@@ -397,7 +378,7 @@
       <workItem from="1512655191648" duration="4290000" />
       <workItem from="1512992385291" duration="174000" />
       <workItem from="1513603501313" duration="6321000" />
-      <workItem from="1513673410315" duration="5980000" />
+      <workItem from="1513673410315" duration="6019000" />
     </task>
     <task id="LOCAL-00001" summary="Da fare:&#10;- classe Coordinata&#10;- iniziare classe Luogo&#10;- sistemare classe Mappa">
       <created>1506604619447</created>
@@ -721,19 +702,25 @@
       <option name="project" value="LOCAL" />
       <updated>1512489113500</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Aggiunta javadoc">
+      <created>1513680417189</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1513680417189</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="322362000" />
+    <option name="totallyTimeSpent" value="322401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="135" y="186" width="1317" height="742" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3234375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3234375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1072,7 +1059,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quesito.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
+        <state relative-caret-position="1853">
           <caret line="125" column="30" lean-forward="false" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
           <folding />
         </state>
