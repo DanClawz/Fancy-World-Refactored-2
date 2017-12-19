@@ -66,7 +66,7 @@ public class MyUtil {
      */
     public static char charInput(String MESSAGGIO) {
         System.out.print(MESSAGGIO + " (se una stringa, viene letto solo il 1^ carattere): ");
-        String s = input.next();
+        String s = input.nextLine();
         if (!s.equals("")) return s.charAt(0);
         else return charInput("Devi inserire un carattere!");
     }
@@ -95,7 +95,7 @@ public class MyUtil {
      */
     public static String stringInput(String MESSAGGIO) {
         System.out.print(MESSAGGIO + ": ");
-        String s = input.next();
+        String s = input.nextLine();
         //if (s.equals("")) return stringInput("Stringa vuota! Inserisci una stringa valida");
         return s;
     }
@@ -108,7 +108,7 @@ public class MyUtil {
      */
     public static String stringInputNonVuoto(String MESSAGGIO) {
         System.out.print(MESSAGGIO + ": ");
-        String s = input.next();
+        String s = input.nextLine();
         if (s.equals("")) return stringInput("Stringa vuota! Inserisci una stringa valida");
         return s;
     }

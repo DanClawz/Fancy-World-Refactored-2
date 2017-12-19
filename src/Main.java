@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
         boolean menu = true;
         splashScreen();
-        MyUtil.stringInputVuoto("Premi un tasto per continuare");
+        MyUtil.stringInputVuoto("Premi il tasto invio per continuare");
 
         /*while(menu) {
             switch(MyUtil.myMenu("Benvenuto!", "Gioca", "Istruzioni", "Esci")) {
