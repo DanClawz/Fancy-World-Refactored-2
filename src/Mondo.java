@@ -32,6 +32,8 @@ public class Mondo implements Serializable {
     /**  path del mondo. */
     private String pathMondo;
 
+    private int tipiChiave;
+
     /**
      * costruttore della classe.
      *
@@ -56,6 +58,8 @@ public class Mondo implements Serializable {
             mondo.add(new Luogo(nomeFile, i, parametri.get(i), this.tutorial));
         }
         pianoCorrente = pianoPartenza;
+
+        this.tipiChiave = Integer.parseInt(MyUtil.leggiFile(this.pathMondo + "num_chiavi").get(0));
     }
 
     /**
@@ -100,12 +104,12 @@ public class Mondo implements Serializable {
 
         if (Passaggio.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio)) {
             pianoUpDown = Passaggio.pianoDestPassaggio(mondo.get(pianoCorrente-pianoPartenza).getLista_passaggi(), mondo.get(pianoCorrente-pianoPartenza).getPosCorrente());
-            System.out.println(pianoUpDown);
             mondo.get(pianoCorrente-pianoPartenza).apriPassaggio(mondo.get(pianoUpDown-pianoPartenza).getPosCorrente(), true);        // apre il passaggio da b (destinazione) verso a (partenza)
         }
 
 
     }
+
 
 
     /**
@@ -295,6 +299,15 @@ public class Mondo implements Serializable {
     /* (non-Javadoc)
      * @see java.lang.Object#toString()
      */
+
+    public int getTipiChiave() {
+        return tipiChiave;
+    }
+
+    public void setTipiChiave(int tipiChiave) {
+        this.tipiChiave = tipiChiave;
+    }
+
     @Override
     public String toString() {
         return "nome mondo:" + this.nomeMondo + "\n" +

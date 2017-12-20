@@ -205,9 +205,10 @@ public class MondoConfig {
      * Numero tipi chiavi.
      */
     public void nTipiChiavi() { // da rivedere
-        int input = MyUtil.controlledIntInput("\nInserisci quanti tipi di chiavi possono essere presenti nel mondo (questo influenzera' il numero di luoghi giocabili) (valore corrente: " + mondo.getMondo().get(1).getChiavi().get(0).getnTipiChiave() + ")", 0, Integer.parseInt(MyUtil.leggiFileStringa(mondo.getPathMondo() + "num_luoghi")));  // da correggere
-        int pianoMax = input+2;
-        Coordinata g = mondo.getMondo().get(mondo.getMondo().size()-1).getGoal();
+        int input = MyUtil.controlledIntInput("\nInserisci quanti tipi di chiavi possono essere presenti nel mondo (tipi di chiavi presenti nel mondo: " + mondo.getTipiChiave() + ")", 0, Integer.parseInt(MyUtil.leggiFile(mondo.getPathMondo() + "num_chiavi").get(0)));  // da correggere
+
+        //int pianoMax = input+2;
+        /*Coordinata g = mondo.getMondo().get(mondo.getMondo().size()-1).getGoal();
         mondo.getMondo().get(input+1).setGoal(g);
         for (int j = 0; j < mondo.getMondo().size(); j++) {
             for (int i = 0; i < mondo.getMondo().get(j).getLista_passaggi().size(); i++) {
@@ -216,7 +217,22 @@ public class MondoConfig {
                     mondo.getMondo().get(j).getLista_passaggi().get(i).setAperto(true);
                 }
             }
+        }*/
+        for (int i = 0; i < mondo.getMondo().size(); i++) {
+            for (int j = 0; j < mondo.getMondo().get(i).getLista_passaggi().size(); j++) {
+                mondo.getMondo().get(i).getLista_passaggi().get(j).setAperto(true);
+                System.out.println(mondo.getMondo().get(i).getLista_passaggi().get(j).getDest() + ":" + mondo.getMondo().get(i).getLista_passaggi().get(j).isAperto());
+
+            }
         }
+
+        for (int i = mondo.getMondo().size()-1; i > mondo.getTipiChiave() - input; i--) {
+            for (int j = 0; j < mondo.getMondo().get(i).getLista_passaggi().size(); j++) {
+                mondo.getMondo().get(i).getLista_passaggi().get(j).setAperto(false);
+                System.out.println(mondo.getMondo().get(i).getLista_passaggi().get(j).getDest() + ":" + mondo.getMondo().get(i).getLista_passaggi().get(j).isAperto());
+            }
+        }
+        mondo.setTipiChiave(input);
     }
 
 

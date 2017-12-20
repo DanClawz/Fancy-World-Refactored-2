@@ -171,7 +171,7 @@ public class Partita implements Serializable{
             }
 
             if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isPassaggioRaggiunto())
-                passaggioVerso = "Il passaggio ti porta verso: luogo" + Passaggio.pianoDestPassaggio(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getLista_passaggi(), m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getPosCorrente());
+                passaggioVerso = "Il passaggio ti porta verso: " + nomeDestinazione(Passaggio.pianoDestPassaggio(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getLista_passaggi(), m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getPosCorrente()));
                 //System.out.println();
             else passaggioVerso = "";
 
@@ -205,6 +205,10 @@ public class Partita implements Serializable{
             }
         }
 
+    }
+
+    public String nomeDestinazione(int pianoDest) {
+        return m.getMondo().get(pianoDest - Integer.parseInt(MyUtil.leggiFile(m.getPathMondo() + "piano_partenza").get(0))).getNomeLuogo();
     }
 
     /**
