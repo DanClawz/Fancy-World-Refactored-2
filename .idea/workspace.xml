@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b18cba1c-0bc8-48ad-b171-f2b178c4ae10" name="Default" comment="">
+    <list default="true" id="b18cba1c-0bc8-48ad-b171-f2b178c4ae10" name="Default" comment="Sistemati errori vari">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mappe/mondo1/mondo1_luogo5" afterPath="$PROJECT_DIR$/Mappe/mondo1/mondo1_luogo5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saves.txt" afterPath="$PROJECT_DIR$/saves.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mondo.java" afterPath="$PROJECT_DIR$/src/Mondo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MondoConfig.java" afterPath="$PROJECT_DIR$/src/MondoConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Partita.java" afterPath="$PROJECT_DIR$/src/Partita.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +26,8 @@
       <file leaf-file-name="MondoConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MondoConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1310">
-              <caret line="227" column="0" lean-forward="true" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+            <state relative-caret-position="3405">
+              <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,8 +36,8 @@
       <file leaf-file-name="Partita.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Partita.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-35">
-              <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+            <state relative-caret-position="2025">
+              <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -51,24 +46,29 @@
       <file leaf-file-name="Passaggio.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Passaggio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2364">
+            <state relative-caret-position="3105">
               <caret line="225" column="36" lean-forward="false" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mondo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Mondo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Mondo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="1545">
               <caret line="105" column="172" lean-forward="false" selection-start-line="105" selection-start-column="172" selection-end-line="105" selection-end-column="172" />
-              <folding>
-                <element signature="e#8878#8879#0" expanded="true" />
-                <element signature="e#8911#8912#0" expanded="true" />
-                <element signature="e#8960#8961#0" expanded="true" />
-                <element signature="e#9004#9005#0" expanded="true" />
-              </folding>
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaricaPartita.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CaricaPartita.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="130" column="52" lean-forward="true" selection-start-line="130" selection-start-column="52" selection-end-line="130" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,7 +107,7 @@
         <entry file="file://$PROJECT_DIR$/Mappe/mondo1/mondo1_luogo4">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="43" lean-forward="true" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+              <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -118,16 +118,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="241" column="37" lean-forward="false" selection-start-line="241" selection-start-column="37" selection-end-line="241" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -151,10 +141,10 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Damian Diaconu &lt;danclawz@hotmail.com&gt;, Sunny Singh" />
         <option value="Marc" />
         <option value="Marco" />
         <option value="marco" />
-        <option value="Damian Diaconu &lt;danclawz@hotmail.com&gt;, Sunny Singh" />
         <option value="Damian Diaconu &lt;danclawz@hotmail.com&gt;, Sunny SinghDa f" />
       </list>
     </option>
@@ -256,10 +246,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -271,18 +261,6 @@
               <item name="Fancy-World-Release-5-Javadoc" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fancy-World-Release-5-Javadoc" type="462c0819:PsiDirectoryNode" />
               <item name="Mappe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fancy-World-Release-5-Javadoc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fancy-World-Release-5-Javadoc" type="462c0819:PsiDirectoryNode" />
-              <item name="Mappe" type="462c0819:PsiDirectoryNode" />
-              <item name="mondo1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fancy-World-Release-5-Javadoc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fancy-World-Release-5-Javadoc" type="462c0819:PsiDirectoryNode" />
-              <item name="Mappe" type="462c0819:PsiDirectoryNode" />
-              <item name="mondo2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Fancy-World-Release-5-Javadoc" type="b2602c69:ProjectViewProjectNode" />
@@ -494,14 +472,8 @@
       <workItem from="1513692984180" duration="423000" />
       <workItem from="1513694219724" duration="652000" />
       <workItem from="1513696290101" duration="508000" />
-      <workItem from="1513777204807" duration="6522000" />
-    </task>
-    <task id="LOCAL-00001" summary="Da fare:&#10;- classe Coordinata&#10;- iniziare classe Luogo&#10;- sistemare classe Mappa">
-      <created>1506604619447</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1506604619447</updated>
+      <workItem from="1513777204807" duration="6653000" />
+      <workItem from="1513850116459" duration="1439000" />
     </task>
     <task id="LOCAL-00002" summary="Da fare:&#10;- classe Coordinata&#10;- iniziare classe Luogo&#10;- sistemare classe Mappa">
       <created>1506604641213</created>
@@ -839,42 +811,48 @@
       <option name="project" value="LOCAL" />
       <updated>1513680885201</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Sistemati errori vari">
+      <created>1513783883457</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1513783883459</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330956000" />
+    <option name="totallyTimeSpent" value="332526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="135" y="186" width="1920" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3234375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4077977" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="719" y="438" width="481" height="176" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.38697916" sideWeight="0.49791667" order="10" side_tool="false" content_ui="tabs" x="531" y="109" width="1249" height="861" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19370331" sideWeight="0.4944356" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19583778" sideWeight="0.4944356" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39874083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11875" sideWeight="0.5055644" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39874083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3234375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="719" y="438" width="481" height="176" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -923,7 +901,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Da fare:&#10;- sistemare i controlli dei passaggi e chiavi dei passaggi" />
     <MESSAGE value="Da fare:&#10;- deposito di chiavi con controlli" />
     <MESSAGE value="Da fare:&#10;- ultimi controlli su Release 2&#10;- progettare Release 3" />
     <MESSAGE value="Da fare:&#10;- Progettare Release 3" />
@@ -948,7 +925,8 @@
     <MESSAGE value="Da fare 3:&#10;&#10;- dare nomi sensati ai luoghi e mappe&#10;- controllo generale programma" />
     <MESSAGE value="Da fare 3:&#10;&#10;- controllo generale programma" />
     <MESSAGE value="Aggiunta javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta javadoc" />
+    <MESSAGE value="Sistemati errori vari" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sistemati errori vari" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1101,14 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CaricaPartita.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2445">
-          <caret line="163" column="63" lean-forward="false" selection-start-line="163" selection-start-column="63" selection-end-line="163" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1122,8 +1092,8 @@
         <state relative-caret-position="0">
           <caret line="243" column="16" lean-forward="false" selection-start-line="243" selection-start-column="16" selection-end-line="243" selection-end-column="16" />
           <folding>
-            <element signature="e#6062#6063#0" expanded="true" />
-            <element signature="e#6088#6089#0" expanded="true" />
+            <element signature="e#6062#6063#0" expanded="false" />
+            <element signature="e#6088#6089#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1148,7 +1118,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1156,7 +1125,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1164,13 +1132,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" lean-forward="true" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
+        <state relative-caret-position="3540">
           <caret line="241" column="37" lean-forward="false" selection-start-line="241" selection-start-column="37" selection-end-line="241" selection-end-column="37" />
           <folding />
         </state>
@@ -1179,7 +1146,7 @@
     <entry file="file://$PROJECT_DIR$/Mappe/mondo1/mondo1_luogo4">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="43" lean-forward="true" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1194,8 +1161,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MondoConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1310">
-          <caret line="227" column="0" lean-forward="true" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+        <state relative-caret-position="3405">
+          <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1226,15 +1193,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Partita.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+        <state relative-caret-position="2025">
+          <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Passaggio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2364">
+        <state relative-caret-position="3105">
           <caret line="225" column="36" lean-forward="false" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
           <folding />
         </state>
@@ -1242,14 +1209,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Mondo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="1545">
           <caret line="105" column="172" lean-forward="false" selection-start-line="105" selection-start-column="172" selection-end-line="105" selection-end-column="172" />
-          <folding>
-            <element signature="e#8878#8879#0" expanded="true" />
-            <element signature="e#8911#8912#0" expanded="true" />
-            <element signature="e#8960#8961#0" expanded="true" />
-            <element signature="e#9004#9005#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CaricaPartita.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="130" column="52" lean-forward="true" selection-start-line="130" selection-start-column="52" selection-end-line="130" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
