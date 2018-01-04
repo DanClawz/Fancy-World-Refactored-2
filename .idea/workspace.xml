@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b18cba1c-0bc8-48ad-b171-f2b178c4ae10" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/mondo/Passaggio2.java" afterPath="$PROJECT_DIR$/src/mondo/Passaggio.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mappe/mondo2/luogo1/passaggi" afterPath="$PROJECT_DIR$/Mappe/mondo2/luogo1/passaggi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saves.txt" afterPath="$PROJECT_DIR$/saves.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Chiave.java" afterPath="$PROJECT_DIR$/src/mondo/Chiave.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Luogo.java" afterPath="$PROJECT_DIR$/src/mondo/Luogo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Mappa.java" afterPath="$PROJECT_DIR$/src/mondo/Mappa.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Mondo.java" afterPath="$PROJECT_DIR$/src/mondo/Mondo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Portale.java" afterPath="$PROJECT_DIR$/src/mondo/Portale.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/partita/Partita.java" afterPath="$PROJECT_DIR$/src/partita/Partita.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -514,14 +505,7 @@
       <workItem from="1514974274637" duration="5041000" />
       <workItem from="1514983010993" duration="3579000" />
       <workItem from="1514994595829" duration="124000" />
-      <workItem from="1515057753885" duration="4250000" />
-    </task>
-    <task id="LOCAL-00005" summary="Da fare:&#10;- sistemare classe Luogo&#10;- fare passaggio da luogo all'altro&#10;- iniziare classe Mondo">
-      <created>1506953918738</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1506953918738</updated>
+      <workItem from="1515057753885" duration="4355000" />
     </task>
     <task id="LOCAL-00006" summary="Da fare:&#10;- finire-sistemare classe Luogo&#10;- input tastiera&#10;- finire classe Mondo&#10;- emulare il gioco (Release 1)">
       <created>1507027016442</created>
@@ -859,11 +843,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515060903941</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Versione iniziale Refactored 2.0">
+      <created>1515062488117</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1515062488117</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="352762000" />
+    <option name="totallyTimeSpent" value="352867000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="135" y="186" width="1920" height="1055" extended-state="6" />
@@ -943,7 +934,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Da fare:&#10;- Sessioni" />
     <MESSAGE value="Da fare:&#10;- ricontrollo generale Release 3&#10;- progettare Release 4" />
     <MESSAGE value="Da fare:&#10;- progettare Release 4" />
     <MESSAGE value="Versione iniziale Release 3" />
@@ -968,7 +958,8 @@
     <MESSAGE value="Release 5 pre-refactoring" />
     <MESSAGE value="Da fare:&#10;- togliere il vecchio metodo passaggio&#10;- lasciare passaggio2, che diventerà passaggio&#10;- gestione movimento&#10;- gestione cambio luogo" />
     <MESSAGE value="Da fare 2:&#10;- togliere il vecchio metodo passaggio&#10;- lasciare passaggio2, che diventerà passaggio&#10;- gestione movimento&#10;- gestione cambio luogo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Da fare 2:&#10;- togliere il vecchio metodo passaggio&#10;- lasciare passaggio2, che diventerà passaggio&#10;- gestione movimento&#10;- gestione cambio luogo" />
+    <MESSAGE value="Versione iniziale Refactored 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Versione iniziale Refactored 2.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
