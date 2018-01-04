@@ -11,7 +11,7 @@ public enum Tipo {
     DIAMANTE("diamante", 'D'),
     VIBRANIO("vibranio", 'V'),
     MISTERIOSA("misteriosa", 'M'),
-    APERTO("", 'X');
+    APERTO("aperto", 'X');
 
     String tipo;
     char t;

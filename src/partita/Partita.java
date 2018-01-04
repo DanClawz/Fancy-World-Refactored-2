@@ -177,7 +177,7 @@ public class Partita implements Serializable{
             }
 
             if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isPassaggioRaggiunto())
-                passaggioVerso = "Il passaggio ti porta verso: " + nomeDestinazione(Passaggio.pianoDestPassaggio(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getLista_passaggi(), m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getPosCorrente()));
+                passaggioVerso = "Il passaggio ti porta verso: " + nomeDestinazione(Passaggio2.pianoDestPassaggio(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getLista_passaggi(), m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getPosCorrente()));
                 //System.out.println();
             else passaggioVerso = "";
 

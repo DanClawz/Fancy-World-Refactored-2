@@ -18,9 +18,7 @@ public class Luogo implements Serializable {
     private ArrayList<Coordinata> ostacoli;
     
     /** La lista dei passaggi. */
-    private ArrayList<Passaggio> lista_passaggi;
-
-    private ArrayList<Passaggio2> lista_passaggi2;
+    private ArrayList<Passaggio2> lista_passaggi;
     
     /** La mappa. */
     private char[][] mappa;
@@ -67,7 +65,6 @@ public class Luogo implements Serializable {
         mappa = mappaIniziale.getMap();
 
         lista_passaggi = mappaIniziale.passaggi();
-        lista_passaggi2 = mappaIniziale.passaggi2();
 
         ostacoli = mappaIniziale.posizioneOstacoli();
         start = mappaIniziale.posizioneIniziale();
@@ -121,7 +118,7 @@ public class Luogo implements Serializable {
      * @param posNew La nuova posizione
      */
     public void muovi(Coordinata posNew) {
-        if (Passaggio.compareListaPassaggi(lista_passaggi, posCorrente)) mappa[posCorrente.getX()][posCorrente.getY()] = '○';
+        if (Passaggio2.compareListaPassaggi(lista_passaggi, posCorrente)) mappa[posCorrente.getX()][posCorrente.getY()] = '○';
         else if (!chiavi.isEmpty() && Chiave.isChiavePresente(chiavi, posCorrente)) mappa[posCorrente.getX()][posCorrente.getY()] = '¶';
         else if (goal.equals(posCorrente)) mappa[posCorrente.getX()][posCorrente.getY()] = '⌂';
         else mappa[posCorrente.getX()][posCorrente.getY()] = '.';
@@ -133,7 +130,10 @@ public class Luogo implements Serializable {
      * Reset passaggi.
      */
     public void resetPassaggi() {
-        for (Passaggio p : lista_passaggi)
+        /*for (Passaggio p : lista_passaggi)
+            mappa[p.getCoordinata().getX()][p.getCoordinata().getY()] = '○';*/
+
+        for (Passaggio2 p : lista_passaggi)
             mappa[p.getCoordinata().getX()][p.getCoordinata().getY()] = '○';
     }
 
@@ -171,7 +171,7 @@ public class Luogo implements Serializable {
                     chiavePresente = true;
                 else chiavePresente = false;
 
-                if (Passaggio.compareListaPassaggi(lista_passaggi, posNuova))
+                if (Passaggio2.compareListaPassaggi(lista_passaggi, posNuova))
                     passaggioRaggiunto = true;
                 else passaggioRaggiunto = false;
 
@@ -189,8 +189,8 @@ public class Luogo implements Serializable {
         else System.out.println("Mossa possibile!");
 
         if (passaggioRaggiunto) {
-            if (Passaggio.compareListaPass(lista_passaggi, posCorrente).getTipoPassaggio() != null)
-                System.out.println("Ti trovi su un passaggio! Tipo: " + Passaggio.compareListaPass(lista_passaggi, posCorrente).getTipoPassaggio());
+            if (Passaggio2.compareListaPass(lista_passaggi, posCorrente).getTipoPassaggio() != null)
+                System.out.println("Ti trovi su un passaggio! Tipo: " + Passaggio2.compareListaPass(lista_passaggi, posCorrente).getTipoPassaggio());
             else System.out.println("Ti trovi su un passaggio aperto!");
         }
 
@@ -217,7 +217,7 @@ public class Luogo implements Serializable {
      * @param aperto aperto
      */
     public void apriPassaggio(Coordinata c, boolean aperto) {
-        for (Passaggio p : lista_passaggi) {
+        for (Passaggio2 p : lista_passaggi) {
             if (p.getCoordinata().equals(c)) {
                 p.setAperto(aperto);
             }
@@ -230,8 +230,8 @@ public class Luogo implements Serializable {
      * @param c the c
      * @return the passaggio
      */
-    public Passaggio passaggioSuCoordinata(Coordinata c) {
-        for (Passaggio p : lista_passaggi)
+    public Passaggio2 passaggioSuCoordinata(Coordinata c) {
+        for (Passaggio2 p : lista_passaggi)
             if (p.getCoordinata().equals(c))
                 return p;
         return null;
@@ -554,7 +554,7 @@ public class Luogo implements Serializable {
      *
      * @return la lista passaggi
      */
-    public ArrayList<Passaggio> getLista_passaggi() {
+    public ArrayList<Passaggio2> getLista_passaggi() {
         return lista_passaggi;
     }
 

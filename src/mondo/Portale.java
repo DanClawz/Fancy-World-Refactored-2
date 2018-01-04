@@ -2,9 +2,10 @@ package mondo;
 
 import utility.MyUtil;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Portale {
+public class Portale implements Serializable{
     private Coordinata c;
     private int piano1, piano2;
     private Tipo tipo;

@@ -180,7 +180,7 @@ public class Mappa implements Serializable {
      *
      * @return la lista
      */
-    public ArrayList<Passaggio> passaggi() {
+    /*public ArrayList<Passaggio> passaggi() {
         ArrayList<Passaggio> p = new ArrayList<Passaggio>();
         for (int i = 0; i < NRIGHE; i++) {
             for (int j = 0; j < NCOLONNE; j++) {
@@ -207,11 +207,11 @@ public class Mappa implements Serializable {
         }
 
         return p;
-    }
+    }*/
 
 
 
-    public ArrayList<Passaggio2> passaggi2() {
+    public ArrayList<Passaggio2> passaggi() {
         ArrayList<String> stringhe = MyUtil.leggiFile(this.pathLuogo + "passaggi");
         ArrayList<Portale> portali = new ArrayList<Portale>();
         ArrayList<Passaggio2> passaggi = new ArrayList<Passaggio2>();
