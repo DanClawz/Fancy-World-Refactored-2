@@ -56,10 +56,4 @@ public class Portale implements Serializable{
         this.tipo = tipo;
     }
 
-    public static void main(String args[]) {
-        ArrayList<String> stringhe = MyUtil.leggiFile("./Passaggi/passaggi");
-        String[] s = stringhe.get(1).split(" ");
-        System.out.println(s[3]);
-
-    }
 }

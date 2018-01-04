@@ -133,7 +133,7 @@ public class Chiave implements Serializable {
      */
     @Override
     public String toString() {
-        return "mondo.Chiave " + (!this.tipoChiave.equals("misteriosa") ? "di " : "") + this.tipoChiave + ", peso: " + this.peso;
+        return "Chiave " + (!this.tipoChiave.equals("misteriosa") ? "di " : "") + this.tipoChiave + ", peso: " + this.peso;
     }
 
     /**

@@ -79,15 +79,15 @@ public class Mondo implements Serializable {
         System.out.println(pianoCorrente);*/
         int indice = pianoCorrente - pianoPartenza;
 
-        int nuovoPiano = Passaggio2.pianoDestPassaggio(mondo.get(indice).getLista_passaggi(), mondo.get(indice).getPosCorrente());
+        int nuovoPiano = Passaggio.pianoDestPassaggio(mondo.get(indice).getLista_passaggi(), mondo.get(indice).getPosCorrente());
         //System.out.println(nuovoPiano);
         int pianoUpDown;
         Coordinata coordinataPassaggio = mondo.get(indice).getPosCorrente();
 
         if (((input == 'u' && nuovoPiano > pianoCorrente) || (input == 'd' && nuovoPiano < pianoCorrente))
-                && (Passaggio2.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio))
+                && (Passaggio.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio))
                 && (((mondo.get(indice).passaggioSuCoordinata(mondo.get(indice).getPosCorrente()).isAperto())) ||
-                Passaggio2.matchChiavi(chiavi, mondo.get(indice).passaggioSuCoordinata(mondo.get(indice).getPosCorrente())))) {
+                Passaggio.matchChiavi(chiavi, mondo.get(indice).passaggioSuCoordinata(mondo.get(indice).getPosCorrente())))) {
 
             this.pianoCorrente = nuovoPiano;
             mondo.get(pianoCorrente-pianoPartenza).apriPassaggio(mondo.get(pianoCorrente-pianoPartenza).getPosCorrente(), true);        // apre il passaggio da a (partenza) verso b (destinazione)
@@ -97,19 +97,19 @@ public class Mondo implements Serializable {
             mondo.get(pianoCorrente-pianoPartenza).setProvaSostenuta(false);
         }
 
-        else if ((Passaggio2.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio) && (input == 'u' && nuovoPiano <= pianoCorrente) || (input == 'd' && nuovoPiano >= pianoCorrente))) {
+        else if ((Passaggio.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio) && (input == 'u' && nuovoPiano <= pianoCorrente) || (input == 'd' && nuovoPiano >= pianoCorrente))) {
             char c = input == 'u' ? 'd' : 'u';
             System.out.println("Direzione errata! prova.Prova con: " + c);
         }
 
-        else if (Passaggio2.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio) &&  (!mondo.get(indice).passaggioSuCoordinata(mondo.get(indice).getPosCorrente()).isAperto()))
+        else if (Passaggio.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio) &&  (!mondo.get(indice).passaggioSuCoordinata(mondo.get(indice).getPosCorrente()).isAperto()))
             System.out.println("mondo.Passaggio non possibile! mondo.Chiave richiesta: " + mondo.get(pianoCorrente-pianoPartenza).passaggioSuCoordinata(mondo.get(pianoCorrente-pianoPartenza).getPosCorrente()).getTipoPassaggio());
 
         mondo.get(pianoCorrente-pianoPartenza).setPosCorrente(coordinataPassaggio);
         mondo.get(pianoCorrente-pianoPartenza).muovi(coordinataPassaggio);
 
-        if (Passaggio2.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio)) {
-            pianoUpDown = Passaggio2.pianoDestPassaggio(mondo.get(pianoCorrente-pianoPartenza).getLista_passaggi(), mondo.get(pianoCorrente-pianoPartenza).getPosCorrente());
+        if (Passaggio.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio)) {
+            pianoUpDown = Passaggio.pianoDestPassaggio(mondo.get(pianoCorrente-pianoPartenza).getLista_passaggi(), mondo.get(pianoCorrente-pianoPartenza).getPosCorrente());
             mondo.get(pianoCorrente-pianoPartenza).apriPassaggio(mondo.get(pianoUpDown-pianoPartenza).getPosCorrente(), true);        // apre il passaggio da b (destinazione) verso a (partenza)
         }
 

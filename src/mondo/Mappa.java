@@ -211,10 +211,10 @@ public class Mappa implements Serializable {
 
 
 
-    public ArrayList<Passaggio2> passaggi() {
+    public ArrayList<Passaggio> passaggi() {
         ArrayList<String> stringhe = MyUtil.leggiFile(this.pathLuogo + "passaggi");
         ArrayList<Portale> portali = new ArrayList<Portale>();
-        ArrayList<Passaggio2> passaggi = new ArrayList<Passaggio2>();
+        ArrayList<Passaggio> passaggi = new ArrayList<Passaggio>();
         for (String s : stringhe) {
             String[] valori = s.split(" ");
             int x = Integer.parseInt(valori[0]);
@@ -230,8 +230,8 @@ public class Mappa implements Serializable {
                 for (Portale p : portali) {
                     if (i == p.getC().getX() && j == p.getC().getY()) {
                         boolean aperto;
-                        if (p.getTipo().getT() == 'X') passaggi.add(new Passaggio2(p, true));
-                        else passaggi.add(new Passaggio2(p, false));
+                        if (p.getTipo().getT() == 'X') passaggi.add(new Passaggio(p, true));
+                        else passaggi.add(new Passaggio(p, false));
                         map[i][j] = '○';
                     }
                 }

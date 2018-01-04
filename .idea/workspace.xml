@@ -2,29 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b18cba1c-0bc8-48ad-b171-f2b178c4ae10" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/mondo1/mondo1_luogo1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/mondo1/mondo1_luogo2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/mondo1/mondo1_luogo3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/mondo1/mondo1_luogo4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/mondo1/mondo1_luogo5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/mondo2/mondo2_luogo1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/mondo2/mondo2_luogo2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/mondo2/mondo2_luogo3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/mondo2/mondo2_luogo4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/mondo2/mondo2_luogo5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/mondo2/mondo2_luogo6" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/mondo2/mondo2_luogo7" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/tutorial/tutorial_luogo1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/tutorial/tutorial_luogo2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mappe/tutorial/tutorial_luogo3" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/mondo/Passaggio2.java" afterPath="$PROJECT_DIR$/src/mondo/Passaggio.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mappe/mondo2/luogo1/passaggi" afterPath="$PROJECT_DIR$/Mappe/mondo2/luogo1/passaggi" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saves.txt" afterPath="$PROJECT_DIR$/saves.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Chiave.java" afterPath="$PROJECT_DIR$/src/mondo/Chiave.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Luogo.java" afterPath="$PROJECT_DIR$/src/mondo/Luogo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Mappa.java" afterPath="$PROJECT_DIR$/src/mondo/Mappa.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Mondo.java" afterPath="$PROJECT_DIR$/src/mondo/Mondo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Passaggio2.java" afterPath="$PROJECT_DIR$/src/mondo/Passaggio2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Portale.java" afterPath="$PROJECT_DIR$/src/mondo/Portale.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Tipo.java" afterPath="$PROJECT_DIR$/src/mondo/Tipo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/partita/Partita.java" afterPath="$PROJECT_DIR$/src/partita/Partita.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,29 +36,19 @@
         <entry file="file://$PROJECT_DIR$/src/mondo/Mappa.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-330">
-              <caret line="213" column="41" lean-forward="false" selection-start-line="213" selection-start-column="41" selection-end-line="213" selection-end-column="41" />
+              <caret line="213" column="40" lean-forward="false" selection-start-line="213" selection-start-column="40" selection-end-line="213" selection-end-column="40" />
               <folding>
-                <marker date="1515060159204" expanded="false" signature="4151:4162" ph="&lt;~&gt;" />
+                <marker date="1515061336660" expanded="false" signature="4151:4162" ph="&lt;~&gt;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tipo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mondo/Tipo.java">
+      <file leaf-file-name="Chiave.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mondo/Chiave.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Passaggio.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mondo/Passaggio.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="108" column="6" lean-forward="true" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
+            <state relative-caret-position="462">
+              <caret line="135" column="16" lean-forward="true" selection-start-line="135" selection-start-column="16" selection-end-line="135" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -100,24 +76,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Partita.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Partita.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/partita/Partita.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115">
+            <state relative-caret-position="1280">
               <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Passaggio2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mondo/Passaggio2.java">
+      <file leaf-file-name="Tipo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mondo/Tipo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,8 +99,30 @@
       <file leaf-file-name="Portale.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mondo/Portale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+            <state relative-caret-position="615">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaricaPartita.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/partita/CaricaPartita.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="77" column="42" lean-forward="true" selection-start-line="77" selection-start-column="42" selection-end-line="77" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Passaggio.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mondo/Passaggio.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,7 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Prove/prova1" />
         <option value="$PROJECT_DIR$/src/Prove/prova2" />
         <option value="$PROJECT_DIR$/src/Mappe/mondo2/mondo2_luogo2" />
         <option value="$PROJECT_DIR$/src/Mappe/mondo2/mondo2_luogo1" />
@@ -210,7 +205,6 @@
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/prova/Prova.java" />
         <option value="$PROJECT_DIR$/Mappe/mondo1/mondo1_luogo1" />
-        <option value="$PROJECT_DIR$/src/mondo/Chiave.java" />
         <option value="$PROJECT_DIR$/src/mondo/Passaggio.java" />
         <option value="$PROJECT_DIR$/Mappe/mondo1/luogo2/mondo1_luogo2" />
         <option value="$PROJECT_DIR$/Mappe/mondo1/luogo3/mondo1_luogo3" />
@@ -219,8 +213,10 @@
         <option value="$PROJECT_DIR$/src/mondo/Mondo.java" />
         <option value="$PROJECT_DIR$/src/partita/Partita.java" />
         <option value="$PROJECT_DIR$/src/mondo/Passaggio2.java" />
-        <option value="$PROJECT_DIR$/src/mondo/Portale.java" />
         <option value="$PROJECT_DIR$/src/mondo/Tipo.java" />
+        <option value="$PROJECT_DIR$/src/mondo/Chiave.java" />
+        <option value="$PROJECT_DIR$/Mappe/mondo2/luogo1/passaggi" />
+        <option value="$PROJECT_DIR$/src/mondo/Portale.java" />
       </list>
     </option>
   </component>
@@ -280,18 +276,19 @@
             <path>
               <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
-              <item name="Mappe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utility" type="462c0819:PsiDirectoryNode" />
+              <item name="mondo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="partita" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -517,14 +514,7 @@
       <workItem from="1514974274637" duration="5041000" />
       <workItem from="1514983010993" duration="3579000" />
       <workItem from="1514994595829" duration="124000" />
-      <workItem from="1515057753885" duration="2635000" />
-    </task>
-    <task id="LOCAL-00004" summary="Da fare:&#10;- controllo passaggio&#10;- controllo goal&#10;- controllo codice Luogo&#10;- iniziare classe Luogo">
-      <created>1506682489328</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1506682489328</updated>
+      <workItem from="1515057753885" duration="4250000" />
     </task>
     <task id="LOCAL-00005" summary="Da fare:&#10;- sistemare classe Luogo&#10;- fare passaggio da luogo all'altro&#10;- iniziare classe Mondo">
       <created>1506953918738</created>
@@ -862,11 +852,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514992480545</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Da fare 2:&#10;- togliere il vecchio metodo passaggio&#10;- lasciare passaggio2, che diventerà passaggio&#10;- gestione movimento&#10;- gestione cambio luogo">
+      <created>1515060903940</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1515060903941</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="351147000" />
+    <option name="totallyTimeSpent" value="352762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="135" y="186" width="1920" height="1055" extended-state="6" />
@@ -946,7 +943,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Da fare:&#10;- Progettare Release 3" />
     <MESSAGE value="Da fare:&#10;- Sessioni" />
     <MESSAGE value="Da fare:&#10;- ricontrollo generale Release 3&#10;- progettare Release 4" />
     <MESSAGE value="Da fare:&#10;- progettare Release 4" />
@@ -971,7 +967,8 @@
     <MESSAGE value="Sistemati errori vari" />
     <MESSAGE value="Release 5 pre-refactoring" />
     <MESSAGE value="Da fare:&#10;- togliere il vecchio metodo passaggio&#10;- lasciare passaggio2, che diventerà passaggio&#10;- gestione movimento&#10;- gestione cambio luogo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Da fare:&#10;- togliere il vecchio metodo passaggio&#10;- lasciare passaggio2, che diventerà passaggio&#10;- gestione movimento&#10;- gestione cambio luogo" />
+    <MESSAGE value="Da fare 2:&#10;- togliere il vecchio metodo passaggio&#10;- lasciare passaggio2, che diventerà passaggio&#10;- gestione movimento&#10;- gestione cambio luogo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Da fare 2:&#10;- togliere il vecchio metodo passaggio&#10;- lasciare passaggio2, che diventerà passaggio&#10;- gestione movimento&#10;- gestione cambio luogo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -980,7 +977,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Mappe/mondo2/mondo2_luogo1" />
     <entry file="file://$PROJECT_DIR$/src/Mappe/mondo2/mondo2_luogo2" />
     <entry file="file://$PROJECT_DIR$/src/Mappe/mondo2/mondo2_luogo3" />
     <entry file="file://$PROJECT_DIR$/src/Mappe/mondo2/mondo2_luogo4" />
@@ -1111,13 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/partita/CaricaPartita.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-689">
-          <caret line="77" column="42" lean-forward="true" selection-start-line="77" selection-start-column="42" selection-end-line="77" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1158,13 +1147,6 @@
         <state relative-caret-position="120">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mondo/Chiave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1251,15 +1233,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/partita/Partita.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mondo/Passaggio2.java">
+    <entry file="file://$PROJECT_DIR$/src/mondo/Passaggio.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
@@ -1269,38 +1243,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mondo/Portale.java">
+    <entry file="file://$PROJECT_DIR$/src/mondo/Mappa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        <state relative-caret-position="-330">
+          <caret line="213" column="40" lean-forward="false" selection-start-line="213" selection-start-column="40" selection-end-line="213" selection-end-column="40" />
+          <folding>
+            <marker date="1515061336660" expanded="false" signature="4151:4162" ph="&lt;~&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mappe/mondo2/luogo1/passaggi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mondo/Chiave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="135" column="16" lean-forward="true" selection-start-line="135" selection-start-column="16" selection-end-line="135" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mondo/Tipo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mondo/Passaggio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mondo/Tipo.java">
+    <entry file="file://$PROJECT_DIR$/src/mondo/Portale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mondo/Mappa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="213" column="41" lean-forward="false" selection-start-line="213" selection-start-column="41" selection-end-line="213" selection-end-column="41" />
+        <state relative-caret-position="615">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
-            <marker date="1515060159204" expanded="false" signature="4151:4162" ph="&lt;~&gt;" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mondo/Passaggio.java">
+    <entry file="file://$PROJECT_DIR$/src/partita/CaricaPartita.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="108" column="6" lean-forward="true" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
+        <state relative-caret-position="705">
+          <caret line="77" column="42" lean-forward="true" selection-start-line="77" selection-start-column="42" selection-end-line="77" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/partita/Partita.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1280">
+          <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding />
         </state>
       </provider>
