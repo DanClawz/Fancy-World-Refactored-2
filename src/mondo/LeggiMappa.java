@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 // TODO: Auto-generated Javadoc
 /**
- * La classe mondo.Mappa.
+ * La classe mondo.LeggiMappa.
  */
-public class Mappa implements Serializable {
+public class LeggiMappa implements Serializable {
     
     /** il  numero di righe. */
     public int NRIGHE;
@@ -35,7 +35,7 @@ public class Mappa implements Serializable {
      *
      * @param nomeFile il nome del file
      */
-    public Mappa(String nomeFile, String pathLuogo) {
+    public LeggiMappa(String nomeFile, String pathLuogo) {
         NRIGHE = 15;
         NCOLONNE = 50;
 
@@ -65,7 +65,7 @@ public class Mappa implements Serializable {
      * @param nomeFile il nome del file
      * @param tutorial il tutorial
      */
-    public Mappa(String nomeFile, String pathLuogo, boolean tutorial) {
+    public LeggiMappa(String nomeFile, String pathLuogo, boolean tutorial) {
 
         this.pathLuogo = pathLuogo;
 
@@ -175,47 +175,13 @@ public class Mappa implements Serializable {
         return c;
     }
 
-    /**
-     * Passaggi.
-     *
-     * @return la lista
-     */
-    /*public ArrayList<Passaggio> passaggi() {
-        ArrayList<Passaggio> p = new ArrayList<Passaggio>();
-        for (int i = 0; i < NRIGHE; i++) {
-            for (int j = 0; j < NCOLONNE; j++) {
-                if (Character.isDigit(map[i][j])) {
-                    p.add(new Passaggio(new Coordinata(i, j), Character.getNumericValue(map[i][j]), true));
-                    p.get(p.size()-1).assegnaTipoPassaggio();
-                    map[i][j] = '○';
-                }
-                else if (Character.isLetter(map[i][j])) {
-                    switch(map[i][j]) {
-                        case 'Q': p.add(new Passaggio(new Coordinata(i, j), 10, true));
-                                p.get(p.size()-1).assegnaTipoPassaggio();
-                                map[i][j] = '○';break;
-                        case 'W': p.add(new Passaggio(new Coordinata(i, j), 11, true));
-                                p.get(p.size()-1).assegnaTipoPassaggio();
-                                map[i][j] = '○';break;
-                        case 'E': p.add(new Passaggio(new Coordinata(i, j), 12, true));
-                                p.get(p.size()-1).assegnaTipoPassaggio();
-                                map[i][j] = '○';break;
-                    }
-
-                }
-            }
-        }
-
-        return p;
-    }*/
-
 
 
     public ArrayList<Passaggio> passaggi() {
-        ArrayList<String> stringhe = MyUtil.leggiFile(this.pathLuogo + "passaggi");
+        ArrayList<String> stringhe = MyUtil.leggiFile(this.pathLuogo + "passaggi");        // si leggono i passaggi dal file e si salvano in una lista
         ArrayList<Portale> portali = new ArrayList<Portale>();
         ArrayList<Passaggio> passaggi = new ArrayList<Passaggio>();
-        for (String s : stringhe) {
+        for (String s : stringhe) {     // si aggiungono i valori specifici di ogni portale alla lista dei portali
             String[] valori = s.split(" ");
             int x = Integer.parseInt(valori[0]);
             int y = Integer.parseInt(valori[1]);
@@ -227,9 +193,8 @@ public class Mappa implements Serializable {
 
         for (int i = 0; i < NRIGHE; i++) {
             for (int j = 0; j < NCOLONNE; j++) {
-                for (Portale p : portali) {
+                for (Portale p : portali) {     // si crea la lista dei passaggi, rendendoli chiusi o aperti e si assegna un simbolo a passaggio
                     if (i == p.getC().getX() && j == p.getC().getY()) {
-                        boolean aperto;
                         if (p.getTipo().getT() == 'X') passaggi.add(new Passaggio(p, true));
                         else passaggi.add(new Passaggio(p, false));
                         map[i][j] = '○';
@@ -238,14 +203,7 @@ public class Mappa implements Serializable {
             }
         }
 
-        for (Portale p : portali) {
-            // ??
-        }
         return passaggi;
-    }
-
-    public void stampaPassaggi(Portale p) {
-
     }
 
 
@@ -258,7 +216,7 @@ public class Mappa implements Serializable {
         ArrayList<Chiave> c = new ArrayList<Chiave>();
         for (int i = 0; i < NRIGHE; i++) {
             for (int j = 0; j < NCOLONNE; j++) {
-                if (Character.isLetter(map[i][j]) && (map[i][j]!='Q' && map[i][j]!='W' && map[i][j]!='E')) {
+                if (Character.isLetter(map[i][j])) {
                     Chiave t = new Chiave(new Coordinata(i, j));
                     t.setPassaggioDaAprire(Character.toLowerCase(map[i][j]));
                     c.add(t);

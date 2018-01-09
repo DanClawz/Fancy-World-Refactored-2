@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project default="javadoc">
     <target name="javadoc">
-        <javadoc access="public" author="true" classpath="." destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" source="1.8" sourcefiles="src/partita.LetturaScritturaPartita.java,src/prova.Prova.java,src/partita.MondoConfig.java,src/mondo.Luogo.java,src/partita.Partita.java,src/utility.MyUtil.java,src/prova.LeggiProva.java,src/prova.Quesito.java,src/partita.CaricaPartita.java,src/giocatore.Giocatore.java,src/mondo.Coordinata.java,src/mondo.Mondo.java,src/main.Main.java,src/mondo.Mappa.java,src/partita.ListaPartite.java,src/mondo.Chiave.java,src/mondo.Passaggio.java" sourcepath="src" splitindex="true" use="true" version="true">
+        <javadoc access="public" author="true" classpath="." destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" source="1.8" sourcefiles="src/partita.LetturaScritturaPartita.java,src/prova.Prova.java,src/partita.MondoConfig.java,src/mondo.Luogo.java,src/partita.Partita.java,src/utility.MyUtil.java,src/prova.LeggiProva.java,src/prova.Quesito.java,src/partita.CaricaPartita.java,src/giocatore.Giocatore.java,src/mondo.Coordinata.java,src/mondo.Mondo.java,src/main.Main.java,src/mondo.LeggiMappa.java,src/partita.ListaPartite.java,src/mondo.Chiave.java,src/mondo.Passaggio.java" sourcepath="src" splitindex="true" use="true" version="true">
             <link href="https://docs.oracle.com/javase/8/docs/api/"/>
             <link href="file:/home/marco/IdeaProjects/Fancy-World-Release-5/doc/"/>
             <link href="http://docs.oracle.com/javase/8/javafx/api/"/>

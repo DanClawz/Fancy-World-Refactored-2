@@ -59,7 +59,7 @@ public class Partita implements Serializable{
      * @param scelta La scelta
      * @param abilitaCambiaMondo L' abilita cambia mondo
      */
-    public Partita(int id, String nomePartita, Giocatore giocatore, ArrayList<Mondo> mondi, int scelta, boolean abilitaCambiaMondo) {
+    public Partita(int id, String nomePartita, Giocatore giocatore, boolean autoSave, ArrayList<Mondo> mondi, boolean abilitaCambiaMondo, int scelta) {
         this.abilitaCambiaMondo = abilitaCambiaMondo;
         this.nomePartita = nomePartita;
         this.mondi = mondi;
@@ -69,6 +69,7 @@ public class Partita implements Serializable{
         this.giocatore = giocatore;
         partite = LetturaScritturaPartita.leggi();
         date = new Date();
+        this.autoSave = autoSave;
         stampaMessaggio(this.m.getPathMondo());
     }
 
@@ -133,7 +134,7 @@ public class Partita implements Serializable{
                 if (MyUtil.controlledCharInput("Vuoi raccogliere la chiave? [s-n]", 's', 'n') == 's' && giocatore.checkChiaveRaccoglibile(chiavePosCorrente)) {
                     Chiave c = m.raccogliChiave();
                     giocatore.aggiungiChiave(c);
-                    System.out.println("mondo.Chiave raccolta: " + c);
+                    System.out.println("Chiave raccolta: " + c);
                 }
 
                 else System.out.println("La chiave non può essere raccolta! Numero chiavi in possesso: " + giocatore.getChiavi().size() + ", Peso chiavi corrente: " + giocatore.pesoTotaleChiavi());
@@ -419,6 +420,14 @@ public class Partita implements Serializable{
      */
     public void setM(Mondo m) {
         this.m = m;
+    }
+
+    public boolean isAutoSave() {
+        return autoSave;
+    }
+
+    public void setAutoSave(boolean autoSave) {
+        this.autoSave = autoSave;
     }
 
     /**

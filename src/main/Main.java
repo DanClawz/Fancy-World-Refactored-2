@@ -1,9 +1,14 @@
 package main;
 
+import factory.AbstractFactory;
+import factory.FancyWorld;
+import factory.TipoPartita;
 import mondo.*;
 import giocatore.*;
 import utility.*;
 import partita.*;
+
+import static factory.AbstractFactory.getFactory;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -21,23 +26,16 @@ public class Main {
         splashScreen();
         MyUtil.stringInputVuoto("Premi il tasto invio per continuare");
 
-        /*while(menu) {
-            switch(utility.MyUtil.myMenu("Benvenuto!", "Gioca", "Istruzioni", "Esci")) {
-                case 1: new partita.CaricaPartita(); break;
-                case 2: System.out.println("Come si gioca???"); break;
-                case 3: System.out.println("Esci!"); System.out.println("Un'occasione del genere non ti si ripresenterà più."); menu = false; break;
-            }
-        }*/
+        AbstractFactory factory = AbstractFactory.getFactory(FancyWorld.MENU);
 
         while(menu) {
             switch(MyUtil.myMenu("\n\n\nBenvenuto!", "Nuova partita", "Carica partita", "Tutorial", "Esci")) {
-                case 1: new CaricaPartita(true); break;
-                case 2: new CaricaPartita(false); break;
-                case 3: new Partita(new Giocatore(0, 10), new Mondo("tutorial", 99)); break;
+                case 1: factory.createMenu(TipoPartita.NUOVAPARTITA).getPartita().gioca(); break;
+                case 2: factory.createMenu(TipoPartita.CARICAPARTITA).getPartita().gioca(); break;
+                case 3: factory.createMenu(TipoPartita.TUTORIAL).getPartita().gioca(); break;
                 case 4: System.out.println("Esci!"); System.out.println("Un'occasione del genere non ti si ripresenterà più."); menu = false; break;
             }
         }
-
     }
 
 

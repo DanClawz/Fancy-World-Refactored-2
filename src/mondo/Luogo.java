@@ -24,7 +24,7 @@ public class Luogo implements Serializable {
     private char[][] mappa;
     
     /** La mappa iniziale. */
-    private Mappa mappaIniziale;
+    private LeggiMappa mappaIniziale;
     
     /** La prova sostenuta. */
     private boolean passaggioRaggiunto, goalRaggiunto, chiavePresente, provaRaggiunta, provaSostenuta;
@@ -58,8 +58,8 @@ public class Luogo implements Serializable {
         this.nomeLuogo = nomeLuogo;
 
         if (tutorial)
-            mappaIniziale = new Mappa(nomeFile, pathLuogo, true);
-        else mappaIniziale = new Mappa(nomeFile, pathLuogo);
+            mappaIniziale = new LeggiMappa(nomeFile, pathLuogo, true);
+        else mappaIniziale = new LeggiMappa(nomeFile, pathLuogo);
 
 
         mappa = mappaIniziale.getMap();
@@ -572,7 +572,7 @@ public class Luogo implements Serializable {
      *
      * @return la mappa iniziale
      */
-    public Mappa getMappaIniziale() {
+    public LeggiMappa getMappaIniziale() {
         return mappaIniziale;
     }
 
