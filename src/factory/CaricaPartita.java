@@ -5,6 +5,7 @@ import mondo.Mondo;
 import partita.LetturaScritturaPartita;
 import partita.ListaPartite;
 import partita.Partita;
+import system_msg.Msg;
 import utility.MyUtil;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class CaricaPartita extends AbstractProductMenu {
         for (int i = 0; i < this.partite.getPartite().size(); i++)
             opzioni[i] = this.partite.getPartite().get(i).toString();
 
-        this.id = MyUtil.myMenu("\nCarica partita", opzioni)-1;
+        this.id = MyUtil.myMenu(Msg.msgCaricaPartita(), opzioni)-1;
         return id;
 
     }
@@ -61,3 +62,5 @@ public class CaricaPartita extends AbstractProductMenu {
         return partite.getPartite().get(id).isAbilitaCambiaMondo();
     }
 }
+
+

@@ -34,11 +34,10 @@ public class LeggiProva implements Serializable{
         try {
             b = new BufferedReader(new FileReader(new File("./Prove/prova1")));
             while ((domanda = b.readLine())!=null && domanda.length()!=0) {
-                String[] opzioni = new String[3];   //???????????????
+                String[] opzioni = new String[3];
                 opzioni[0] = b.readLine();
                 opzioni[1] = b.readLine();
                 opzioni[2] = b.readLine();
-                //System.out.println(opzioni[0] + opzioni[1] + opzioni[2]);
                 risposta = b.readLine();
                 prova1.add(new Quesito(domanda, opzioni, risposta));
             }

@@ -66,10 +66,10 @@ public class MyUtil {
      * @return il char
      */
     public static char charInput(String MESSAGGIO) {
-        System.out.print(MESSAGGIO + " (se una stringa, viene letto solo il 1^ carattere): ");
+        System.out.print("\n" + MESSAGGIO + " (se una stringa, viene letto solo il 1^ carattere): ");
         String s = input.nextLine();
         if (!s.equals("")) return s.charAt(0);
-        else return charInput("Devi inserire un carattere!");
+        else return charInput("-- Devi inserire un carattere! --");
     }
 
     /**
@@ -89,13 +89,33 @@ public class MyUtil {
     }
 
     /**
+     * Controlla boolean input.
+     *
+     * @param MESSAGGIO il messaggio
+     * @param caratteri i caratteri
+     * @return i char
+     */
+    public static boolean controlledBoolInput(String MESSAGGIO, char... caratteri) {
+        char c = charInput(MESSAGGIO + ": ");
+        for (int i = 0; i < caratteri.length; i++) {
+            if (c == caratteri[i]) {
+                if (c == 's' || c == 'y') return true;
+                else return false;
+            }
+        }
+        System.out.println("-- Devi inserire uno dei seguenti caratteri: " + Arrays.toString(caratteri) + " --");
+        return controlledBoolInput(MESSAGGIO, caratteri);
+    }
+
+
+    /**
      * String input.
      *
      * @param MESSAGGIO il messaggio
      * @return la string
      */
     public static String stringInput(String MESSAGGIO) {
-        System.out.print(MESSAGGIO + ": ");
+        System.out.print("\n" + MESSAGGIO + ": ");
         String s = input.nextLine();
         //if (s.equals("")) return stringInput("Stringa vuota! Inserisci una stringa valida");
         return s;
@@ -108,9 +128,9 @@ public class MyUtil {
      * @return la string
      */
     public static String stringInputNonVuoto(String MESSAGGIO) {
-        System.out.print(MESSAGGIO + ": ");
+        System.out.print("\n" + MESSAGGIO + ": ");
         String s = input.nextLine();
-        if (s.equals("")) return stringInput("Stringa vuota! Inserisci una stringa valida");
+        if (s.equals("")) return stringInputNonVuoto("Stringa vuota! Inserisci una stringa valida");
         return s;
     }
 
@@ -135,7 +155,7 @@ public class MyUtil {
      * @return l'int
      */
     public static int myMenu (String MESSAGGIO, String... opzioni) {
-        System.out.println(MESSAGGIO);
+        System.out.printf("\n\n\n%s", MESSAGGIO).println();
         for (int i=0;i<opzioni.length;i++) {
             System.out.println((i+1) + ": " + opzioni[i]);
         }

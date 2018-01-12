@@ -17,12 +17,6 @@ public class Portale implements Serializable{
         this.tipo = tipo;
     }
 
-    public int pianoDestinazione(int pianoCorrente) {
-        if (pianoCorrente == piano1) return piano2;
-        if (pianoCorrente == piano2) return piano1;
-        return 0;
-    }
-
 
     public Coordinata getC() {
         return c;

@@ -6,6 +6,7 @@ import partita.LetturaScritturaPartita;
 import partita.ListaPartite;
 import partita.MondoConfig;
 import partita.Partita;
+import system_msg.Msg;
 import utility.MyUtil;
 
 import java.util.ArrayList;
@@ -24,12 +25,15 @@ public class NuovaPartita extends AbstractProductMenu {
     @Override
     public int getId() {
         ListaPartite partite = LetturaScritturaPartita.leggi();
+
+        // si controlla se ci sono dei salvataggi sul file: se sì, viene letto l'id dell'ultimo salvataggio e viene incrementato di 1 per ottenere l'id della nuova partita
+        // altrimenti l'id viene impostato a 0
         return (!partite.getPartite().isEmpty() ? partite.getPartite().get(partite.getPartite().size()-1).getId()+1 : 0);
     }
 
     @Override
     public String getNomePartita() {
-        return MyUtil.stringInputNonVuoto("\nInserisci nome salvataggio");
+        return MyUtil.stringInputNonVuoto(Msg.msgNomeSalvataggio());
     }
 
     @Override
@@ -39,7 +43,7 @@ public class NuovaPartita extends AbstractProductMenu {
 
     @Override
     public boolean getAutosave() {
-        return (MyUtil.controlledCharInput("Abilitare autosalvataggio? [s-n]", 's', 'n') == 's' ? true : false);
+        return MyUtil.controlledBoolInput(Msg.msgAbilitaAutosave(), Msg.opzioniSN());
     }
 
     @Override
@@ -51,10 +55,10 @@ public class NuovaPartita extends AbstractProductMenu {
 
         // configurazione mondi
         while(menu) {
-            if (MyUtil.controlledCharInput("Vuoi configurare i mondi?", 's', 'n') == 's') {
+            if (MyUtil.controlledBoolInput(Msg.msgConfigMondi(), Msg.opzioniSN())) {
                 String opzioni[] = new String[mondi.size()];
                 for (int i = 0; i < N_MONDI; i++) opzioni[i] = mondi.get(i).getNomeMondo();
-                new MondoConfig(mondi.get(MyUtil.myMenu("Scegli il mondo da configurare", opzioni)-1), getGiocatore()).menuConfigMondo();
+                new MondoConfig(mondi.get(MyUtil.myMenu(Msg.msgConfigSceltaMondo(), opzioni)-1), getGiocatore()).menuConfigMondo();
             }
             else menu = false;
         }
@@ -70,13 +74,13 @@ public class NuovaPartita extends AbstractProductMenu {
             for (int i = 0; i < mondi.size(); i++) {
                 opzioni[i] = mondi.get(i).getNomeMondo();
             }
-            return MyUtil.myMenu("\nScegli il mondo da giocare", opzioni);
+            return MyUtil.myMenu(Msg.msgGiocaSceltaMondo(), opzioni);
         }
     }
 
     @Override
     public boolean getAbilitaCambiaMondo() {
-        this.cambiaMondo = (MyUtil.controlledCharInput("Vuoi giocare tutti i mondi in ordine?", 's', 'n') == 's' ? true : false);
+        this.cambiaMondo = MyUtil.controlledBoolInput(Msg.msgAbilitaCambiaMondo(), Msg.opzioniSN());
         return this.cambiaMondo;
     }
 }

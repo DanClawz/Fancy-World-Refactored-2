@@ -1,6 +1,7 @@
 package mondo;
 
 import prova.Prova;
+import system_msg.Msg;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -185,13 +186,14 @@ public class Luogo implements Serializable {
             }
         }
 
-        if (!mossaPossibile || bordoToccato) System.out.println("Mossa non possibile!");
-        else System.out.println("Mossa possibile!");
+        if (!mossaPossibile || bordoToccato) System.out.println(Msg.msgMossaNonPossibile());
+        else System.out.println(Msg.msgMossaPossibile());
 
         if (passaggioRaggiunto) {
             if (Passaggio.compareListaPass(lista_passaggi, posCorrente).getTipoPassaggio() != null)
-                System.out.println("Ti trovi su un passaggio! Tipo: " + Passaggio.compareListaPass(lista_passaggi, posCorrente).getTipoPassaggio());
-            else System.out.println("Ti trovi su un passaggio aperto!");
+                System.out.println(String.format(Msg.msgTipoPassaggio(), Passaggio.compareListaPass(lista_passaggi, posCorrente).getTipoPassaggio()));
+
+            else System.out.println(Msg.msgPassaggioAperto());
         }
 
     }
@@ -259,7 +261,7 @@ public class Luogo implements Serializable {
             chiavi.add(c);
             //this.chiaveDepositata = true;
         }
-        else System.out.println("La chiave non può essere depositata qui!");
+        else System.out.println(Msg.msgChiaveNonDepositata());
     }
 
     /**

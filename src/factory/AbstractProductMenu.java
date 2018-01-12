@@ -20,3 +20,6 @@ public abstract class AbstractProductMenu {
     public abstract boolean getAbilitaCambiaMondo();
 
 }
+
+
+

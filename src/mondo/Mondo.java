@@ -3,6 +3,7 @@ package mondo;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import system_msg.Msg;
 import utility.*;
 
 // TODO: Auto-generated Javadoc
@@ -99,11 +100,12 @@ public class Mondo implements Serializable {
 
         else if ((Passaggio.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio) && (input == 'u' && nuovoPiano <= pianoCorrente) || (input == 'd' && nuovoPiano >= pianoCorrente))) {
             char c = input == 'u' ? 'd' : 'u';
-            System.out.println("Direzione errata! prova.Prova con: " + c);
+            System.out.println(String.format(Msg.msgDirezioneErrata(), c));
         }
 
         else if (Passaggio.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio) &&  (!mondo.get(indice).passaggioSuCoordinata(mondo.get(indice).getPosCorrente()).isAperto()))
-            System.out.println("mondo.Passaggio non possibile! mondo.Chiave richiesta: " + mondo.get(pianoCorrente-pianoPartenza).passaggioSuCoordinata(mondo.get(pianoCorrente-pianoPartenza).getPosCorrente()).getTipoPassaggio());
+            System.out.println(String.format(Msg.msgChiaveRichiesta(), mondo.get(pianoCorrente-pianoPartenza).passaggioSuCoordinata(mondo.get(pianoCorrente-pianoPartenza).getPosCorrente()).getTipoPassaggio()));
+
 
         mondo.get(pianoCorrente-pianoPartenza).setPosCorrente(coordinataPassaggio);
         mondo.get(pianoCorrente-pianoPartenza).muovi(coordinataPassaggio);
@@ -161,8 +163,9 @@ public class Mondo implements Serializable {
     public String stampaMappa() {
         return nomeMondo.toUpperCase() + "\n" +
                 mondo.get(pianoCorrente-pianoPartenza).getNomeLuogo() + "\n" +
-                (this.tutorial ? "" : "Il goal si trova in: " + luogoGoal() + "\n") +
+                (this.tutorial ? "" : String.format(Msg.msgLuogoGoal(), luogoGoal()) + "\n") +
                 mondo.get(pianoCorrente-pianoPartenza).stampaMappa();
+
     }
 
     /**

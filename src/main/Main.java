@@ -1,18 +1,15 @@
 package main;
 
 import factory.AbstractFactory;
-import factory.FancyWorld;
 import factory.TipoPartita;
-import mondo.*;
-import giocatore.*;
+import system_msg.Msg;
 import utility.*;
-import partita.*;
 
-import static factory.AbstractFactory.getFactory;
+import java.util.ArrayList;
 
-// TODO: Auto-generated Javadoc
+
 /**
- * The Class main.Main.
+ * The Class main.Main."Esci"
  */
 public class Main {
 
@@ -24,16 +21,17 @@ public class Main {
     public static void main(String[] args) {
         boolean menu = true;
         splashScreen();
-        MyUtil.stringInputVuoto("Premi il tasto invio per continuare");
+        MyUtil.stringInputVuoto("");
+        ArrayList<String> messaggi = MyUtil.leggiFile("./messages");
 
-        AbstractFactory factory = AbstractFactory.getFactory(FancyWorld.MENU);
-
+        // creazione factory menu
+        AbstractFactory factory = AbstractFactory.createFactory();
         while(menu) {
-            switch(MyUtil.myMenu("\n\n\nBenvenuto!", "Nuova partita", "Carica partita", "Tutorial", "Esci")) {
+            switch(MyUtil.myMenu(Msg.msgMenuPrincipale(), Msg.menuPrincipale())) {
                 case 1: factory.createMenu(TipoPartita.NUOVAPARTITA).getPartita().gioca(); break;
                 case 2: factory.createMenu(TipoPartita.CARICAPARTITA).getPartita().gioca(); break;
                 case 3: factory.createMenu(TipoPartita.TUTORIAL).getPartita().gioca(); break;
-                case 4: System.out.println("Esci!"); System.out.println("Un'occasione del genere non ti si ripresenterà più."); menu = false; break;
+                case 4: System.out.println(Msg.msgEsci()); menu = false; break;
             }
         }
     }
@@ -58,7 +56,8 @@ public class Main {
                 "                                                  ,8\"  8I                                                               \n" +
                 "                                                  I8   8I                                                               \n" +
                 "                                                  `8, ,8I                                                               \n" +
-                "                                                   `Y8P\"                                                                \n\n");
+                "                                                   `Y8P\"                                                                \n\n" +
+        Msg.splash());
 
     }
 

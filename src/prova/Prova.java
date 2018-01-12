@@ -130,7 +130,7 @@ public class Prova implements Serializable{
             System.out.println("Hai ancora " + --tentativi);
         }
         if (tentativi == 0) {
-            System.out.println("prova.Prova non superata! Risposta: " + leggi.getProva2().get(indiceParola).getRisposta());
+            System.out.println("Prova non superata! Risposta: " + leggi.getProva2().get(indiceParola).getRisposta());
             return -punteggio;
         }
         else {

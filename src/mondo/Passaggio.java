@@ -74,6 +74,7 @@ public class Passaggio implements Serializable {
 
 
 
+
     public int getDest() {
         return p.getPiano2();
     }

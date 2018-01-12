@@ -2,6 +2,7 @@ package partita;
 
 import mondo.*;
 import giocatore.*;
+import system_msg.Msg;
 import utility.*;
 
 import java.io.Serializable;
@@ -117,31 +118,32 @@ public class Partita implements Serializable{
 
 
             if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isProvaRaggiunta() && !m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isProvaSostenuta()) {
-                if (MyUtil.controlledCharInput("Vuoi sostenere la prova?", 's', 'n') == 's') {
+                if (MyUtil.controlledBoolInput(Msg.msgSostieniProva(), Msg.opzioniSN())) {
                     int punti = m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getProva().prova();
                     if (punti > 0) m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).setProvaSostenuta(true);
                     giocatore.modificaPunteggio(punti);
                 }
             }
 
-            System.out.println("Punteggio: " + giocatore.getPunteggio());
-            System.out.println(giocatore.getChiavi().isEmpty() ? ("Nessuna chiave raccolta") : ("Chiavi in possesso: " + giocatore.getChiavi()));
+            System.out.println(String.format(Msg.msgPunteggio(), giocatore.getPunteggio()));
+
+            System.out.println(giocatore.getChiavi().isEmpty() ? (Msg.msgNessunaChiave()) : (String.format(Msg.msgChiaviInPossesso(), giocatore.getChiavi())));
 
             Chiave chiavePosCorrente = m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getChiave(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getPosCorrente());
 
             if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isChiavePresente() && !chiavePosCorrente.isDepositata()) {    // controllo: se la chiave e' presente e se e' depositata
                 System.out.println(chiavePosCorrente);
-                if (MyUtil.controlledCharInput("Vuoi raccogliere la chiave? [s-n]", 's', 'n') == 's' && giocatore.checkChiaveRaccoglibile(chiavePosCorrente)) {
+                if (MyUtil.controlledBoolInput(Msg.msgRaccogliChiave(), Msg.opzioniSN()) && giocatore.checkChiaveRaccoglibile(chiavePosCorrente)) {
                     Chiave c = m.raccogliChiave();
                     giocatore.aggiungiChiave(c);
-                    System.out.println("Chiave raccolta: " + c);
+                    System.out.println(String.format(Msg.msgChiaveRaccolta(), c));
                 }
 
-                else System.out.println("La chiave non può essere raccolta! Numero chiavi in possesso: " + giocatore.getChiavi().size() + ", Peso chiavi corrente: " + giocatore.pesoTotaleChiavi());
+                else System.out.println(String.format(Msg.msgChiaveNonRaccolta(), giocatore.getChiavi().size(), giocatore.pesoTotaleChiavi()));
                 m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).setChiavePresente(false);
             }
 
-            String in = MyUtil.stringInput("Dove vuoi muoverti? [n-s-e-w-u-d][x per depositare una chiave][q per uscire]");
+            String in = MyUtil.stringInput(Msg.msgMossa());
             checkInput(in);
 
 
@@ -154,19 +156,19 @@ public class Partita implements Serializable{
             else if (input == 'x') {
                 if (!giocatore.getChiavi().isEmpty()) {
 
-                    int i = MyUtil.myMenu("Scegli la chiave da depositare", opzioniDeposita(giocatore.getChiavi()));
+                    int i = MyUtil.myMenu(Msg.msgChiaveDaDepositare(), opzioniDeposita(giocatore.getChiavi()));
                     if (i != opzioniDeposita(giocatore.getChiavi()).length) {
                         Chiave chiaveNuova = giocatore.getChiavi().get(i-1);
                         if(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).posLibera(chiaveNuova)) {
                             m.depositaChiave(chiaveNuova); // aggiunge la chiave dalla mappa
                             giocatore.rimuoviChiave(chiaveNuova);    // rimuove la chiave dalla lista chiavi del giocatore
-                            System.out.println("mondo.Chiave depositata!");
+                            System.out.println(Msg.msgChiaveDepositata());
                         }
-                        else System.out.println("La chiave non può essere depositata qui!");
+                        else System.out.println(Msg.msgChiaveNonDepositata());
                     }
-                    else System.out.println("Nessuna chiave depositata!");
+                    else System.out.println(Msg.msgNessunaChiaveDepositata());
                 }
-                else System.out.println("Non hai nessuna chiave!");
+                else System.out.println(Msg.msgNessunaChiavePresente());
             }
             else if (input == 'q') {
                 if (!this.m.isTutorial()) {
@@ -178,8 +180,9 @@ public class Partita implements Serializable{
             }
 
             if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isPassaggioRaggiunto())
-                passaggioVerso = "Il passaggio ti porta verso: " + nomeDestinazione(Passaggio.pianoDestPassaggio(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getLista_passaggi(), m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getPosCorrente()));
+                passaggioVerso = String.format(Msg.msgPassaggioVerso(), nomeDestinazione(Passaggio.pianoDestPassaggio(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getLista_passaggi(), m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getPosCorrente())));
                 //System.out.println();
+
             else passaggioVerso = "";
 
             if (m.obbiettivoRaggiunto()) {
@@ -187,16 +190,17 @@ public class Partita implements Serializable{
 
                 if (m.isProvaPresente()) {
                     if (giocatore.getPunteggio() >= giocatore.getPunteggioVittoria()) {
-                        System.out.println("Obiettivo raggiunto!");
+                        System.out.println(Msg.msgObiettivoRaggiunto());
 
                         if (abilitaCambiaMondo) cambiaMondo();
                         else break;
                     }
-                    else System.out.println("Devi raggiungere " + giocatore.getPunteggioVittoria() + " punti per vincere! Hai attualmente " + giocatore.getPunteggio() + " punti");
+                    else System.out.println(String.format(Msg.msgPunteggioNonRaggiunto(), giocatore.getPunteggioVittoria(), giocatore.getPunteggio()));
+
                 }
 
                 else {
-                    System.out.println("Obiettivo raggiunto!");
+                    System.out.println(Msg.msgObiettivoRaggiunto());
 
                     if (abilitaCambiaMondo) cambiaMondo();
                     else break;
@@ -223,7 +227,7 @@ public class Partita implements Serializable{
      */
     public void cambiaMondo() {
         if (m.getId() < mondi.size()) {
-            if (MyUtil.controlledCharInput("\nHai completato questo mondo! Vuoi continuare con il mondo successivo? ", 's', 'n') == 's')
+            if (MyUtil.controlledBoolInput(Msg.msgMondoCompletato(), Msg.opzioniSN()))
                 this.m = mondi.get(m.getId());
             stampaMessaggio(this.m.getPathMondo());
         }
@@ -248,7 +252,7 @@ public class Partita implements Serializable{
         if (!this.m.isTutorial()) {
             isPartitaPresente();
             LetturaScritturaPartita.scrivi(partite);
-            System.out.println("Partita salvata");
+            System.out.println(Msg.msgPartitaSalvata());
         }
 
     }
@@ -278,7 +282,7 @@ public class Partita implements Serializable{
         String s = MyUtil.leggiFileStringa(nome + "messaggio");
         System.out.println("\n\n\n" + s);
         MyUtil.stringInputVuoto("");
-        MyUtil.stringInputVuoto("Premi Invio per continuare...");
+        MyUtil.stringInputVuoto(Msg.splash());
     }
 
     /**

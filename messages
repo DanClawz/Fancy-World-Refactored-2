@@ -1,0 +1,78 @@
+Premi il tasto Invio per continuare...
+Benvenuto!
+Nuova partita
+Carica partita
+Tutorial
+Esci
+Un'occasione del genere non ti si ripresenterà più.
+Inserisci nome salvataggio
+Abilitare autosalvataggio? [s-n]
+Vuoi configurare i mondi?
+Scegli il mondo da configurare
+Scegli il mondo da giocare
+Vuoi giocare tutti i mondi in ordine?
+Configura %s
+Numero tipi di chiavi
+Peso max di una chiave
+Peso di ogni chiave
+Numero max di chiavi possedute
+Capacità max inventario chiavi
+Numero tipologie di prode
+Valore max di una prova
+Valore di una prova
+Punteggio iniziale
+Punteggio vittoria
+Procedi
+Inserisci il punteggio iniziale del giocatore (valore corrente: %d)
+Punteggio iniziale modificato in: %d
+Inserisci il punteggio vittoria (valore corrente: %d)
+Punteggio vittoria modificato in: %d
+In questo mondo non sono presenti prove!
+Inserisci numero di tipologie di prove disponibili (valore corrente: %d)
+Numero tipologie di prove modificato in: %d
+Inserisci valore max di una prova (valore corrente: %d)
+Valore max di una prova modificato in: %d
+Il valore massimo impostato è minore del valore di una delle prove! Riconfigura i valori!
+Inserisci il nuovo valore della prova %d
+Valore della prova %d modificato
+Inserisci peso max di una chiave (valore corrente: %d)
+Peso max di una chiave modificato in: %d
+Il valore massimo impostato è minore del valore di una delle chiavi! Riconfigura i valori!
+Seleziona una chiave
+Inserisci il nuovo peso
+Peso modificato
+Inserisci il numero massimo di chiavi che il giocatore può possedere (valore corrente: %d)
+Numero massimo di chiavi in possesso modificato in: %d
+Inserisci il max peso delle chiavi possedute contemporaneamente (valore corrente: %d)
+Max peso delle chiavi possedute contemporaneamente modificato in: %d
+Inserisci quanti tipi di chiave possono essere presenti nel mondo (valore corrente: %d)
+Numero tipi di chiave modificato in: %d
+Carica partita
+Vuoi sostenere la prova? [s-n]
+Punteggio: %d
+Nessuna chiave raccolta
+Chiavi in possesso: %s
+Vuoi raccogliere la chiave? [s-n]
+Chiave raccolta: %s
+La chiave non può essere raccolta! Numero chiavi in possesso: %d, Peso chiavi corrente: %d
+Dove vuoi muoverti? [n-s-e-w-u-d][x per depositare una chiave][q per uscire]
+Scegli la chiave da depositare
+Chiave depositata!
+La chiave non può essere depositata qui!
+Nessuna chiave depositata!
+Non hai nessuna chiave!
+Il passaggio ti porta verso: %s
+Obiettivo raggiunto!
+Devi raggiungere %d punti per vincere! Hai attualmente %d punti
+Hai completato questo mondo! Vuoi continuare con il mondo successivo?
+Partita salvata
+Mossa non possibile!
+Mossa possibile!
+Ti trovi su un passaggio! Tipo: %s
+Ti trovi su un passaggio aperto!
+Direzione errata! Prova con: %c
+Passaggio non possibile! Chiave richiesta: %s
+Il goal si trova in: %s
+
+
+
