@@ -63,6 +63,16 @@ public class Prova implements Serializable{
 
     }
 
+
+    public Prova(Coordinata c, int nProve, int valoreProva, int tipo) {
+        this.c = c;
+        leggi = new LeggiProva();
+        this.tipo = tipo;
+        this.punteggio = valoreProva;
+        leggiProva();
+
+    }
+
     /**
      * Inizializza prova.
      */
@@ -91,6 +101,26 @@ public class Prova implements Serializable{
         System.out.println("\nDomanda a risposta chiusa");
         int tentativi = 2;
         int indiceDomanda = MyUtil.randomInt(0, leggi.getProva1().size()-1);
+
+        while(tentativi > 0) {
+            int scelta = MyUtil.myMenu(leggi.getProva1().get(indiceDomanda).getDomanda(), leggi.getProva1().get(indiceDomanda).getOpzioni());
+            if (leggi.checkRispostaProva1(indiceDomanda, leggi.getProva1().get(indiceDomanda).getOpzioni()[scelta-1])) {
+                System.out.println("Risposta corretta!");
+                return punteggio;
+            }
+            else {
+                System.out.println("Risposta non corretta! Hai ancora " + --tentativi + " tentativi");
+            }
+        }
+
+        System.out.println("Tentativi esauriti! Risposta esatta: " + leggi.getProva1().get(indiceDomanda).getRisposta());
+        return -punteggio;
+    }
+
+    private int prova1Test(int indice) {
+        System.out.println("\nDomanda a risposta chiusa");
+        int tentativi = 2;
+        int indiceDomanda = indice;
 
         while(tentativi > 0) {
             int scelta = MyUtil.myMenu(leggi.getProva1().get(indiceDomanda).getDomanda(), leggi.getProva1().get(indiceDomanda).getOpzioni());
@@ -139,6 +169,33 @@ public class Prova implements Serializable{
         }
     }
 
+    private int prova2Test(int indice) {
+        System.out.println("\nIndovina la parola");
+        int tentativi = 15;
+        int indiceParola = indice;
+
+
+        String risposta = leggi.nascondiCaratteri(indiceParola);
+        System.out.println("Inserisci risposta: ");
+
+        while(tentativi > 0) {
+            String inputUtente = MyUtil.stringInputNonVuoto(leggi.stringaNascostaConSpazi(risposta));
+            if (leggi.checkRispostaProva2(indiceParola, inputUtente))
+                break;
+            else
+                risposta = leggi.match(indiceParola, inputUtente, risposta);
+            System.out.println("Hai ancora " + --tentativi);
+        }
+        if (tentativi == 0) {
+            System.out.println("Prova non superata! Risposta: " + leggi.getProva2().get(indiceParola).getRisposta());
+            return -punteggio;
+        }
+        else {
+            System.out.println("Risposta corretta!");
+            return punteggio;
+        }
+    }
+
     /**
      * prova.Prova 3.
      *
@@ -148,6 +205,25 @@ public class Prova implements Serializable{
         System.out.println("\nIndovinello");
         int tentativi = 3;
         int indiceRisposta = MyUtil.randomInt(0, leggi.getProva3().size()-1);
+
+        while(!leggi.checkRispostaProva3(indiceRisposta, MyUtil.stringInputNonVuoto(leggi.getProva3().get(indiceRisposta).getDomanda())) && --tentativi > 0) {
+            System.out.println("Risposta non corretta! Hai ancora " + tentativi + " tentativi a disposizione.");
+        }
+        if (tentativi == 0) {
+            System.out.println("Tentativi esauriti! La risposta corretta e' " + leggi.getProva3().get(indiceRisposta).getRisposta());
+            return -punteggio;
+        }
+        else {
+            System.out.println("Risposta corretta!");
+            return punteggio;
+        }
+
+    }
+
+    private int prova3Test(int indice) {
+        System.out.println("\nIndovinello");
+        int tentativi = 3;
+        int indiceRisposta = indice;
 
         while(!leggi.checkRispostaProva3(indiceRisposta, MyUtil.stringInputNonVuoto(leggi.getProva3().get(indiceRisposta).getDomanda())) && --tentativi > 0) {
             System.out.println("Risposta non corretta! Hai ancora " + tentativi + " tentativi a disposizione.");

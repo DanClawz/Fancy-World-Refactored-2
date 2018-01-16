@@ -270,7 +270,6 @@ public class Luogo implements Serializable {
      * @param c la coordinata
      */
     public void rimuoviChiave(Chiave c) {
-
         for (int i = 0; i < chiavi.size(); i++) {
             if (chiavi.get(i).equals(c) && chiavi.get(i).getPosChiave().equals(c.getPosChiave()))
                 chiavi.remove(i);

@@ -85,7 +85,6 @@ public class Partita implements Serializable{
         this.m = tutorial;
         this.autoSave = false;
         this.abilitaCambiaMondo = false;
-        gioca();
     }
 
 
@@ -102,6 +101,111 @@ public class Partita implements Serializable{
         }
     }
 
+
+    private void sostieniProva() {
+        if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isProvaRaggiunta() && !m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isProvaSostenuta()) {
+            if (MyUtil.controlledBoolInput(Msg.msgSostieniProva(), Msg.opzioniSN())) {
+                int punti = m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getProva().prova();
+                if (punti > 0) m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).setProvaSostenuta(true);
+                giocatore.modificaPunteggio(punti);
+            }
+        }
+    }
+
+    private void raccogliChiave() {
+        Chiave chiavePosCorrente = m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getChiave(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getPosCorrente());
+
+        if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isChiavePresente() && !chiavePosCorrente.isDepositata()) {    // controllo: se la chiave e' presente e se e' depositata
+            System.out.println(chiavePosCorrente);
+            if (MyUtil.controlledBoolInput(Msg.msgRaccogliChiave(), Msg.opzioniSN()) && giocatore.checkChiaveRaccoglibile(chiavePosCorrente)) {
+                Chiave c = m.raccogliChiave();
+                giocatore.aggiungiChiave(c);
+                System.out.println(String.format(Msg.msgChiaveRaccolta(), c));
+            }
+
+            else System.out.println(String.format(Msg.msgChiaveNonRaccolta(), giocatore.getChiavi().size(), giocatore.pesoTotaleChiavi()));
+            m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).setChiavePresente(false);
+        }
+    }
+
+    private void depositaChiave() {
+        if (!giocatore.getChiavi().isEmpty()) {
+            int i = MyUtil.myMenu(Msg.msgChiaveDaDepositare(), opzioniDeposita(giocatore.getChiavi()));
+            if (i != opzioniDeposita(giocatore.getChiavi()).length) {
+                Chiave chiaveNuova = giocatore.getChiavi().get(i-1);
+                if(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).posLibera(chiaveNuova)) {
+                    m.depositaChiave(chiaveNuova); // aggiunge la chiave dalla mappa
+                    giocatore.rimuoviChiave(chiaveNuova);    // rimuove la chiave dalla lista chiavi del giocatore
+                    System.out.println(Msg.msgChiaveDepositata());
+                }
+                else System.out.println(Msg.msgChiaveNonDepositata());
+            }
+            else System.out.println(Msg.msgNessunaChiaveDepositata());
+        }
+        else System.out.println(Msg.msgNessunaChiavePresente());
+    }
+
+    private boolean mossa() {
+        String in = MyUtil.stringInput(Msg.msgMossa());
+        checkInput(in);
+
+        if(input == 'n' || input == 's' || input == 'e' || input == 'w')
+            m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).aggiornaMappa(input);
+        else if (input == 'u' || input == 'd')
+            m.cambioLuogo(input, giocatore.getChiavi());
+        else if (input == 'x') {
+            depositaChiave();
+        }
+        else if (input == 'q') {
+            if (!this.m.isTutorial()) {
+                salvaPartita();
+                System.exit(1);
+            }
+            else return false;
+        }
+        return true;
+    }
+
+    private int obiettivoRaggiunto() {
+        if (m.obbiettivoRaggiunto()) {
+            System.out.println(m.stampaMappa());
+
+            if (m.isProvaPresente()) {
+                if (giocatore.getPunteggio() >= giocatore.getPunteggioVittoria()) {
+                    System.out.println(Msg.msgObiettivoRaggiunto());
+
+                    if (abilitaCambiaMondo) cambiaMondo();
+                    else return 2;
+                }
+                else System.out.println(String.format(Msg.msgPunteggioNonRaggiunto(), giocatore.getPunteggioVittoria(), giocatore.getPunteggio()));
+
+            }
+
+            else {
+                System.out.println(Msg.msgObiettivoRaggiunto());
+
+                if (abilitaCambiaMondo) cambiaMondo();
+                else return 1;
+            }
+        }
+        return 0;
+    }
+
+    private String direzionePassaggio() {
+        if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isPassaggioRaggiunto())
+            return String.format(Msg.msgPassaggioVerso(), nomeDestinazione(Passaggio.pianoDestPassaggio(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getLista_passaggi(), m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getPosCorrente())));
+        else return "";
+    }
+
+    private int salvarePartita(int nMosse) {
+        nMosse++;
+        if (autoSave && nMosse == 20) {
+            salvaPartita();
+            nMosse = 0;
+        }
+        return nMosse;
+    }
+
     /**
      * Gioca.
      */
@@ -109,111 +213,27 @@ public class Partita implements Serializable{
         String passaggioVerso = "";
         int nMosse = 0;
 
-
         while(true) {
             System.out.println("\n\n\n\n");
-
             System.out.println(m.stampaMappa());
             System.out.println(passaggioVerso);
-
-
-            if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isProvaRaggiunta() && !m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isProvaSostenuta()) {
-                if (MyUtil.controlledBoolInput(Msg.msgSostieniProva(), Msg.opzioniSN())) {
-                    int punti = m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getProva().prova();
-                    if (punti > 0) m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).setProvaSostenuta(true);
-                    giocatore.modificaPunteggio(punti);
-                }
-            }
 
             System.out.println(String.format(Msg.msgPunteggio(), giocatore.getPunteggio()));
 
             System.out.println(giocatore.getChiavi().isEmpty() ? (Msg.msgNessunaChiave()) : (String.format(Msg.msgChiaviInPossesso(), giocatore.getChiavi())));
 
-            Chiave chiavePosCorrente = m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getChiave(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getPosCorrente());
+            sostieniProva();
 
-            if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isChiavePresente() && !chiavePosCorrente.isDepositata()) {    // controllo: se la chiave e' presente e se e' depositata
-                System.out.println(chiavePosCorrente);
-                if (MyUtil.controlledBoolInput(Msg.msgRaccogliChiave(), Msg.opzioniSN()) && giocatore.checkChiaveRaccoglibile(chiavePosCorrente)) {
-                    Chiave c = m.raccogliChiave();
-                    giocatore.aggiungiChiave(c);
-                    System.out.println(String.format(Msg.msgChiaveRaccolta(), c));
-                }
+            raccogliChiave();
 
-                else System.out.println(String.format(Msg.msgChiaveNonRaccolta(), giocatore.getChiavi().size(), giocatore.pesoTotaleChiavi()));
-                m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).setChiavePresente(false);
-            }
+            if (!mossa()) break;
 
-            String in = MyUtil.stringInput(Msg.msgMossa());
-            checkInput(in);
+            passaggioVerso = direzionePassaggio();
 
+            int raggiunto = obiettivoRaggiunto();
+            if (raggiunto == 1 || raggiunto == 2) break;
 
-
-
-            if(input == 'n' || input == 's' || input == 'e' || input == 'w')
-                m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).aggiornaMappa(input);
-            else if (input == 'u' || input == 'd')
-                m.cambioLuogo(input, giocatore.getChiavi());
-            else if (input == 'x') {
-                if (!giocatore.getChiavi().isEmpty()) {
-
-                    int i = MyUtil.myMenu(Msg.msgChiaveDaDepositare(), opzioniDeposita(giocatore.getChiavi()));
-                    if (i != opzioniDeposita(giocatore.getChiavi()).length) {
-                        Chiave chiaveNuova = giocatore.getChiavi().get(i-1);
-                        if(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).posLibera(chiaveNuova)) {
-                            m.depositaChiave(chiaveNuova); // aggiunge la chiave dalla mappa
-                            giocatore.rimuoviChiave(chiaveNuova);    // rimuove la chiave dalla lista chiavi del giocatore
-                            System.out.println(Msg.msgChiaveDepositata());
-                        }
-                        else System.out.println(Msg.msgChiaveNonDepositata());
-                    }
-                    else System.out.println(Msg.msgNessunaChiaveDepositata());
-                }
-                else System.out.println(Msg.msgNessunaChiavePresente());
-            }
-            else if (input == 'q') {
-                if (!this.m.isTutorial()) {
-                    salvaPartita();
-                    System.exit(1);
-                }
-                else return;
-
-            }
-
-            if (m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).isPassaggioRaggiunto())
-                passaggioVerso = String.format(Msg.msgPassaggioVerso(), nomeDestinazione(Passaggio.pianoDestPassaggio(m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getLista_passaggi(), m.getMondo().get(m.getPianoCorrente()-m.getPianoPartenza()).getPosCorrente())));
-                //System.out.println();
-
-            else passaggioVerso = "";
-
-            if (m.obbiettivoRaggiunto()) {
-                System.out.println(m.stampaMappa());
-
-                if (m.isProvaPresente()) {
-                    if (giocatore.getPunteggio() >= giocatore.getPunteggioVittoria()) {
-                        System.out.println(Msg.msgObiettivoRaggiunto());
-
-                        if (abilitaCambiaMondo) cambiaMondo();
-                        else break;
-                    }
-                    else System.out.println(String.format(Msg.msgPunteggioNonRaggiunto(), giocatore.getPunteggioVittoria(), giocatore.getPunteggio()));
-
-                }
-
-                else {
-                    System.out.println(Msg.msgObiettivoRaggiunto());
-
-                    if (abilitaCambiaMondo) cambiaMondo();
-                    else break;
-                }
-            }
-
-
-
-            nMosse++;
-            if (autoSave && nMosse == 20) {
-                salvaPartita();
-                nMosse = 0;
-            }
+            nMosse = salvarePartita(nMosse);
         }
 
     }

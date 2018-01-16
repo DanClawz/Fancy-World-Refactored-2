@@ -15,9 +15,6 @@ public class Chiave implements Serializable {
     /** Il tipo chiave. */
     private String tipoChiave;
     
-    /** I, passaggio da aprire. */
-    private int passaggioDaAprire;
-    
     /** La chiave depositata. */
     private boolean depositata;
     
@@ -47,18 +44,8 @@ public class Chiave implements Serializable {
         this.depositata = false;
         this.pesoMax = 25;
         this.nTipiChiave = 10;
-        this.tipiChiave = new String[]{"legno", "ferro", "bronzo", "argento", "oro", "titanite", "cristallo", "diamante", "vibranio", "misteriosa"};
-        this.pesiChiave = new int[]{2, 4, 6, 8, 10, 13, 16, 19, 22, 25};
     }
 
-    /**
-     * Restituisce il  passaggio da aprire.
-     *
-     * @return il passaggio da aprire
-     */
-    public int getPassaggioDaAprire() {
-        return passaggioDaAprire;
-    }
 
     /**
      * Assegna il passaggio da aprire.
@@ -66,16 +53,8 @@ public class Chiave implements Serializable {
      * @param tipo il  nuovo passaggio da aprire
      */
     public void setPassaggioDaAprire(char tipo) {
-        Character[] tipoInput = new Character[]{'l', 'f', 'b', 'a', 'o', 't', 'c', 'd', 'v', 'm'};
-
-        for (int i = 0; i < tipoInput.length; i++) {
-            if (tipo == tipoInput[i]) {
-                this.tipoChiave = tipiChiave[i];
-                this.passaggioDaAprire = i+3;
-                this.peso = pesiChiave[i];
-                break;
-            }
-        }
+        this.tipoChiave = Tipo.assegnaPassaggio(tipo).getTipo();
+        this.peso = Tipo.assegnaPassaggio(tipo).getPeso();
     }
 
     /**

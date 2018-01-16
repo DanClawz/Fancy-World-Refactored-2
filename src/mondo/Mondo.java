@@ -53,11 +53,9 @@ public class Mondo implements Serializable {
         mondo = new ArrayList<Luogo>();
         pianoPartenza = Integer.parseInt(MyUtil.leggiFile("./Mappe/" + nome + "/" + "piano_partenza").get(0));  // ATTENZIONE AGLI INDICI!!!!!
 
-        int j = pianoPartenza;
         for (int i = 1; i <= NLUOGHI; i++) {
             String nomeLuogo = "luogo" + i;
             String nomeFile = "";
-            //nomeFile += "./Mappe/" + nome + "/" + nome + "_luogo" + i;
             nomeFile += "./Mappe/" + nome + "/" + nomeLuogo + "/" + nome + "_" + nomeLuogo;
             String pathLuogo = "./Mappe/" + nome + "/" + nomeLuogo + "/";
             if (nome.equals("tutorial")) this.tutorial = true;
@@ -76,19 +74,15 @@ public class Mondo implements Serializable {
      * @param chiavi le chiavi
      */
     public void cambioLuogo(char input, ArrayList<Chiave> chiavi) {
-        /*System.out.println(pianoPartenza);
-        System.out.println(pianoCorrente);*/
         int indice = pianoCorrente - pianoPartenza;
-
         int nuovoPiano = Passaggio.pianoDestPassaggio(mondo.get(indice).getLista_passaggi(), mondo.get(indice).getPosCorrente());
-        //System.out.println(nuovoPiano);
         int pianoUpDown;
         Coordinata coordinataPassaggio = mondo.get(indice).getPosCorrente();
 
-        if (((input == 'u' && nuovoPiano > pianoCorrente) || (input == 'd' && nuovoPiano < pianoCorrente))
-                && (Passaggio.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio))
-                && (((mondo.get(indice).passaggioSuCoordinata(mondo.get(indice).getPosCorrente()).isAperto())) ||
-                Passaggio.matchChiavi(chiavi, mondo.get(indice).passaggioSuCoordinata(mondo.get(indice).getPosCorrente())))) {
+        if (((input == 'u' && nuovoPiano > pianoCorrente) || (input == 'd' && nuovoPiano < pianoCorrente))      // se input è u (d) e se il piano di destinazione è maggiore (minore) del piano corrente
+                && (Passaggio.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio)) // se il passaggio  è contenuto nella lista passaggi del luogo
+                && (((mondo.get(indice).passaggioSuCoordinata(mondo.get(indice).getPosCorrente()).isAperto()))    // se il passaggio di quella coordinata è aperto
+                || Passaggio.matchChiavi(chiavi, mondo.get(indice).passaggioSuCoordinata(mondo.get(indice).getPosCorrente())))) {  // se il giocatore possiede la chiave per aprire il passaggio
 
             this.pianoCorrente = nuovoPiano;
             mondo.get(pianoCorrente-pianoPartenza).apriPassaggio(mondo.get(pianoCorrente-pianoPartenza).getPosCorrente(), true);        // apre il passaggio da a (partenza) verso b (destinazione)
@@ -98,11 +92,14 @@ public class Mondo implements Serializable {
             mondo.get(pianoCorrente-pianoPartenza).setProvaSostenuta(false);
         }
 
+        // controllo se mi trovo su un passaggio e se input è u (d) e se il piano di destinazione è maggiore (minore) del piano corrente
         else if ((Passaggio.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio) && (input == 'u' && nuovoPiano <= pianoCorrente) || (input == 'd' && nuovoPiano >= pianoCorrente))) {
+            // messaggio di direzione errata
             char c = input == 'u' ? 'd' : 'u';
             System.out.println(String.format(Msg.msgDirezioneErrata(), c));
         }
 
+        // controllo se il passaggio non è aperto e se il giocatore è in possesso della chiave richiesta
         else if (Passaggio.compareListaPassaggi(mondo.get(indice).getLista_passaggi(), coordinataPassaggio) &&  (!mondo.get(indice).passaggioSuCoordinata(mondo.get(indice).getPosCorrente()).isAperto()))
             System.out.println(String.format(Msg.msgChiaveRichiesta(), mondo.get(pianoCorrente-pianoPartenza).passaggioSuCoordinata(mondo.get(pianoCorrente-pianoPartenza).getPosCorrente()).getTipoPassaggio()));
 

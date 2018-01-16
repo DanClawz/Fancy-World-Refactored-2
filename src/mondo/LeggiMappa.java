@@ -218,7 +218,7 @@ public class LeggiMappa implements Serializable {
             for (int j = 0; j < NCOLONNE; j++) {
                 if (Character.isLetter(map[i][j])) {
                     Chiave t = new Chiave(new Coordinata(i, j));
-                    t.setPassaggioDaAprire(Character.toLowerCase(map[i][j]));
+                    t.setPassaggioDaAprire(map[i][j]);
                     c.add(t);
                     map[i][j] = '¶';
                 }

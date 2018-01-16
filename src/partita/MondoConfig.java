@@ -147,10 +147,13 @@ public class MondoConfig {
         for (int i = 0; i < mondo.getMondo().size(); i++) {
             for (int j = 0; j < mondo.getMondo().get(i).getChiavi().size(); j++) {
                 mondo.getMondo().get(i).getChiavi().get(j).setPesoMax(pesoMax);
-                if (pesoMax < mondo.getMondo().get(i).getChiavi().get(j).getPeso()) {
-                    System.out.println(Msg.msgPesoMaxChiaveMinore());
-                    pesoChiave();
-                }
+            }
+        }
+
+        for (int i = 0; i < Tipo.values().length; i++) {
+            while(pesoMax < Tipo.values()[i].getPeso()) {
+                System.out.println(Msg.msgPesoMaxChiaveMinore());
+                pesoChiave();
             }
         }
 
@@ -162,9 +165,9 @@ public class MondoConfig {
      */
     public void pesoChiave() {
 
-        String opzioni[] = new String[mondo.getMondo().get(1).getChiavi().get(0).getTipiChiave().length];
+        String opzioni[] = new String[Tipo.values().length-1];
         for (int i = 0; i < opzioni.length; i++) {
-            String temp = mondo.getMondo().get(1).getChiavi().get(0).getTipiChiave()[i] + ", " + mondo.getMondo().get(1).getChiavi().get(0).getPesiChiave()[i];
+            String temp = Tipo.values()[i].getTipo() + ", " + Tipo.values()[i].getPeso();
             opzioni[i] = temp;
         }
 
@@ -172,12 +175,11 @@ public class MondoConfig {
         int peso = MyUtil.controlledIntInput(Msg.msgInserisciPeso(), 1, mondo.getMondo().get(1).getChiavi().get(0).getPesoMax());
 
         for (int i = 0; i < mondo.getMondo().size(); i++) {
-
             for (int j = 0; j < mondo.getMondo().get(i).getChiavi().size(); j++) {
-                if (mondo.getMondo().get(i).getChiavi().get(j).getTipoChiave().equalsIgnoreCase(mondo.getMondo().get(1).getChiavi().get(0).getTipiChiave()[indiceChiave-1])) {
+                if (mondo.getMondo().get(i).getChiavi().get(j).getTipoChiave().equalsIgnoreCase(Tipo.values()[indiceChiave-1].getTipo())) {
                     mondo.getMondo().get(i).getChiavi().get(j).setPeso(peso);
                 }
-                mondo.getMondo().get(i).getChiavi().get(j).setPesoIndice(peso, indiceChiave-1);
+                Tipo.values()[indiceChiave-1].setPeso(peso);
             }
         }
 
