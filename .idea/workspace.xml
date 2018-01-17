@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b18cba1c-0bc8-48ad-b171-f2b178c4ae10" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/factory/MenuFactoryTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/giocatore/GiocatoreTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mondo/ChiaveTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mondo/LuogoTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mondo/MondoTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/partita/PartitaTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/prova/ProvaTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saves.txt" afterPath="$PROJECT_DIR$/saves.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Chiave.java" afterPath="$PROJECT_DIR$/src/mondo/Chiave.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/LeggiMappa.java" afterPath="$PROJECT_DIR$/src/mondo/LeggiMappa.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Fancy World Release 1.iml" afterPath="$PROJECT_DIR$/Fancy World Release 1.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Luogo.java" afterPath="$PROJECT_DIR$/src/mondo/Luogo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Mondo.java" afterPath="$PROJECT_DIR$/src/mondo/Mondo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mondo/Tipo.java" afterPath="$PROJECT_DIR$/src/mondo/Tipo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/partita/MondoConfig.java" afterPath="$PROJECT_DIR$/src/partita/MondoConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/partita/Partita.java" afterPath="$PROJECT_DIR$/src/partita/Partita.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prova/Prova.java" afterPath="$PROJECT_DIR$/src/prova/Prova.java" />
     </list>
@@ -33,29 +35,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MondoConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/partita/MondoConfig.java">
+      <file leaf-file-name="MondoTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mondo/MondoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-645">
-              <caret line="181" column="44" lean-forward="false" selection-start-line="181" selection-start-column="44" selection-end-line="181" selection-end-column="44" />
+            <state relative-caret-position="480">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Partita.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/partita/Partita.java">
+      <file leaf-file-name="LuogoTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mondo/LuogoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="463" column="0" lean-forward="true" selection-start-line="463" selection-start-column="0" selection-end-line="463" selection-end-column="0" />
+            <state relative-caret-position="675">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="piano_partenza" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mappe/tutorial/piano_partenza">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChiaveTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mondo/ChiaveTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nomi_luoghi" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mappe/tutorial/nomi_luoghi">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="191" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="191" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GiocatoreTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/giocatore/GiocatoreTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
-                <element signature="method#sostieniProva#0;class#Partita#0" expanded="false" />
-                <element signature="method#raccogliChiave#0;class#Partita#0" expanded="false" />
-                <element signature="method#depositaChiave#0;class#Partita#0" expanded="false" />
-                <element signature="method#mossa#0;class#Partita#0" expanded="false" />
-                <element signature="method#obiettivoRaggiunto#0;class#Partita#0" expanded="false" />
-                <element signature="method#direzionePassaggio#0;class#Partita#0" expanded="false" />
-                <element signature="method#salvarePartita#0;class#Partita#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PartitaTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/partita/PartitaTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding>
+                <element signature="e#573#574#0" expanded="true" />
+                <element signature="e#626#627#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProvaTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prova/ProvaTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="9" column="64" lean-forward="false" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+              <folding>
+                <element signature="e#359#360#0" expanded="true" />
+                <element signature="e#441#442#0" expanded="true" />
+                <element signature="e#476#477#0" expanded="true" />
+                <element signature="e#558#559#0" expanded="true" />
+                <element signature="e#593#594#0" expanded="true" />
+                <element signature="e#675#676#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,8 +130,8 @@
       <file leaf-file-name="LeggiProva.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/prova/LeggiProva.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+            <state relative-caret-position="420">
+              <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -74,58 +140,8 @@
       <file leaf-file-name="Prova.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/prova/Prova.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="243" column="6" lean-forward="true" selection-start-line="243" selection-start-column="6" selection-end-line="243" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Quesito.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/prova/Quesito.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="97" column="7" lean-forward="true" selection-start-line="97" selection-start-column="7" selection-end-line="97" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tipo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mondo/Tipo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LetturaScritturaPartita.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/partita/LetturaScritturaPartita.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-30">
-              <caret line="8" column="41" lean-forward="false" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListaPartite.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/partita/ListaPartite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Portale.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mondo/Portale.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="765">
+              <caret line="80" column="37" lean-forward="false" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -138,6 +154,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -167,14 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Mondo.java" />
-        <option value="$PROJECT_DIR$/src/partita/LetturaScritturaPartita.java" />
-        <option value="$PROJECT_DIR$/src/giocatore/Giocatore.java" />
-        <option value="$PROJECT_DIR$/Mappe/mondo1/mondo1_luogo1" />
-        <option value="$PROJECT_DIR$/Mappe/mondo1/luogo2/mondo1_luogo2" />
-        <option value="$PROJECT_DIR$/Mappe/mondo1/luogo3/mondo1_luogo3" />
-        <option value="$PROJECT_DIR$/src/mondo/Passaggio2.java" />
-        <option value="$PROJECT_DIR$/Mappe/mondo2/luogo1/passaggi" />
         <option value="$PROJECT_DIR$/src/partita/PartitaFactory.java" />
         <option value="$PROJECT_DIR$/src/partita/PartitaConcreteFactory.java" />
         <option value="$PROJECT_DIR$/src/partita/PartitaAbstractFactory.java" />
@@ -213,11 +222,19 @@
         <option value="$PROJECT_DIR$/src/partita/MondoConfig.java" />
         <option value="$PROJECT_DIR$/src/mondo/Chiave.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/partita/Partita.java" />
-        <option value="$PROJECT_DIR$/src/mondo/Luogo.java" />
         <option value="$PROJECT_DIR$/src/mondo/Mondo.java" />
-        <option value="$PROJECT_DIR$/src/prova/Prova.java" />
         <option value="$PROJECT_DIR$/src/testing/FancyWorldTest.java" />
+        <option value="$PROJECT_DIR$/src/testing/FancyWorldTests.java" />
+        <option value="$PROJECT_DIR$/src/factory/MenuFactoryTest.java" />
+        <option value="$PROJECT_DIR$/src/mondo/Luogo.java" />
+        <option value="$PROJECT_DIR$/src/partita/Partita.java" />
+        <option value="$PROJECT_DIR$/src/prova/Prova.java" />
+        <option value="$PROJECT_DIR$/src/prova/ProvaTest.java" />
+        <option value="$PROJECT_DIR$/src/partita/PartitaTest.java" />
+        <option value="$PROJECT_DIR$/src/mondo/MondoTest.java" />
+        <option value="$PROJECT_DIR$/src/mondo/LuogoTest.java" />
+        <option value="$PROJECT_DIR$/src/mondo/ChiaveTest.java" />
+        <option value="$PROJECT_DIR$/src/giocatore/GiocatoreTest.java" />
       </list>
     </option>
   </component>
@@ -267,22 +284,6 @@
       <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -331,6 +332,63 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
+              <item name="Prove" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="giocatore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mondo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="partita" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fancy-World-Refactored" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fancy-World-Refactored" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="prova" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -339,6 +397,20 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="prova" />
+      <recent name="partita" />
+      <recent name="mondo" />
+      <recent name="factory" />
+      <recent name="giocatore" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -352,88 +424,131 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Luogo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.GiocatoreTest">
+    <configuration name="ChiaveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="mondo.LeggiMappa" />
+          <option name="PATTERN" value="mondo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="mondo.Luogo" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <module name="Fancy World Release 1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Fancy World Release 1" />
-      <envs />
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Fancy World Release 1" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-    </configuration>
-    <configuration name="MondoConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="partita.MondoConfig" />
+      <option name="PACKAGE_NAME" value="mondo" />
+      <option name="MAIN_CLASS_NAME" value="mondo.ChiaveTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Fancy World Release 1" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
       <envs />
+      <patterns />
     </configuration>
-    <configuration name="Portale" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="GiocatoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="mondo.LeggiMappa" />
+          <option name="PATTERN" value="giocatore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="mondo.Portale" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <module name="Fancy World Release 1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="PACKAGE_NAME" value="giocatore" />
+      <option name="MAIN_CLASS_NAME" value="giocatore.GiocatoreTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Fancy World Release 1" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
       <envs />
+      <patterns />
     </configuration>
-    <configuration name="Prova" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="prova.Prova" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+    <configuration name="LuogoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="mondo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Fancy World Release 1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="PACKAGE_NAME" value="mondo" />
+      <option name="MAIN_CLASS_NAME" value="mondo.LuogoTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Fancy World Release 1" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
       <envs />
+      <patterns />
+    </configuration>
+    <configuration name="MondoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="mondo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Fancy World Release 1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="mondo" />
+      <option name="MAIN_CLASS_NAME" value="mondo.MondoTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="PartitaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="partita.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Fancy World Release 1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="partita" />
+      <option name="MAIN_CLASS_NAME" value="partita.PartitaTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -451,19 +566,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Prova" />
-      <item index="2" class="java.lang.String" itemvalue="Application.MondoConfig" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Portale" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Luogo" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ChiaveTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.LuogoTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MondoTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PartitaTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.GiocatoreTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.MondoConfig" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Luogo" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Portale" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Prova" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.GiocatoreTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ChiaveTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.LuogoTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MondoTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PartitaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -560,14 +675,8 @@
       <workItem from="1515751629028" duration="5921000" />
       <workItem from="1516007736535" duration="7388000" />
       <workItem from="1516019429586" duration="88000" />
-      <workItem from="1516093826326" duration="8241000" />
-    </task>
-    <task id="LOCAL-00009" summary="Da fare:&#10;- finire Release 1 (aggiungendo controlli)&#10;- controllare il raggiungimento del goal">
-      <created>1507283729606</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1507283729607</updated>
+      <workItem from="1516093826326" duration="16681000" />
+      <workItem from="1516179879404" duration="3799000" />
     </task>
     <task id="LOCAL-00010" summary="Da fare:&#10;- preparare Release 1 per Release 2">
       <created>1507558968839</created>
@@ -905,11 +1014,50 @@
       <option name="project" value="LOCAL" />
       <updated>1515758598683</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Refactoring finito">
+      <created>1516107401662</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1516107401664</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ChiaveTest - 2018.01.17 at 11h 02m 46s.xml">
+      <configuration name="ChiaveTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GiocatoreTest - 2018.01.17 at 11h 03m 51s.xml">
+      <configuration name="GiocatoreTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LuogoTest - 2018.01.17 at 11h 00m 31s.xml">
+      <configuration name="LuogoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LuogoTest - 2018.01.17 at 11h 01m 11s.xml">
+      <configuration name="LuogoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MondoTest - 2018.01.17 at 11h 00m 00s.xml">
+      <configuration name="MondoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PartitaTest - 2018.01.17 at 10h 59m 00s.xml">
+      <configuration name="PartitaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProvaTest - 2018.01.17 at 10h 52m 16s.xml">
+      <configuration name="ProvaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProvaTest - 2018.01.17 at 10h 52m 28s.xml">
+      <configuration name="ProvaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProvaTest - 2018.01.17 at 10h 52m 52s.xml">
+      <configuration name="ProvaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProvaTest - 2018.01.17 at 10h 57m 37s.xml">
+      <configuration name="ProvaTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="418913000" />
+    <option name="totallyTimeSpent" value="431152000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="32" width="1920" height="1048" extended-state="6" />
@@ -917,21 +1065,20 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32100108" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14951245" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4077977" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="719" y="438" width="481" height="176" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.38697916" sideWeight="0.49791667" order="10" side_tool="false" content_ui="tabs" x="638" y="182" width="1249" height="861" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.38697916" sideWeight="0.49791667" order="10" side_tool="false" content_ui="tabs" x="469" y="125" width="1249" height="861" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924226" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13713981" sideWeight="0.4944356" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13874066" sideWeight="0.4944356" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3261105" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -942,8 +1089,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="719" y="438" width="481" height="176" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924226" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -989,7 +1137,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Versione iniziale Release 3" />
     <MESSAGE value="Versione iniziale Release 4" />
     <MESSAGE value="Da fare:&#10;- scrivere prova2 e prova3" />
     <MESSAGE value="Da fare:&#10;- implementare prove nel gioco" />
@@ -1014,102 +1161,22 @@
     <MESSAGE value="Versione iniziale Refactored 2.0" />
     <MESSAGE value="Implementato l'Abstract Factory, inizio implementazione MVC" />
     <MESSAGE value="Eseguita qualche modifica sul codice, e lettura stringhe da file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eseguita qualche modifica sul codice, e lettura stringhe da file" />
+    <MESSAGE value="Refactoring finito" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring finito" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Mappe/mondo1/mondo1_luogo1" />
-    <entry file="file://$PROJECT_DIR$/Mappe/mondo1/luogo3/mondo1_luogo3">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mappe/mondo1/luogo2/mondo1_luogo2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mappe/mondo1/luogo5/mondo1_luogo5">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mappe/mondo1/luogo1/mondo1_luogo1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mappe/mondo1/luogo5/passaggi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mappe/mondo1/luogo2/passaggi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mondo/Passaggio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mappe/mondo2/luogo1/passaggi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partita/PartitaAbstractFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/partita/PartitaConcreteFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/dimensioni_mappe">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partita/CaricaPartita.java" />
-    <entry file="file://$PROJECT_DIR$/doc/class-use/CaricaPartita.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="48" column="37" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/factory/AbstractProductMondo.java" />
     <entry file="file://$PROJECT_DIR$/src/factory/LuogoFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/factory/MondoFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/observer/Mappa.java" />
     <entry file="file://$PROJECT_DIR$/src/mvc/Mappa.java" />
     <entry file="file://$PROJECT_DIR$/src/mvc/ControllerLuogo.java" />
-    <entry file="file://$PROJECT_DIR$/Mappe/mondo1/luogo1/passaggi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/factory/FancyWorld.java" />
     <entry file="file://$PROJECT_DIR$/src/system_msg/Files.java" />
     <entry file="file://$PROJECT_DIR$/src/utility/MyUtil.java">
@@ -1137,7 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1156,15 +1222,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1192,61 +1249,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/giocatore/Giocatore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="82" column="24" lean-forward="true" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/MenuFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mondo/Chiave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2056">
-          <caret line="78" column="37" lean-forward="false" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mondo/Coordinata.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-420">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mondo/LeggiMappa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="220" column="22" lean-forward="false" selection-start-line="220" selection-start-column="22" selection-end-line="220" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mondo/Luogo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3816">
-          <caret line="271" column="41" lean-forward="false" selection-start-line="271" selection-start-column="41" selection-end-line="271" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mondo/Mondo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-796">
-          <caret line="213" column="17" lean-forward="true" selection-start-line="213" selection-start-column="17" selection-end-line="213" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1254,7 +1260,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1262,15 +1267,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mondo/Tipo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1298,10 +1294,106 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/testing/FancyWorldTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testing/FancyWorldTests.java" />
+    <entry file="file://$PROJECT_DIR$/src/prova/Quesito.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="74" column="7" lean-forward="true" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/giocatore/Giocatore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mondo/LeggiMappa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="234" column="7" lean-forward="true" selection-start-line="234" selection-start-column="7" selection-end-line="234" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/MenuFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mondo/Chiave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/MenuFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mondo/Tipo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mondo/Luogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3075">
+          <caret line="12" column="15" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mappe/mondo1/luogo1/passaggi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mappe/mondo1/luogo5/mondo1_luogo5">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mondo/Mondo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="12" column="15" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/partita/Partita.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="463" column="0" lean-forward="true" selection-start-line="463" selection-start-column="0" selection-end-line="463" selection-end-column="0" />
+        <state relative-caret-position="-735">
+          <caret line="85" column="28" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
           <folding>
             <element signature="method#sostieniProva#0;class#Partita#0" expanded="false" />
             <element signature="method#raccogliChiave#0;class#Partita#0" expanded="false" />
@@ -1309,40 +1401,123 @@
             <element signature="method#mossa#0;class#Partita#0" expanded="false" />
             <element signature="method#obiettivoRaggiunto#0;class#Partita#0" expanded="false" />
             <element signature="method#direzionePassaggio#0;class#Partita#0" expanded="false" />
-            <element signature="method#salvarePartita#0;class#Partita#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mappe/tutorial/piano_partenza">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mappe/tutorial/nomi_luoghi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="191" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="191" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prove/prova1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prove/prova2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prove/prova3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prova/LeggiProva.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        <state relative-caret-position="420">
+          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prova/Prova.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="243" column="6" lean-forward="true" selection-start-line="243" selection-start-column="6" selection-end-line="243" selection-end-column="6" />
+        <state relative-caret-position="765">
+          <caret line="80" column="37" lean-forward="false" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testing/FancyWorldTest.java">
+    <entry file="file://$PROJECT_DIR$/src/prova/ProvaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state relative-caret-position="90">
+          <caret line="9" column="64" lean-forward="false" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+          <folding>
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/partita/PartitaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mondo/MondoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prova/Quesito.java">
+    <entry file="file://$PROJECT_DIR$/src/mondo/LuogoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="97" column="7" lean-forward="true" selection-start-line="97" selection-start-column="7" selection-end-line="97" selection-end-column="7" />
+        <state relative-caret-position="675">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mondo/ChiaveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/giocatore/GiocatoreTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -83,7 +83,7 @@ public class Partita implements Serializable{
     public Partita(Giocatore giocatore, Mondo tutorial) {
         this.giocatore = giocatore;
         this.m = tutorial;
-        this.autoSave = false;
+        this.autoSave = true;
         this.abilitaCambiaMondo = false;
     }
 
@@ -197,7 +197,7 @@ public class Partita implements Serializable{
         else return "";
     }
 
-    private int salvarePartita(int nMosse) {
+    public int salvarePartita(int nMosse) {
         nMosse++;
         if (autoSave && nMosse == 20) {
             salvaPartita();

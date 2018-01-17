@@ -204,7 +204,7 @@ public class Luogo implements Serializable {
      * @param input  input
      * @return la coordinata
      */
-    private Coordinata posizioneNuova(char input) {
+    public Coordinata posizioneNuova(char input) {
         if (input == 'n') return new Coordinata(posCorrente.getX()-1, posCorrente.getY());
         if (input == 's') return new Coordinata(posCorrente.getX()+1, posCorrente.getY());
         if (input == 'e') return new Coordinata(posCorrente.getX(), posCorrente.getY()+1);

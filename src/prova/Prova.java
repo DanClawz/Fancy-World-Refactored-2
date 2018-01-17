@@ -73,6 +73,16 @@ public class Prova implements Serializable{
 
     }
 
+    public Prova(Coordinata c, int tipo) {
+        this.c = c;
+        this.nProve = 3;
+        leggi = new LeggiProva();
+        this.tipo = tipo;
+        this.punteggio = this.tipo*10;
+        leggiProva();
+
+    }
+
     /**
      * Inizializza prova.
      */
@@ -117,13 +127,13 @@ public class Prova implements Serializable{
         return -punteggio;
     }
 
-    private int prova1Test(int indice) {
+    public int prova1Test(int indice) {
         System.out.println("\nDomanda a risposta chiusa");
         int tentativi = 2;
         int indiceDomanda = indice;
 
         while(tentativi > 0) {
-            int scelta = MyUtil.myMenu(leggi.getProva1().get(indiceDomanda).getDomanda(), leggi.getProva1().get(indiceDomanda).getOpzioni());
+            int scelta = 2;
             if (leggi.checkRispostaProva1(indiceDomanda, leggi.getProva1().get(indiceDomanda).getOpzioni()[scelta-1])) {
                 System.out.println("Risposta corretta!");
                 return punteggio;
@@ -169,7 +179,7 @@ public class Prova implements Serializable{
         }
     }
 
-    private int prova2Test(int indice) {
+    public int prova2Test(int indice) {
         System.out.println("\nIndovina la parola");
         int tentativi = 15;
         int indiceParola = indice;
@@ -179,7 +189,7 @@ public class Prova implements Serializable{
         System.out.println("Inserisci risposta: ");
 
         while(tentativi > 0) {
-            String inputUtente = MyUtil.stringInputNonVuoto(leggi.stringaNascostaConSpazi(risposta));
+            String inputUtente = "cuffie";
             if (leggi.checkRispostaProva2(indiceParola, inputUtente))
                 break;
             else
@@ -220,12 +230,12 @@ public class Prova implements Serializable{
 
     }
 
-    private int prova3Test(int indice) {
+    public int prova3Test(int indice) {
         System.out.println("\nIndovinello");
         int tentativi = 3;
         int indiceRisposta = indice;
 
-        while(!leggi.checkRispostaProva3(indiceRisposta, MyUtil.stringInputNonVuoto(leggi.getProva3().get(indiceRisposta).getDomanda())) && --tentativi > 0) {
+        while(!leggi.checkRispostaProva3(indiceRisposta, "elastico") && --tentativi > 0) {
             System.out.println("Risposta non corretta! Hai ancora " + tentativi + " tentativi a disposizione.");
         }
         if (tentativi == 0) {
